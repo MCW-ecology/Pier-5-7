@@ -25,5 +25,5 @@
 # This is intended for large datasets that need version control
 # but would be too large for standard Git storage
 
-03_large_files_LFS/** filter=lfs diff=lfs merge=lfs -text
+01_data/03_large_files_LFS/** filter=lfs diff=lfs merge=lfs -text
 01[[:space:]]-[[:space:]]Data/01[[:space:]]-[[:space:]]Large[[:space:]]Files/** filter=lfs diff=lfs merge=lfs -text
