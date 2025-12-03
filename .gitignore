@@ -1,0 +1,28 @@
+## --------------------------------------------------------------#
+## .gitignore for R Projects
+##
+## This file tells Git which files and folders to ignore (not track).
+## Files matching these patterns will NOT be committed to the repository.
+##
+## --------------------------------------------------------------#
+
+#####R Session Files###########################################----
+# These are temporary files created by R/RStudio during sessions
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.RDataTmp*
+
+
+#####Output Files##############################################----
+# Generated figures and plots 
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.tiff
+*.tif
+
+
+CLAUDE.md
