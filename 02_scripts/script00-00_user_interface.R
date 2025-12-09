@@ -20,9 +20,10 @@
 
 ### Core Data Processing
 #----------------------------#
-source("02_scripts/script00-01_load_packages.R") # Load packages and helper functions first 
 
+setwd("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/")
+source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script00-01_load_packages.R") 
 
-
+source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script01-00_import_efish_data.R") 
 
 
