@@ -1,0 +1,602 @@
+"","Common_Name","Year","Area","Transect","Count"
+"1","Alewife","2018","Macassa Bay","HH56",5
+"2","Alewife","2019","Macassa Bay","HH55",9
+"3","Alewife","2019","Macassa Bay","HH56",7
+"4","Alewife","2019","Macassa Bay","HH57",11
+"5","Alewife","2019","Macassa Bay","HH58",2
+"6","Alewife","2019","Macassa Bay","HH59",3
+"7","Alewife","2019","Macassa Bay","HH60",7
+"8","Alewife","2019","Piers 5-7","HH50",21
+"9","Alewife","2019","Piers 5-7","HH51",4
+"10","Alewife","2019","Piers 5-7","HH53",4
+"11","Alewife","2019","Piers 5-7","HH54",7
+"12","Alewife","2020","Macassa Bay","HH59",1
+"13","Alewife","2020","Piers 5-7","HH51",1
+"14","Alewife","2021","Macassa Bay","HH56",1
+"15","Alewife","2022","Macassa Bay","HH55",1
+"16","Alewife","2022","Macassa Bay","HH57",1
+"17","Alewife","2022","Macassa Bay","HH58",2
+"18","American eel","2018","Construction Site","HH52",1
+"19","American eel","2018","Macassa Bay","HH56",1
+"20","American eel","2019","Piers 5-7","HH50",1
+"21","American eel","2019","Piers 5-7","HH53",2
+"22","American eel","2023","Piers 5-7","HH51",1
+"23","Bigmouth buffalo","2019","Macassa Bay","HH60",1
+"24","Bigmouth buffalo","2020","Macassa Bay","HH57",1
+"25","Bigmouth buffalo","2021","Piers 5-7","HH51",2
+"26","Bigmouth buffalo","2022","Macassa Bay","HH58",1
+"27","Bigmouth buffalo","2023","Piers 5-7","HH51",1
+"28","Bluegill","2018","Macassa Bay","HH60",2
+"29","Bluegill","2018","Piers 5-7","HH50",21
+"30","Bluegill","2018","Piers 5-7","HH51",7
+"31","Bluegill","2018","Piers 5-7","HH53",3
+"32","Bluegill","2019","Macassa Bay","HH55",3
+"33","Bluegill","2019","Macassa Bay","HH57",1
+"34","Bluegill","2019","Macassa Bay","HH59",2
+"35","Bluegill","2019","Macassa Bay","HH60",1
+"36","Bluegill","2019","Piers 5-7","HH50",11
+"37","Bluegill","2019","Piers 5-7","HH51",7
+"38","Bluegill","2019","Piers 5-7","HH53",8
+"39","Bluegill","2019","Piers 5-7","HH54",1
+"40","Bluegill","2020","Macassa Bay","HH55",4
+"41","Bluegill","2020","Macassa Bay","HH57",1
+"42","Bluegill","2020","Macassa Bay","HH59",3
+"43","Bluegill","2020","Macassa Bay","HH60",8
+"44","Bluegill","2020","Piers 5-7","HH50",5
+"45","Bluegill","2020","Piers 5-7","HH51",13
+"46","Bluegill","2020","Piers 5-7","HH53",1
+"47","Bluegill","2021","Macassa Bay","HH55",9
+"48","Bluegill","2021","Macassa Bay","HH57",2
+"49","Bluegill","2021","Macassa Bay","HH58",10
+"50","Bluegill","2021","Macassa Bay","HH59",2
+"51","Bluegill","2021","Macassa Bay","HH60",8
+"52","Bluegill","2021","Piers 5-7","HH50",5
+"53","Bluegill","2021","Piers 5-7","HH51",3
+"54","Bluegill","2021","Piers 5-7","HH53",1
+"55","Bluegill","2022","Macassa Bay","HH55",5
+"56","Bluegill","2022","Macassa Bay","HH56",2
+"57","Bluegill","2022","Macassa Bay","HH57",1
+"58","Bluegill","2022","Macassa Bay","HH58",5
+"59","Bluegill","2022","Macassa Bay","HH59",2
+"60","Bluegill","2022","Piers 5-7","HH50",17
+"61","Bluegill","2022","Piers 5-7","HH51",2
+"62","Bluegill","2022","Piers 5-7","HH53",6
+"63","Bluegill","2022","Piers 5-7","HH54",5
+"64","Bluegill","2023","Construction Site","HH52",3
+"65","Bluegill","2023","Macassa Bay","HH55",12
+"66","Bluegill","2023","Macassa Bay","HH56",4
+"67","Bluegill","2023","Macassa Bay","HH58",2
+"68","Bluegill","2023","Macassa Bay","HH59",1
+"69","Bluegill","2023","Macassa Bay","HH60",20
+"70","Bluegill","2023","Piers 5-7","HH50",12
+"71","Bluegill","2023","Piers 5-7","HH51",20
+"72","Bluegill","2023","Piers 5-7","HH53",2
+"73","Bluegill","2023","Piers 5-7","HH54",7
+"74","Bluntnose minnow","2022","Macassa Bay","HH59",1
+"75","Bowfin","2018","Piers 5-7","HH51",1
+"76","Brook silverside","2018","Piers 5-7","HH50",3
+"77","Brook silverside","2018","Piers 5-7","HH51",1
+"78","Brook silverside","2019","Construction Site","HH52",4
+"79","Brook silverside","2019","Macassa Bay","HH55",9
+"80","Brook silverside","2019","Macassa Bay","HH56",5
+"81","Brook silverside","2019","Macassa Bay","HH57",1
+"82","Brook silverside","2019","Macassa Bay","HH58",6
+"83","Brook silverside","2019","Macassa Bay","HH60",6
+"84","Brook silverside","2019","Piers 5-7","HH50",8
+"85","Brook silverside","2019","Piers 5-7","HH51",4
+"86","Brook silverside","2019","Piers 5-7","HH53",3
+"87","Brook silverside","2019","Piers 5-7","HH54",9
+"88","Brook silverside","2020","Construction Site","HH52",2
+"89","Brook silverside","2020","Macassa Bay","HH55",15
+"90","Brook silverside","2020","Macassa Bay","HH56",4
+"91","Brook silverside","2020","Macassa Bay","HH57",1
+"92","Brook silverside","2020","Macassa Bay","HH58",2
+"93","Brook silverside","2020","Macassa Bay","HH59",5
+"94","Brook silverside","2020","Macassa Bay","HH60",5
+"95","Brook silverside","2020","Piers 5-7","HH51",2
+"96","Brook silverside","2020","Piers 5-7","HH54",1
+"97","Brook silverside","2021","Construction Site","HH52",3
+"98","Brook silverside","2021","Macassa Bay","HH55",11
+"99","Brook silverside","2021","Macassa Bay","HH56",3
+"100","Brook silverside","2021","Macassa Bay","HH57",14
+"101","Brook silverside","2021","Macassa Bay","HH58",4
+"102","Brook silverside","2021","Macassa Bay","HH59",6
+"103","Brook silverside","2021","Macassa Bay","HH60",7
+"104","Brook silverside","2021","Piers 5-7","HH50",9
+"105","Brook silverside","2021","Piers 5-7","HH51",5
+"106","Brook silverside","2021","Piers 5-7","HH53",3
+"107","Brook silverside","2021","Piers 5-7","HH54",4
+"108","Brook silverside","2022","Construction Site","HH52",12
+"109","Brook silverside","2022","Macassa Bay","HH55",10
+"110","Brook silverside","2022","Macassa Bay","HH56",17
+"111","Brook silverside","2022","Macassa Bay","HH57",15
+"112","Brook silverside","2022","Macassa Bay","HH59",3
+"113","Brook silverside","2022","Piers 5-7","HH50",1
+"114","Brook silverside","2022","Piers 5-7","HH51",20
+"115","Brook silverside","2022","Piers 5-7","HH53",5
+"116","Brook silverside","2022","Piers 5-7","HH54",10
+"117","Brook silverside","2023","Construction Site","HH52",3
+"118","Brook silverside","2023","Macassa Bay","HH55",3
+"119","Brook silverside","2023","Macassa Bay","HH56",2
+"120","Brook silverside","2023","Macassa Bay","HH58",2
+"121","Brook silverside","2023","Macassa Bay","HH59",1
+"122","Brook silverside","2023","Macassa Bay","HH60",2
+"123","Brook silverside","2023","Piers 5-7","HH50",2
+"124","Brook silverside","2023","Piers 5-7","HH53",1
+"125","Brown bullhead","2018","Macassa Bay","HH55",1
+"126","Brown bullhead","2018","Macassa Bay","HH56",1
+"127","Brown bullhead","2018","Macassa Bay","HH59",3
+"128","Brown bullhead","2018","Macassa Bay","HH60",2
+"129","Brown bullhead","2018","Piers 5-7","HH50",1
+"130","Brown bullhead","2018","Piers 5-7","HH51",1
+"131","Brown bullhead","2018","Piers 5-7","HH53",2
+"132","Brown bullhead","2019","Macassa Bay","HH55",11
+"133","Brown bullhead","2019","Macassa Bay","HH56",6
+"134","Brown bullhead","2019","Macassa Bay","HH57",2
+"135","Brown bullhead","2019","Macassa Bay","HH58",7
+"136","Brown bullhead","2019","Macassa Bay","HH59",5
+"137","Brown bullhead","2019","Macassa Bay","HH60",17
+"138","Brown bullhead","2019","Piers 5-7","HH51",1
+"139","Brown bullhead","2019","Piers 5-7","HH53",1
+"140","Brown bullhead","2020","Macassa Bay","HH55",22
+"141","Brown bullhead","2020","Macassa Bay","HH56",3
+"142","Brown bullhead","2020","Macassa Bay","HH58",10
+"143","Brown bullhead","2020","Macassa Bay","HH59",13
+"144","Brown bullhead","2020","Macassa Bay","HH60",12
+"145","Brown bullhead","2020","Piers 5-7","HH50",2
+"146","Brown bullhead","2021","Construction Site","HH52",1
+"147","Brown bullhead","2021","Macassa Bay","HH55",4
+"148","Brown bullhead","2021","Macassa Bay","HH57",1
+"149","Brown bullhead","2021","Macassa Bay","HH58",6
+"150","Brown bullhead","2021","Macassa Bay","HH59",1
+"151","Brown bullhead","2021","Macassa Bay","HH60",4
+"152","Brown bullhead","2021","Piers 5-7","HH50",1
+"153","Brown bullhead","2022","Macassa Bay","HH55",2
+"154","Brown bullhead","2022","Macassa Bay","HH56",2
+"155","Brown bullhead","2022","Macassa Bay","HH57",5
+"156","Brown bullhead","2022","Macassa Bay","HH58",3
+"157","Brown bullhead","2022","Macassa Bay","HH59",6
+"158","Brown bullhead","2022","Piers 5-7","HH51",13
+"159","Brown bullhead","2022","Piers 5-7","HH54",1
+"160","Brown bullhead","2023","Construction Site","HH52",2
+"161","Brown bullhead","2023","Macassa Bay","HH55",1
+"162","Brown bullhead","2023","Macassa Bay","HH56",2
+"163","Brown bullhead","2023","Macassa Bay","HH60",3
+"164","Brown bullhead","2023","Piers 5-7","HH50",3
+"165","Brown bullhead","2023","Piers 5-7","HH53",3
+"166","Brown bullhead","2023","Piers 5-7","HH54",2
+"167","Carp","2018","Construction Site","HH52",1
+"168","Carp","2018","Macassa Bay","HH56",1
+"169","Carp","2018","Macassa Bay","HH59",1
+"170","Carp","2018","Macassa Bay","HH60",1
+"171","Carp","2019","Macassa Bay","HH58",2
+"172","Carp","2019","Macassa Bay","HH60",1
+"173","Carp","2019","Piers 5-7","HH50",1
+"174","Carp","2019","Piers 5-7","HH53",1
+"175","Carp","2020","Macassa Bay","HH58",1
+"176","Carp","2020","Macassa Bay","HH60",1
+"177","Carp","2021","Macassa Bay","HH60",1
+"178","Carp","2022","Macassa Bay","HH57",1
+"179","Carp","2022","Macassa Bay","HH59",1
+"180","Carp x Goldfish hybrid","2018","Macassa Bay","HH59",1
+"181","Chinook salmon","2019","Macassa Bay","HH57",1
+"182","Chinook salmon","2022","Macassa Bay","HH55",1
+"183","Chinook salmon","2022","Piers 5-7","HH50",1
+"184","Common shiner","2023","Macassa Bay","HH60",1
+"185","Emerald shiner","2019","Macassa Bay","HH55",5
+"186","Emerald shiner","2019","Macassa Bay","HH56",7
+"187","Emerald shiner","2019","Macassa Bay","HH58",2
+"188","Emerald shiner","2019","Macassa Bay","HH59",5
+"189","Emerald shiner","2019","Piers 5-7","HH50",1
+"190","Emerald shiner","2019","Piers 5-7","HH51",1
+"191","Emerald shiner","2019","Piers 5-7","HH53",4
+"192","Emerald shiner","2019","Piers 5-7","HH54",8
+"193","Emerald shiner","2020","Macassa Bay","HH56",2
+"194","Emerald shiner","2020","Macassa Bay","HH57",1
+"195","Emerald shiner","2020","Macassa Bay","HH59",4
+"196","Emerald shiner","2020","Macassa Bay","HH60",2
+"197","Emerald shiner","2021","Macassa Bay","HH56",1
+"198","Emerald shiner","2021","Macassa Bay","HH57",2
+"199","Emerald shiner","2021","Macassa Bay","HH59",3
+"200","Emerald shiner","2021","Macassa Bay","HH60",3
+"201","Emerald shiner","2021","Piers 5-7","HH50",1
+"202","Emerald shiner","2023","Macassa Bay","HH59",2
+"203","Emerald shiner","2023","Macassa Bay","HH60",2
+"204","Gizzard shad","2018","Construction Site","HH52",30
+"205","Gizzard shad","2018","Macassa Bay","HH55",11
+"206","Gizzard shad","2018","Macassa Bay","HH56",8
+"207","Gizzard shad","2018","Macassa Bay","HH57",10
+"208","Gizzard shad","2018","Macassa Bay","HH58",20
+"209","Gizzard shad","2018","Macassa Bay","HH59",31
+"210","Gizzard shad","2018","Macassa Bay","HH60",18
+"211","Gizzard shad","2018","Piers 5-7","HH50",43
+"212","Gizzard shad","2018","Piers 5-7","HH51",48
+"213","Gizzard shad","2018","Piers 5-7","HH53",42
+"214","Gizzard shad","2018","Piers 5-7","HH54",4
+"215","Gizzard shad","2019","Construction Site","HH52",14
+"216","Gizzard shad","2019","Macassa Bay","HH55",19
+"217","Gizzard shad","2019","Macassa Bay","HH56",14
+"218","Gizzard shad","2019","Macassa Bay","HH57",6
+"219","Gizzard shad","2019","Macassa Bay","HH58",2
+"220","Gizzard shad","2019","Macassa Bay","HH59",12
+"221","Gizzard shad","2019","Macassa Bay","HH60",7
+"222","Gizzard shad","2019","Piers 5-7","HH50",13
+"223","Gizzard shad","2019","Piers 5-7","HH51",12
+"224","Gizzard shad","2019","Piers 5-7","HH53",18
+"225","Gizzard shad","2019","Piers 5-7","HH54",4
+"226","Gizzard shad","2020","Construction Site","HH52",26
+"227","Gizzard shad","2020","Macassa Bay","HH55",43
+"228","Gizzard shad","2020","Macassa Bay","HH56",23
+"229","Gizzard shad","2020","Macassa Bay","HH57",27
+"230","Gizzard shad","2020","Macassa Bay","HH58",26
+"231","Gizzard shad","2020","Macassa Bay","HH59",18
+"232","Gizzard shad","2020","Macassa Bay","HH60",5
+"233","Gizzard shad","2020","Piers 5-7","HH50",22
+"234","Gizzard shad","2020","Piers 5-7","HH51",8
+"235","Gizzard shad","2020","Piers 5-7","HH53",3
+"236","Gizzard shad","2020","Piers 5-7","HH54",37
+"237","Gizzard shad","2021","Construction Site","HH52",12
+"238","Gizzard shad","2021","Macassa Bay","HH55",10
+"239","Gizzard shad","2021","Macassa Bay","HH56",8
+"240","Gizzard shad","2021","Macassa Bay","HH57",22
+"241","Gizzard shad","2021","Macassa Bay","HH58",14
+"242","Gizzard shad","2021","Macassa Bay","HH59",4
+"243","Gizzard shad","2021","Macassa Bay","HH60",4
+"244","Gizzard shad","2021","Piers 5-7","HH50",8
+"245","Gizzard shad","2021","Piers 5-7","HH51",1
+"246","Gizzard shad","2021","Piers 5-7","HH53",8
+"247","Gizzard shad","2021","Piers 5-7","HH54",7
+"248","Gizzard shad","2022","Construction Site","HH52",3
+"249","Gizzard shad","2022","Macassa Bay","HH55",2
+"250","Gizzard shad","2022","Macassa Bay","HH56",2
+"251","Gizzard shad","2022","Macassa Bay","HH58",5
+"252","Gizzard shad","2022","Macassa Bay","HH59",4
+"253","Gizzard shad","2022","Piers 5-7","HH50",7
+"254","Gizzard shad","2022","Piers 5-7","HH51",14
+"255","Gizzard shad","2022","Piers 5-7","HH53",6
+"256","Gizzard shad","2023","Construction Site","HH52",7
+"257","Gizzard shad","2023","Macassa Bay","HH55",14
+"258","Gizzard shad","2023","Macassa Bay","HH58",15
+"259","Gizzard shad","2023","Macassa Bay","HH60",1
+"260","Gizzard shad","2023","Piers 5-7","HH50",17
+"261","Gizzard shad","2023","Piers 5-7","HH51",16
+"262","Gizzard shad","2023","Piers 5-7","HH53",8
+"263","Gizzard shad","2023","Piers 5-7","HH54",20
+"264","Golden shiner","2023","Macassa Bay","HH59",3
+"265","Goldfish","2018","Macassa Bay","HH55",1
+"266","Goldfish","2018","Macassa Bay","HH59",2
+"267","Goldfish","2018","Macassa Bay","HH60",1
+"268","Goldfish","2018","Piers 5-7","HH51",1
+"269","Goldfish","2019","Construction Site","HH52",1
+"270","Goldfish","2019","Macassa Bay","HH55",5
+"271","Goldfish","2019","Macassa Bay","HH58",1
+"272","Goldfish","2019","Macassa Bay","HH60",3
+"273","Goldfish","2020","Macassa Bay","HH55",5
+"274","Goldfish","2020","Macassa Bay","HH58",2
+"275","Goldfish","2020","Macassa Bay","HH59",2
+"276","Goldfish","2020","Macassa Bay","HH60",2
+"277","Goldfish","2021","Macassa Bay","HH55",8
+"278","Goldfish","2021","Macassa Bay","HH58",2
+"279","Goldfish","2021","Macassa Bay","HH59",3
+"280","Goldfish","2021","Macassa Bay","HH60",4
+"281","Goldfish","2021","Piers 5-7","HH51",1
+"282","Goldfish","2022","Macassa Bay","HH56",2
+"283","Goldfish","2022","Macassa Bay","HH59",2
+"284","Goldfish","2023","Macassa Bay","HH55",1
+"285","Green sunfish","2019","Macassa Bay","HH55",1
+"286","Green sunfish","2022","Piers 5-7","HH50",1
+"287","Green sunfish","2022","Piers 5-7","HH53",2
+"288","Green sunfish","2023","Piers 5-7","HH50",2
+"289","Green sunfish","2023","Piers 5-7","HH53",2
+"290","Green sunfish","2023","Piers 5-7","HH54",1
+"291","Largemouth bass","2018","Construction Site","HH52",2
+"292","Largemouth bass","2018","Macassa Bay","HH55",3
+"293","Largemouth bass","2018","Macassa Bay","HH56",1
+"294","Largemouth bass","2018","Macassa Bay","HH59",2
+"295","Largemouth bass","2018","Macassa Bay","HH60",1
+"296","Largemouth bass","2018","Piers 5-7","HH50",9
+"297","Largemouth bass","2018","Piers 5-7","HH51",17
+"298","Largemouth bass","2019","Construction Site","HH52",2
+"299","Largemouth bass","2019","Macassa Bay","HH55",9
+"300","Largemouth bass","2019","Macassa Bay","HH59",5
+"301","Largemouth bass","2019","Macassa Bay","HH60",6
+"302","Largemouth bass","2019","Piers 5-7","HH50",12
+"303","Largemouth bass","2019","Piers 5-7","HH51",14
+"304","Largemouth bass","2019","Piers 5-7","HH53",11
+"305","Largemouth bass","2020","Construction Site","HH52",3
+"306","Largemouth bass","2020","Macassa Bay","HH55",2
+"307","Largemouth bass","2020","Macassa Bay","HH56",2
+"308","Largemouth bass","2020","Macassa Bay","HH59",4
+"309","Largemouth bass","2020","Macassa Bay","HH60",11
+"310","Largemouth bass","2020","Piers 5-7","HH50",10
+"311","Largemouth bass","2020","Piers 5-7","HH51",14
+"312","Largemouth bass","2020","Piers 5-7","HH53",9
+"313","Largemouth bass","2021","Macassa Bay","HH55",21
+"314","Largemouth bass","2021","Macassa Bay","HH56",2
+"315","Largemouth bass","2021","Macassa Bay","HH58",5
+"316","Largemouth bass","2021","Macassa Bay","HH59",3
+"317","Largemouth bass","2021","Macassa Bay","HH60",21
+"318","Largemouth bass","2021","Piers 5-7","HH50",1
+"319","Largemouth bass","2021","Piers 5-7","HH53",2
+"320","Largemouth bass","2022","Construction Site","HH52",4
+"321","Largemouth bass","2022","Macassa Bay","HH55",15
+"322","Largemouth bass","2022","Macassa Bay","HH56",8
+"323","Largemouth bass","2022","Macassa Bay","HH57",7
+"324","Largemouth bass","2022","Macassa Bay","HH58",9
+"325","Largemouth bass","2022","Macassa Bay","HH59",8
+"326","Largemouth bass","2022","Piers 5-7","HH50",7
+"327","Largemouth bass","2022","Piers 5-7","HH51",4
+"328","Largemouth bass","2022","Piers 5-7","HH53",6
+"329","Largemouth bass","2022","Piers 5-7","HH54",6
+"330","Largemouth bass","2023","Construction Site","HH52",19
+"331","Largemouth bass","2023","Macassa Bay","HH55",6
+"332","Largemouth bass","2023","Macassa Bay","HH56",5
+"333","Largemouth bass","2023","Macassa Bay","HH58",2
+"334","Largemouth bass","2023","Macassa Bay","HH59",17
+"335","Largemouth bass","2023","Macassa Bay","HH60",8
+"336","Largemouth bass","2023","Piers 5-7","HH50",5
+"337","Largemouth bass","2023","Piers 5-7","HH51",10
+"338","Largemouth bass","2023","Piers 5-7","HH53",1
+"339","Largemouth bass","2023","Piers 5-7","HH54",12
+"340","Logperch","2018","Piers 5-7","HH50",1
+"341","Logperch","2018","Piers 5-7","HH51",22
+"342","Logperch","2019","Construction Site","HH52",14
+"343","Logperch","2019","Macassa Bay","HH55",2
+"344","Logperch","2019","Macassa Bay","HH56",1
+"345","Logperch","2019","Macassa Bay","HH57",1
+"346","Logperch","2019","Macassa Bay","HH59",15
+"347","Logperch","2019","Macassa Bay","HH60",4
+"348","Logperch","2019","Piers 5-7","HH50",7
+"349","Logperch","2019","Piers 5-7","HH51",18
+"350","Logperch","2019","Piers 5-7","HH53",8
+"351","Logperch","2020","Construction Site","HH52",10
+"352","Logperch","2020","Macassa Bay","HH56",4
+"353","Logperch","2020","Macassa Bay","HH59",2
+"354","Logperch","2020","Macassa Bay","HH60",24
+"355","Logperch","2020","Piers 5-7","HH50",21
+"356","Logperch","2020","Piers 5-7","HH51",39
+"357","Logperch","2020","Piers 5-7","HH53",31
+"358","Logperch","2020","Piers 5-7","HH54",1
+"359","Logperch","2021","Macassa Bay","HH55",6
+"360","Logperch","2021","Macassa Bay","HH57",2
+"361","Logperch","2021","Macassa Bay","HH58",5
+"362","Logperch","2021","Macassa Bay","HH60",1
+"363","Logperch","2021","Piers 5-7","HH50",2
+"364","Logperch","2021","Piers 5-7","HH51",1
+"365","Logperch","2021","Piers 5-7","HH53",5
+"366","Logperch","2021","Piers 5-7","HH54",2
+"367","Logperch","2022","Construction Site","HH52",2
+"368","Logperch","2022","Macassa Bay","HH55",2
+"369","Logperch","2022","Macassa Bay","HH56",1
+"370","Logperch","2022","Piers 5-7","HH51",7
+"371","Logperch","2022","Piers 5-7","HH53",24
+"372","Logperch","2022","Piers 5-7","HH54",7
+"373","Logperch","2023","Construction Site","HH52",18
+"374","Logperch","2023","Macassa Bay","HH55",1
+"375","Logperch","2023","Macassa Bay","HH56",3
+"376","Logperch","2023","Macassa Bay","HH59",2
+"377","Logperch","2023","Macassa Bay","HH60",15
+"378","Logperch","2023","Piers 5-7","HH50",4
+"379","Logperch","2023","Piers 5-7","HH51",16
+"380","Logperch","2023","Piers 5-7","HH54",4
+"381","Northern pike","2019","Piers 5-7","HH53",1
+"382","Northern pike","2020","Construction Site","HH52",1
+"383","Northern pike","2021","Macassa Bay","HH60",1
+"384","Pumpkinseed","2018","Macassa Bay","HH60",1
+"385","Pumpkinseed","2018","Piers 5-7","HH51",2
+"386","Pumpkinseed","2019","Macassa Bay","HH55",2
+"387","Pumpkinseed","2019","Macassa Bay","HH56",1
+"388","Pumpkinseed","2019","Macassa Bay","HH57",1
+"389","Pumpkinseed","2019","Macassa Bay","HH60",2
+"390","Pumpkinseed","2019","Piers 5-7","HH50",12
+"391","Pumpkinseed","2019","Piers 5-7","HH51",2
+"392","Pumpkinseed","2019","Piers 5-7","HH53",1
+"393","Pumpkinseed","2020","Macassa Bay","HH55",1
+"394","Pumpkinseed","2020","Macassa Bay","HH59",3
+"395","Pumpkinseed","2020","Macassa Bay","HH60",1
+"396","Pumpkinseed","2020","Piers 5-7","HH50",5
+"397","Pumpkinseed","2020","Piers 5-7","HH51",2
+"398","Pumpkinseed","2021","Macassa Bay","HH55",1
+"399","Pumpkinseed","2021","Macassa Bay","HH56",1
+"400","Pumpkinseed","2021","Macassa Bay","HH59",1
+"401","Pumpkinseed","2021","Macassa Bay","HH60",6
+"402","Pumpkinseed","2021","Piers 5-7","HH50",1
+"403","Pumpkinseed","2022","Macassa Bay","HH55",1
+"404","Pumpkinseed","2022","Macassa Bay","HH58",2
+"405","Pumpkinseed","2022","Piers 5-7","HH50",4
+"406","Pumpkinseed","2023","Construction Site","HH52",2
+"407","Pumpkinseed","2023","Macassa Bay","HH55",7
+"408","Pumpkinseed","2023","Macassa Bay","HH56",6
+"409","Pumpkinseed","2023","Macassa Bay","HH58",6
+"410","Pumpkinseed","2023","Macassa Bay","HH59",3
+"411","Pumpkinseed","2023","Macassa Bay","HH60",11
+"412","Pumpkinseed","2023","Piers 5-7","HH50",5
+"413","Pumpkinseed","2023","Piers 5-7","HH51",5
+"414","Rock bass","2018","Construction Site","HH52",1
+"415","Rock bass","2018","Macassa Bay","HH59",3
+"416","Rock bass","2018","Macassa Bay","HH60",1
+"417","Rock bass","2018","Piers 5-7","HH50",7
+"418","Rock bass","2018","Piers 5-7","HH51",4
+"419","Rock bass","2018","Piers 5-7","HH53",1
+"420","Rock bass","2019","Construction Site","HH52",2
+"421","Rock bass","2019","Macassa Bay","HH55",2
+"422","Rock bass","2019","Macassa Bay","HH60",2
+"423","Rock bass","2019","Piers 5-7","HH50",13
+"424","Rock bass","2019","Piers 5-7","HH51",13
+"425","Rock bass","2019","Piers 5-7","HH53",4
+"426","Rock bass","2020","Construction Site","HH52",2
+"427","Rock bass","2020","Macassa Bay","HH55",2
+"428","Rock bass","2020","Macassa Bay","HH59",1
+"429","Rock bass","2020","Macassa Bay","HH60",3
+"430","Rock bass","2020","Piers 5-7","HH50",16
+"431","Rock bass","2020","Piers 5-7","HH51",16
+"432","Rock bass","2020","Piers 5-7","HH53",2
+"433","Rock bass","2021","Macassa Bay","HH59",4
+"434","Rock bass","2021","Piers 5-7","HH50",4
+"435","Rock bass","2021","Piers 5-7","HH51",2
+"436","Rock bass","2022","Construction Site","HH52",3
+"437","Rock bass","2022","Macassa Bay","HH55",2
+"438","Rock bass","2022","Piers 5-7","HH50",16
+"439","Rock bass","2022","Piers 5-7","HH51",4
+"440","Rock bass","2022","Piers 5-7","HH53",4
+"441","Rock bass","2022","Piers 5-7","HH54",1
+"442","Rock bass","2023","Construction Site","HH52",2
+"443","Rock bass","2023","Macassa Bay","HH55",2
+"444","Rock bass","2023","Macassa Bay","HH59",7
+"445","Rock bass","2023","Macassa Bay","HH60",1
+"446","Rock bass","2023","Piers 5-7","HH50",14
+"447","Rock bass","2023","Piers 5-7","HH51",17
+"448","Rock bass","2023","Piers 5-7","HH53",1
+"449","Rock bass","2023","Piers 5-7","HH54",2
+"450","Round Goby","2018","Piers 5-7","HH50",1
+"451","Round Goby","2020","Piers 5-7","HH50",1
+"452","Round Goby","2023","Piers 5-7","HH54",2
+"453","Rudd","2018","Macassa Bay","HH57",1
+"454","Rudd","2018","Macassa Bay","HH59",4
+"455","Rudd","2018","Macassa Bay","HH60",1
+"456","Rudd","2019","Macassa Bay","HH55",2
+"457","Rudd","2019","Macassa Bay","HH59",1
+"458","Rudd","2020","Macassa Bay","HH58",1
+"459","Rudd","2020","Macassa Bay","HH60",3
+"460","Rudd","2020","Piers 5-7","HH51",1
+"461","Rudd","2021","Macassa Bay","HH58",1
+"462","Rudd","2021","Macassa Bay","HH59",4
+"463","Rudd","2021","Macassa Bay","HH60",3
+"464","Rudd","2021","Piers 5-7","HH51",4
+"465","Rudd","2022","Macassa Bay","HH55",11
+"466","Rudd","2022","Macassa Bay","HH56",4
+"467","Rudd","2022","Macassa Bay","HH57",2
+"468","Rudd","2022","Piers 5-7","HH51",2
+"469","Rudd","2022","Piers 5-7","HH53",1
+"470","Rudd","2023","Construction Site","HH52",1
+"471","Rudd","2023","Macassa Bay","HH55",6
+"472","Rudd","2023","Macassa Bay","HH56",10
+"473","Rudd","2023","Macassa Bay","HH58",1
+"474","Rudd","2023","Macassa Bay","HH59",2
+"475","Rudd","2023","Macassa Bay","HH60",14
+"476","Rudd","2023","Piers 5-7","HH50",1
+"477","Rudd","2023","Piers 5-7","HH51",1
+"478","Shorthead redhorse","2020","Construction Site","HH52",1
+"479","Smallmouth bass","2018","Piers 5-7","HH51",1
+"480","Smallmouth bass","2019","Construction Site","HH52",2
+"481","Smallmouth bass","2023","Piers 5-7","HH50",2
+"482","Smallmouth bass","2023","Piers 5-7","HH54",1
+"483","Spottail shiner","2018","Macassa Bay","HH56",6
+"484","Spottail shiner","2018","Macassa Bay","HH57",17
+"485","Spottail shiner","2018","Macassa Bay","HH58",5
+"486","Spottail shiner","2018","Macassa Bay","HH59",2
+"487","Spottail shiner","2018","Macassa Bay","HH60",10
+"488","Spottail shiner","2018","Piers 5-7","HH50",1
+"489","Spottail shiner","2018","Piers 5-7","HH51",3
+"490","Spottail shiner","2019","Construction Site","HH52",1
+"491","Spottail shiner","2019","Macassa Bay","HH58",23
+"492","Spottail shiner","2019","Macassa Bay","HH60",11
+"493","Spottail shiner","2019","Piers 5-7","HH51",1
+"494","Spottail shiner","2020","Macassa Bay","HH55",1
+"495","Spottail shiner","2020","Macassa Bay","HH60",6
+"496","Spottail shiner","2020","Piers 5-7","HH51",1
+"497","Spottail shiner","2020","Piers 5-7","HH54",1
+"498","Spottail shiner","2021","Macassa Bay","HH56",1
+"499","Spottail shiner","2021","Macassa Bay","HH59",1
+"500","Spottail shiner","2021","Piers 5-7","HH51",1
+"501","Spottail shiner","2022","Macassa Bay","HH55",8
+"502","Spottail shiner","2023","Macassa Bay","HH60",8
+"503","Spottail shiner","2023","Piers 5-7","HH50",1
+"504","Spottail shiner","2023","Piers 5-7","HH54",1
+"505","Walleye(yellow pickerel)","2018","Macassa Bay","HH60",1
+"506","Walleye(yellow pickerel)","2019","Piers 5-7","HH54",1
+"507","Walleye(yellow pickerel)","2020","Macassa Bay","HH55",1
+"508","Walleye(yellow pickerel)","2020","Macassa Bay","HH56",1
+"509","Walleye(yellow pickerel)","2020","Macassa Bay","HH60",1
+"510","Walleye(yellow pickerel)","2020","Piers 5-7","HH50",1
+"511","Walleye(yellow pickerel)","2021","Construction Site","HH52",1
+"512","Walleye(yellow pickerel)","2021","Piers 5-7","HH50",1
+"513","Walleye(yellow pickerel)","2021","Piers 5-7","HH51",1
+"514","Walleye(yellow pickerel)","2022","Macassa Bay","HH57",1
+"515","Walleye(yellow pickerel)","2022","Piers 5-7","HH51",1
+"516","Walleye(yellow pickerel)","2022","Piers 5-7","HH53",1
+"517","Walleye(yellow pickerel)","2023","Construction Site","HH52",1
+"518","Walleye(yellow pickerel)","2023","Piers 5-7","HH50",1
+"519","Walleye(yellow pickerel)","2023","Piers 5-7","HH54",2
+"520","White perch","2018","Construction Site","HH52",2
+"521","White perch","2018","Macassa Bay","HH56",2
+"522","White perch","2018","Macassa Bay","HH59",5
+"523","White perch","2018","Piers 5-7","HH50",4
+"524","White perch","2018","Piers 5-7","HH51",5
+"525","White perch","2018","Piers 5-7","HH53",4
+"526","White perch","2019","Construction Site","HH52",5
+"527","White perch","2019","Macassa Bay","HH58",1
+"528","White perch","2019","Macassa Bay","HH60",1
+"529","White perch","2019","Piers 5-7","HH50",1
+"530","White perch","2019","Piers 5-7","HH51",2
+"531","White perch","2019","Piers 5-7","HH53",10
+"532","White perch","2020","Construction Site","HH52",1
+"533","White perch","2020","Macassa Bay","HH55",2
+"534","White perch","2020","Macassa Bay","HH59",1
+"535","White perch","2020","Piers 5-7","HH50",1
+"536","White perch","2020","Piers 5-7","HH53",3
+"537","White perch","2020","Piers 5-7","HH54",1
+"538","White perch","2021","Macassa Bay","HH58",2
+"539","White perch","2021","Macassa Bay","HH59",1
+"540","White perch","2021","Macassa Bay","HH60",1
+"541","White perch","2021","Piers 5-7","HH53",2
+"542","White perch","2022","Macassa Bay","HH55",7
+"543","White perch","2022","Macassa Bay","HH56",7
+"544","White perch","2022","Macassa Bay","HH57",8
+"545","White perch","2022","Macassa Bay","HH58",3
+"546","White perch","2022","Piers 5-7","HH53",2
+"547","White perch","2022","Piers 5-7","HH54",1
+"548","White perch","2023","Construction Site","HH52",9
+"549","White perch","2023","Macassa Bay","HH55",1
+"550","White perch","2023","Macassa Bay","HH56",2
+"551","White perch","2023","Macassa Bay","HH59",3
+"552","White perch","2023","Macassa Bay","HH60",4
+"553","White perch","2023","Piers 5-7","HH50",2
+"554","White perch","2023","Piers 5-7","HH51",1
+"555","White perch","2023","Piers 5-7","HH53",5
+"556","White sucker","2018","Macassa Bay","HH55",1
+"557","White sucker","2018","Macassa Bay","HH59",2
+"558","White sucker","2018","Macassa Bay","HH60",3
+"559","White sucker","2019","Construction Site","HH52",1
+"560","White sucker","2019","Macassa Bay","HH55",2
+"561","White sucker","2019","Macassa Bay","HH59",1
+"562","White sucker","2019","Macassa Bay","HH60",5
+"563","White sucker","2019","Piers 5-7","HH50",2
+"564","White sucker","2019","Piers 5-7","HH51",2
+"565","White sucker","2021","Macassa Bay","HH55",1
+"566","White sucker","2022","Macassa Bay","HH55",1
+"567","White sucker","2023","Macassa Bay","HH60",2
+"568","White sucker","2023","Piers 5-7","HH51",2
+"569","Yellow perch","2018","Macassa Bay","HH56",2
+"570","Yellow perch","2018","Macassa Bay","HH59",1
+"571","Yellow perch","2018","Macassa Bay","HH60",1
+"572","Yellow perch","2018","Piers 5-7","HH51",1
+"573","Yellow perch","2019","Construction Site","HH52",1
+"574","Yellow perch","2019","Macassa Bay","HH55",6
+"575","Yellow perch","2019","Macassa Bay","HH58",1
+"576","Yellow perch","2019","Macassa Bay","HH59",1
+"577","Yellow perch","2019","Macassa Bay","HH60",3
+"578","Yellow perch","2019","Piers 5-7","HH50",2
+"579","Yellow perch","2019","Piers 5-7","HH53",1
+"580","Yellow perch","2020","Construction Site","HH52",2
+"581","Yellow perch","2020","Macassa Bay","HH55",2
+"582","Yellow perch","2020","Macassa Bay","HH56",1
+"583","Yellow perch","2020","Macassa Bay","HH58",1
+"584","Yellow perch","2020","Macassa Bay","HH59",3
+"585","Yellow perch","2020","Macassa Bay","HH60",3
+"586","Yellow perch","2020","Piers 5-7","HH50",1
+"587","Yellow perch","2020","Piers 5-7","HH51",6
+"588","Yellow perch","2021","Macassa Bay","HH55",6
+"589","Yellow perch","2021","Macassa Bay","HH58",5
+"590","Yellow perch","2021","Macassa Bay","HH59",2
+"591","Yellow perch","2021","Macassa Bay","HH60",2
+"592","Yellow perch","2021","Piers 5-7","HH51",1
+"593","Yellow perch","2022","Macassa Bay","HH55",8
+"594","Yellow perch","2022","Macassa Bay","HH56",3
+"595","Yellow perch","2022","Macassa Bay","HH57",1
+"596","Yellow perch","2022","Piers 5-7","HH51",1
+"597","Yellow perch","2023","Macassa Bay","HH55",4
+"598","Yellow perch","2023","Macassa Bay","HH56",6
+"599","Yellow perch","2023","Macassa Bay","HH58",4
+"600","Yellow perch","2023","Macassa Bay","HH60",10
+"601","Yellow perch","2023","Piers 5-7","HH54",1

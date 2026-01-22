@@ -25,7 +25,7 @@
 
 #setwd("~/GitHub/Piers-5-7/")
 
-data_efish_lenW <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/HH_efish_lengthweights_2018-2023.csv")
+data_efish_lenW <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/elecfish_lengthweight_HH20182023_NEW.csv")
 data_efish_biomass <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/HH_Biomass2023.csv")
 data_taxon <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/taxon.csv")
 
@@ -57,8 +57,9 @@ temp_lenw <- temp_lenw %>% rename(Sp_Code = Species)
 temp_biomass <- subset(data_efish_biomass, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 cat("Loaded", format(nrow(temp_biomass), big.mark = ","), "records\n")
 
-
-###get areas
+#########################
+###Assign areas #########
+#########################
 temp_lenw$Area <- ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
         ifelse(temp_lenw$Transect %in% c("HH52"),"Construction Site",
                "Macassa Bay"))
@@ -67,9 +68,9 @@ temp_lenw$Area <- ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH53","HH54"),
 temp_biomass$Area <- ifelse(temp_biomass$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
                          ifelse(temp_biomass$Transect %in% c("HH52"),"Construction Site",
                                 "Macassa Bay"))
-###########################
+##########################################
 ####Formatting and Selecting Years########
-##########################
+##########################################
 
 temp_lenw$YMD <- format(as.Date(temp_lenw$Date), format = "%Y-%m-%d")
 temp_lenw$MonthYear<-format(as.Date(temp_lenw$YMD), "%b-%Y")
@@ -85,9 +86,15 @@ temp_biomass$MonthYear<-format(as.Date(temp_biomass$YMD), "%b-%Y")
 temp_biomass$Month<-format(as.Date(temp_biomass$YMD), "%m")
 temp_biomass$Year<-format(as.Date(temp_biomass$YMD), "%Y")
 
-#temp_biomass2 <- temp_biomass %>%
-# filter(temp_biomass$Year >= 2018 & temp_biomass$Year <= 2023)
+#######################################
+####Selecting night data###############
+#######################################
 
+temp_lenw <- subset(temp_lenw, Time.Period %in% c("2"))
+cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
+
+temp_biomass <- subset(temp_biomass, Time.Period %in% c("2"))
+cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 #####Data Cleaning#########################################----
 #-------------------------------------------------------------#
 

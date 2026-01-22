@@ -1,0 +1,154 @@
+"","Common_Name","TimePeriod","Area","Count"
+"1","Alewife","Construction","Macassa Bay",1
+"2","Alewife","Post","Macassa Bay",4
+"3","Alewife","Pre","Macassa Bay",45
+"4","Alewife","Pre","Piers 5-7",37
+"5","American eel","Post","Piers 5-7",1
+"6","American eel","Pre","Construction Site",1
+"7","American eel","Pre","Macassa Bay",1
+"8","American eel","Pre","Piers 5-7",3
+"9","Bigmouth buffalo","Construction","Piers 5-7",2
+"10","Bigmouth buffalo","Post","Macassa Bay",1
+"11","Bigmouth buffalo","Post","Piers 5-7",1
+"12","Bigmouth buffalo","Pre","Macassa Bay",2
+"13","Bluegill","Construction","Macassa Bay",31
+"14","Bluegill","Construction","Piers 5-7",9
+"15","Bluegill","Post","Construction Site",3
+"16","Bluegill","Post","Macassa Bay",54
+"17","Bluegill","Post","Piers 5-7",71
+"18","Bluegill","Pre","Macassa Bay",25
+"19","Bluegill","Pre","Piers 5-7",77
+"20","Bluntnose minnow","Post","Macassa Bay",1
+"21","Bowfin","Pre","Piers 5-7",1
+"22","Brook silverside","Construction","Construction Site",3
+"23","Brook silverside","Construction","Macassa Bay",45
+"24","Brook silverside","Construction","Piers 5-7",21
+"25","Brook silverside","Post","Construction Site",15
+"26","Brook silverside","Post","Macassa Bay",55
+"27","Brook silverside","Post","Piers 5-7",39
+"28","Brook silverside","Pre","Construction Site",6
+"29","Brook silverside","Pre","Macassa Bay",59
+"30","Brook silverside","Pre","Piers 5-7",31
+"31","Brown bullhead","Construction","Construction Site",1
+"32","Brown bullhead","Construction","Macassa Bay",16
+"33","Brown bullhead","Construction","Piers 5-7",1
+"34","Brown bullhead","Post","Construction Site",2
+"35","Brown bullhead","Post","Macassa Bay",24
+"36","Brown bullhead","Post","Piers 5-7",22
+"37","Brown bullhead","Pre","Macassa Bay",115
+"38","Brown bullhead","Pre","Piers 5-7",8
+"39","Carp","Construction","Macassa Bay",1
+"40","Carp","Post","Macassa Bay",2
+"41","Carp","Pre","Construction Site",1
+"42","Carp","Pre","Macassa Bay",8
+"43","Carp","Pre","Piers 5-7",2
+"44","Carp x Goldfish hybrid","Pre","Macassa Bay",1
+"45","Chinook salmon","Post","Macassa Bay",1
+"46","Chinook salmon","Post","Piers 5-7",1
+"47","Chinook salmon","Pre","Macassa Bay",1
+"48","Common shiner","Post","Macassa Bay",1
+"49","Emerald shiner","Construction","Macassa Bay",9
+"50","Emerald shiner","Construction","Piers 5-7",1
+"51","Emerald shiner","Post","Macassa Bay",4
+"52","Emerald shiner","Pre","Macassa Bay",28
+"53","Emerald shiner","Pre","Piers 5-7",14
+"54","Gizzard shad","Construction","Construction Site",12
+"55","Gizzard shad","Construction","Macassa Bay",62
+"56","Gizzard shad","Construction","Piers 5-7",24
+"57","Gizzard shad","Post","Construction Site",10
+"58","Gizzard shad","Post","Macassa Bay",43
+"59","Gizzard shad","Post","Piers 5-7",88
+"60","Gizzard shad","Pre","Construction Site",70
+"61","Gizzard shad","Pre","Macassa Bay",300
+"62","Gizzard shad","Pre","Piers 5-7",254
+"63","Golden shiner","Post","Macassa Bay",3
+"64","Goldfish","Construction","Macassa Bay",17
+"65","Goldfish","Construction","Piers 5-7",1
+"66","Goldfish","Post","Macassa Bay",5
+"67","Goldfish","Pre","Construction Site",1
+"68","Goldfish","Pre","Macassa Bay",24
+"69","Goldfish","Pre","Piers 5-7",1
+"70","Green sunfish","Post","Piers 5-7",8
+"71","Green sunfish","Pre","Macassa Bay",1
+"72","Largemouth bass","Construction","Macassa Bay",52
+"73","Largemouth bass","Construction","Piers 5-7",3
+"74","Largemouth bass","Post","Construction Site",23
+"75","Largemouth bass","Post","Macassa Bay",85
+"76","Largemouth bass","Post","Piers 5-7",51
+"77","Largemouth bass","Pre","Construction Site",7
+"78","Largemouth bass","Pre","Macassa Bay",46
+"79","Largemouth bass","Pre","Piers 5-7",96
+"80","Logperch","Construction","Macassa Bay",14
+"81","Logperch","Construction","Piers 5-7",10
+"82","Logperch","Post","Construction Site",20
+"83","Logperch","Post","Macassa Bay",24
+"84","Logperch","Post","Piers 5-7",62
+"85","Logperch","Pre","Construction Site",24
+"86","Logperch","Pre","Macassa Bay",53
+"87","Logperch","Pre","Piers 5-7",148
+"88","Northern pike","Construction","Macassa Bay",1
+"89","Northern pike","Pre","Construction Site",1
+"90","Northern pike","Pre","Piers 5-7",1
+"91","Pumpkinseed","Construction","Macassa Bay",9
+"92","Pumpkinseed","Construction","Piers 5-7",1
+"93","Pumpkinseed","Post","Construction Site",2
+"94","Pumpkinseed","Post","Macassa Bay",36
+"95","Pumpkinseed","Post","Piers 5-7",14
+"96","Pumpkinseed","Pre","Macassa Bay",12
+"97","Pumpkinseed","Pre","Piers 5-7",24
+"98","Rock bass","Construction","Macassa Bay",4
+"99","Rock bass","Construction","Piers 5-7",6
+"100","Rock bass","Post","Construction Site",5
+"101","Rock bass","Post","Macassa Bay",12
+"102","Rock bass","Post","Piers 5-7",59
+"103","Rock bass","Pre","Construction Site",5
+"104","Rock bass","Pre","Macassa Bay",14
+"105","Rock bass","Pre","Piers 5-7",76
+"106","Round Goby","Post","Piers 5-7",2
+"107","Round Goby","Pre","Piers 5-7",2
+"108","Rudd","Construction","Macassa Bay",8
+"109","Rudd","Construction","Piers 5-7",4
+"110","Rudd","Post","Construction Site",1
+"111","Rudd","Post","Macassa Bay",50
+"112","Rudd","Post","Piers 5-7",5
+"113","Rudd","Pre","Macassa Bay",13
+"114","Rudd","Pre","Piers 5-7",1
+"115","Shorthead redhorse","Pre","Construction Site",1
+"116","Smallmouth bass","Post","Piers 5-7",3
+"117","Smallmouth bass","Pre","Construction Site",2
+"118","Smallmouth bass","Pre","Piers 5-7",1
+"119","Spottail shiner","Construction","Macassa Bay",2
+"120","Spottail shiner","Construction","Piers 5-7",1
+"121","Spottail shiner","Post","Macassa Bay",16
+"122","Spottail shiner","Post","Piers 5-7",2
+"123","Spottail shiner","Pre","Construction Site",1
+"124","Spottail shiner","Pre","Macassa Bay",81
+"125","Spottail shiner","Pre","Piers 5-7",7
+"126","Walleye(yellow pickerel)","Construction","Construction Site",1
+"127","Walleye(yellow pickerel)","Construction","Piers 5-7",2
+"128","Walleye(yellow pickerel)","Post","Construction Site",1
+"129","Walleye(yellow pickerel)","Post","Macassa Bay",1
+"130","Walleye(yellow pickerel)","Post","Piers 5-7",5
+"131","Walleye(yellow pickerel)","Pre","Macassa Bay",4
+"132","Walleye(yellow pickerel)","Pre","Piers 5-7",2
+"133","White perch","Construction","Macassa Bay",4
+"134","White perch","Construction","Piers 5-7",2
+"135","White perch","Post","Construction Site",9
+"136","White perch","Post","Macassa Bay",35
+"137","White perch","Post","Piers 5-7",11
+"138","White perch","Pre","Construction Site",8
+"139","White perch","Pre","Macassa Bay",12
+"140","White perch","Pre","Piers 5-7",31
+"141","White sucker","Construction","Macassa Bay",1
+"142","White sucker","Post","Macassa Bay",3
+"143","White sucker","Post","Piers 5-7",2
+"144","White sucker","Pre","Construction Site",1
+"145","White sucker","Pre","Macassa Bay",14
+"146","White sucker","Pre","Piers 5-7",4
+"147","Yellow perch","Construction","Macassa Bay",15
+"148","Yellow perch","Construction","Piers 5-7",1
+"149","Yellow perch","Post","Macassa Bay",36
+"150","Yellow perch","Post","Piers 5-7",2
+"151","Yellow perch","Pre","Construction Site",3
+"152","Yellow perch","Pre","Macassa Bay",25
+"153","Yellow perch","Pre","Piers 5-7",11
