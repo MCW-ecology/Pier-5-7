@@ -22,6 +22,8 @@ library('tidyverse') #Basic organizing and plotting
 library('ggmap') #google basemaps
 library('sf') #handle shapefiles, projections, and distance calculations
 library('patchwork') #Add plots together
+library('data.table')
+library('reshape2')
 
 ###Packages off CRAN
 #----------------------------#
