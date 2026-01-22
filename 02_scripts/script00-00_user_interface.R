@@ -8,9 +8,9 @@
 ##      - higher numbers depend on lower numbers
 ##      - letters (a,b,c) indicate no dependency between same-numbered scripts
 ##
-## Author:
+## Author:M Croft-White
 ##
-## Date Created:
+## Date Created:Dec 2025
 ##
 ## --------------------------------------------------------------#
 ## Modification Notes:
@@ -26,4 +26,4 @@ source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script00-01_lo
 
 source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script01-00_import_efish_data.R") 
 
-
+source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script02-00_data_analysis.R") 

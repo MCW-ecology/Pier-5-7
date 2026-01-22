@@ -18,8 +18,6 @@
 ## --------------------------------------------------------------#
 
 
-### Core Data Processing
-#----------------------------#
 
 ##########################
 ## Import Data and Prep ##
@@ -31,7 +29,18 @@ data_efish_lenW <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_d
 data_efish_biomass <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/HH_Biomass2023.csv")
 data_taxon <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/taxon.csv")
 
+### Prep Taxon file ####
+data_taxon <- data_taxon %>% select(1:4)
+data_taxon <- data_taxon %>% rename(Sp_Code = ACCESS_CODE)
+data_taxon <- data_taxon %>% rename(Common_Name = COMMON_NAME)
 
+### Prep length weight file ####
+###Biomass column and Number.Individuals in the length weight file is confusing. 
+###Biomass refers to total biomass of that species for a transect/date, so if 
+### there are two YelPerch each weight 45 g, biomass recorded
+### in each column would be 90g and Number.Individuals would be 2
+data_efish_lenW$Biomass <- NULL ### removes the Biomass column
+data_efish_lenW$Number.Individuals <- NULL ### removes the Biomass column
 
 cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")
 
@@ -41,15 +50,23 @@ cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")
 
 temp_lenw <- subset(data_efish_lenW, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
+temp_lenw <- temp_lenw %>% rename(Sp_Code = Species)
+
 
 
 temp_biomass <- subset(data_efish_biomass, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 cat("Loaded", format(nrow(temp_biomass), big.mark = ","), "records\n")
 
-###get areas
-temp_lenw$Area<-ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH52","HH53","HH54"),"Piers 5-7","Macassa Bay")
-temp_biomass$Area<-ifelse(temp_biomass$Transect %in% c("HH50","HH51","HH52","HH53","HH54"),"Piers 5-7","Macassa Bay")
 
+###get areas
+temp_lenw$Area <- ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
+        ifelse(temp_lenw$Transect %in% c("HH52"),"Construction Site",
+               "Macassa Bay"))
+
+
+temp_biomass$Area <- ifelse(temp_biomass$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
+                         ifelse(temp_biomass$Transect %in% c("HH52"),"Construction Site",
+                                "Macassa Bay"))
 ###########################
 ####Formatting and Selecting Years########
 ##########################
@@ -93,12 +110,35 @@ batch_data <- temp_lenw[!is.na(temp_lenw$Batch_count), ] #remove rows that don't
 batch_total<- batch_data[batch_data$Individual_id == "1", ] #select out the first instance where the batch was recorded for that Transect/Date/Species
 data.table::setnames(batch_total,'Batch_count','Count')  ### Changes column name
 
-### Count of species by transect/Date/Species
+batch_total$Weight <- NULL ### removes the weight column
+batch_total <- batch_total %>% rename(Weight = Batch_weight)
+
+#data.table::setnames(batch_total,'Batch_weight','Weight')  ### Changes column name
+
+### Make a count column
 temp_lenw['Count']='1' #make a new column with the  
+temp_lenw$Count <- as.numeric(temp_lenw$Count)
 
 ### Add batch back in #####
 temp_combined <- dplyr::bind_rows(temp_lenw,batch_total)
 ### Sum count data by Transect/YMD/Species
+
+### Add Taxon info in #####
+combined <- merge(temp_combined, data_taxon, by = "Sp_Code")
+
+### Add Pre and Post Construction labels
+
+combined$TimePeriod <- as.factor(
+ ifelse(combined$Year <= 2020, "Pre",
+        ifelse(combined$Year == 2021, "Construction",
+               "Post")))
+
+#####Export Processed Data #################################----
+#-------------------------------------------------------------#
+write.csv(combined,"Efish_Table1.csv")
+saveRDS(combined, "01_data/Efish_processed.rds")
+
+
 
 
 #####Data Formatting#######################################----
@@ -143,8 +183,6 @@ temp_combined <- dplyr::bind_rows(temp_lenw,batch_total)
 # }
 
 
-#####Export Processed Data (Optional)######################----
-#-------------------------------------------------------------#
 
 # Save processed data for future use (commented out - manual export only)
 # saveRDS(df_final, "01 - Data/processed_data.rds")
