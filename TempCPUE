@@ -1,0 +1,602 @@
+"","Year","Transect","Common_Name","Abundance"
+"1","2018","HH50","Bluegill",21
+"2","2018","HH50","Brook silverside",3
+"3","2018","HH50","Brown bullhead",1
+"4","2018","HH50","Gizzard shad",134
+"5","2018","HH50","Largemouth bass",9
+"6","2018","HH50","Logperch",1
+"7","2018","HH50","Rock bass",7
+"8","2018","HH50","Round Goby",1
+"9","2018","HH50","Spottail shiner",1
+"10","2018","HH50","White perch",4
+"11","2018","HH51","Bluegill",7
+"12","2018","HH51","Bowfin",1
+"13","2018","HH51","Brook silverside",1
+"14","2018","HH51","Brown bullhead",1
+"15","2018","HH51","Gizzard shad",109
+"16","2018","HH51","Goldfish",1
+"17","2018","HH51","Largemouth bass",17
+"18","2018","HH51","Logperch",28
+"19","2018","HH51","Pumpkinseed",2
+"20","2018","HH51","Rock bass",4
+"21","2018","HH51","Smallmouth bass",1
+"22","2018","HH51","Spottail shiner",3
+"23","2018","HH51","White perch",5
+"24","2018","HH51","Yellow perch",1
+"25","2018","HH52","American eel",1
+"26","2018","HH52","Carp",1
+"27","2018","HH52","Gizzard shad",50
+"28","2018","HH52","Largemouth bass",2
+"29","2018","HH52","Rock bass",1
+"30","2018","HH52","White perch",2
+"31","2018","HH53","Bluegill",3
+"32","2018","HH53","Brown bullhead",2
+"33","2018","HH53","Gizzard shad",88
+"34","2018","HH53","Rock bass",1
+"35","2018","HH53","White perch",4
+"36","2018","HH54","Gizzard shad",4
+"37","2018","HH55","Brown bullhead",1
+"38","2018","HH55","Gizzard shad",11
+"39","2018","HH55","Goldfish",1
+"40","2018","HH55","Largemouth bass",3
+"41","2018","HH55","White sucker",1
+"42","2018","HH56","Alewife",5
+"43","2018","HH56","American eel",1
+"44","2018","HH56","Brown bullhead",1
+"45","2018","HH56","Carp",1
+"46","2018","HH56","Gizzard shad",8
+"47","2018","HH56","Largemouth bass",1
+"48","2018","HH56","Spottail shiner",6
+"49","2018","HH56","White perch",2
+"50","2018","HH56","Yellow perch",2
+"51","2018","HH57","Gizzard shad",10
+"52","2018","HH57","Rudd",1
+"53","2018","HH57","Spottail shiner",17
+"54","2018","HH58","Gizzard shad",20
+"55","2018","HH58","Spottail shiner",5
+"56","2018","HH59","Brown bullhead",3
+"57","2018","HH59","Carp",1
+"58","2018","HH59","Carp x Goldfish hybrid",1
+"59","2018","HH59","Gizzard shad",32
+"60","2018","HH59","Goldfish",2
+"61","2018","HH59","Largemouth bass",2
+"62","2018","HH59","Rock bass",3
+"63","2018","HH59","Rudd",4
+"64","2018","HH59","Spottail shiner",2
+"65","2018","HH59","White perch",5
+"66","2018","HH59","White sucker",2
+"67","2018","HH59","Yellow perch",1
+"68","2018","HH60","Bluegill",2
+"69","2018","HH60","Brown bullhead",2
+"70","2018","HH60","Carp",1
+"71","2018","HH60","Gizzard shad",18
+"72","2018","HH60","Goldfish",1
+"73","2018","HH60","Largemouth bass",1
+"74","2018","HH60","Pumpkinseed",1
+"75","2018","HH60","Rock bass",1
+"76","2018","HH60","Rudd",1
+"77","2018","HH60","Spottail shiner",10
+"78","2018","HH60","Walleye(yellow pickerel)",1
+"79","2018","HH60","White sucker",3
+"80","2018","HH60","Yellow perch",1
+"81","2019","HH50","Alewife",21
+"82","2019","HH50","American eel",1
+"83","2019","HH50","Bluegill",11
+"84","2019","HH50","Brook silverside",8
+"85","2019","HH50","Carp",1
+"86","2019","HH50","Emerald shiner",1
+"87","2019","HH50","Gizzard shad",13
+"88","2019","HH50","Largemouth bass",12
+"89","2019","HH50","Logperch",7
+"90","2019","HH50","Pumpkinseed",12
+"91","2019","HH50","Rock bass",13
+"92","2019","HH50","White perch",1
+"93","2019","HH50","White sucker",2
+"94","2019","HH50","Yellow perch",2
+"95","2019","HH51","Alewife",4
+"96","2019","HH51","Bluegill",7
+"97","2019","HH51","Brook silverside",4
+"98","2019","HH51","Brown bullhead",1
+"99","2019","HH51","Emerald shiner",1
+"100","2019","HH51","Gizzard shad",12
+"101","2019","HH51","Largemouth bass",14
+"102","2019","HH51","Logperch",18
+"103","2019","HH51","Pumpkinseed",2
+"104","2019","HH51","Rock bass",13
+"105","2019","HH51","Spottail shiner",1
+"106","2019","HH51","White perch",2
+"107","2019","HH51","White sucker",2
+"108","2019","HH52","Brook silverside",4
+"109","2019","HH52","Gizzard shad",14
+"110","2019","HH52","Goldfish",1
+"111","2019","HH52","Largemouth bass",2
+"112","2019","HH52","Logperch",14
+"113","2019","HH52","Rock bass",2
+"114","2019","HH52","Smallmouth bass",2
+"115","2019","HH52","Spottail shiner",1
+"116","2019","HH52","White perch",5
+"117","2019","HH52","White sucker",1
+"118","2019","HH52","Yellow perch",1
+"119","2019","HH53","Alewife",4
+"120","2019","HH53","American eel",2
+"121","2019","HH53","Bluegill",8
+"122","2019","HH53","Brook silverside",3
+"123","2019","HH53","Brown bullhead",1
+"124","2019","HH53","Carp",1
+"125","2019","HH53","Emerald shiner",4
+"126","2019","HH53","Gizzard shad",18
+"127","2019","HH53","Largemouth bass",11
+"128","2019","HH53","Logperch",8
+"129","2019","HH53","Northern pike",1
+"130","2019","HH53","Pumpkinseed",1
+"131","2019","HH53","Rock bass",4
+"132","2019","HH53","White perch",10
+"133","2019","HH53","Yellow perch",1
+"134","2019","HH54","Alewife",7
+"135","2019","HH54","Bluegill",1
+"136","2019","HH54","Brook silverside",9
+"137","2019","HH54","Emerald shiner",8
+"138","2019","HH54","Gizzard shad",4
+"139","2019","HH54","Walleye(yellow pickerel)",1
+"140","2019","HH55","Alewife",9
+"141","2019","HH55","Bluegill",3
+"142","2019","HH55","Brook silverside",9
+"143","2019","HH55","Brown bullhead",11
+"144","2019","HH55","Emerald shiner",5
+"145","2019","HH55","Gizzard shad",19
+"146","2019","HH55","Goldfish",5
+"147","2019","HH55","Green sunfish",1
+"148","2019","HH55","Largemouth bass",9
+"149","2019","HH55","Logperch",2
+"150","2019","HH55","Pumpkinseed",2
+"151","2019","HH55","Rock bass",2
+"152","2019","HH55","Rudd",2
+"153","2019","HH55","White sucker",2
+"154","2019","HH55","Yellow perch",6
+"155","2019","HH56","Alewife",7
+"156","2019","HH56","Brook silverside",5
+"157","2019","HH56","Brown bullhead",6
+"158","2019","HH56","Emerald shiner",7
+"159","2019","HH56","Gizzard shad",14
+"160","2019","HH56","Logperch",1
+"161","2019","HH56","Pumpkinseed",1
+"162","2019","HH57","Alewife",11
+"163","2019","HH57","Bluegill",1
+"164","2019","HH57","Brook silverside",1
+"165","2019","HH57","Brown bullhead",2
+"166","2019","HH57","Chinook salmon",1
+"167","2019","HH57","Gizzard shad",6
+"168","2019","HH57","Logperch",1
+"169","2019","HH57","Pumpkinseed",1
+"170","2019","HH58","Alewife",2
+"171","2019","HH58","Brook silverside",6
+"172","2019","HH58","Brown bullhead",7
+"173","2019","HH58","Carp",2
+"174","2019","HH58","Emerald shiner",2
+"175","2019","HH58","Gizzard shad",2
+"176","2019","HH58","Goldfish",1
+"177","2019","HH58","Spottail shiner",23
+"178","2019","HH58","White perch",1
+"179","2019","HH58","Yellow perch",1
+"180","2019","HH59","Alewife",3
+"181","2019","HH59","Bluegill",2
+"182","2019","HH59","Brown bullhead",5
+"183","2019","HH59","Emerald shiner",5
+"184","2019","HH59","Gizzard shad",12
+"185","2019","HH59","Largemouth bass",5
+"186","2019","HH59","Logperch",15
+"187","2019","HH59","Rudd",1
+"188","2019","HH59","White sucker",1
+"189","2019","HH59","Yellow perch",1
+"190","2019","HH60","Alewife",7
+"191","2019","HH60","Bigmouth buffalo",1
+"192","2019","HH60","Bluegill",1
+"193","2019","HH60","Brook silverside",6
+"194","2019","HH60","Brown bullhead",17
+"195","2019","HH60","Carp",1
+"196","2019","HH60","Gizzard shad",7
+"197","2019","HH60","Goldfish",3
+"198","2019","HH60","Largemouth bass",6
+"199","2019","HH60","Logperch",4
+"200","2019","HH60","Pumpkinseed",2
+"201","2019","HH60","Rock bass",2
+"202","2019","HH60","Spottail shiner",11
+"203","2019","HH60","White perch",1
+"204","2019","HH60","White sucker",5
+"205","2019","HH60","Yellow perch",3
+"206","2020","HH50","Bluegill",5
+"207","2020","HH50","Brown bullhead",2
+"208","2020","HH50","Gizzard shad",22
+"209","2020","HH50","Largemouth bass",10
+"210","2020","HH50","Logperch",21
+"211","2020","HH50","Pumpkinseed",5
+"212","2020","HH50","Rock bass",16
+"213","2020","HH50","Round Goby",1
+"214","2020","HH50","Walleye(yellow pickerel)",1
+"215","2020","HH50","White perch",1
+"216","2020","HH50","Yellow perch",1
+"217","2020","HH51","Alewife",1
+"218","2020","HH51","Bluegill",13
+"219","2020","HH51","Brook silverside",2
+"220","2020","HH51","Gizzard shad",8
+"221","2020","HH51","Largemouth bass",14
+"222","2020","HH51","Logperch",39
+"223","2020","HH51","Pumpkinseed",2
+"224","2020","HH51","Rock bass",16
+"225","2020","HH51","Rudd",1
+"226","2020","HH51","Spottail shiner",1
+"227","2020","HH51","Yellow perch",6
+"228","2020","HH52","Brook silverside",2
+"229","2020","HH52","Gizzard shad",26
+"230","2020","HH52","Largemouth bass",3
+"231","2020","HH52","Logperch",10
+"232","2020","HH52","Northern pike",1
+"233","2020","HH52","Rock bass",2
+"234","2020","HH52","Shorthead redhorse",1
+"235","2020","HH52","White perch",1
+"236","2020","HH52","Yellow perch",2
+"237","2020","HH53","Bluegill",1
+"238","2020","HH53","Gizzard shad",3
+"239","2020","HH53","Largemouth bass",9
+"240","2020","HH53","Logperch",41
+"241","2020","HH53","Rock bass",2
+"242","2020","HH53","White perch",3
+"243","2020","HH54","Brook silverside",1
+"244","2020","HH54","Gizzard shad",37
+"245","2020","HH54","Logperch",1
+"246","2020","HH54","Spottail shiner",1
+"247","2020","HH54","White perch",1
+"248","2020","HH55","Bluegill",4
+"249","2020","HH55","Brook silverside",15
+"250","2020","HH55","Brown bullhead",22
+"251","2020","HH55","Gizzard shad",80
+"252","2020","HH55","Goldfish",5
+"253","2020","HH55","Largemouth bass",2
+"254","2020","HH55","Pumpkinseed",1
+"255","2020","HH55","Rock bass",2
+"256","2020","HH55","Spottail shiner",1
+"257","2020","HH55","Walleye(yellow pickerel)",1
+"258","2020","HH55","White perch",2
+"259","2020","HH55","Yellow perch",2
+"260","2020","HH56","Brook silverside",4
+"261","2020","HH56","Brown bullhead",3
+"262","2020","HH56","Emerald shiner",2
+"263","2020","HH56","Gizzard shad",23
+"264","2020","HH56","Largemouth bass",2
+"265","2020","HH56","Logperch",4
+"266","2020","HH56","Walleye(yellow pickerel)",1
+"267","2020","HH56","Yellow perch",1
+"268","2020","HH57","Bigmouth buffalo",1
+"269","2020","HH57","Bluegill",1
+"270","2020","HH57","Brook silverside",1
+"271","2020","HH57","Emerald shiner",1
+"272","2020","HH57","Gizzard shad",82
+"273","2020","HH58","Brook silverside",2
+"274","2020","HH58","Brown bullhead",10
+"275","2020","HH58","Carp",1
+"276","2020","HH58","Gizzard shad",78
+"277","2020","HH58","Goldfish",2
+"278","2020","HH58","Rudd",1
+"279","2020","HH58","Yellow perch",1
+"280","2020","HH59","Alewife",1
+"281","2020","HH59","Bluegill",3
+"282","2020","HH59","Brook silverside",5
+"283","2020","HH59","Brown bullhead",13
+"284","2020","HH59","Emerald shiner",4
+"285","2020","HH59","Gizzard shad",18
+"286","2020","HH59","Goldfish",2
+"287","2020","HH59","Largemouth bass",4
+"288","2020","HH59","Logperch",2
+"289","2020","HH59","Pumpkinseed",3
+"290","2020","HH59","Rock bass",1
+"291","2020","HH59","White perch",1
+"292","2020","HH59","Yellow perch",3
+"293","2020","HH60","Bluegill",8
+"294","2020","HH60","Brook silverside",5
+"295","2020","HH60","Brown bullhead",12
+"296","2020","HH60","Carp",1
+"297","2020","HH60","Emerald shiner",2
+"298","2020","HH60","Gizzard shad",5
+"299","2020","HH60","Goldfish",2
+"300","2020","HH60","Largemouth bass",11
+"301","2020","HH60","Logperch",24
+"302","2020","HH60","Pumpkinseed",1
+"303","2020","HH60","Rock bass",3
+"304","2020","HH60","Rudd",3
+"305","2020","HH60","Spottail shiner",6
+"306","2020","HH60","Walleye(yellow pickerel)",1
+"307","2020","HH60","Yellow perch",3
+"308","2021","HH50","Bluegill",5
+"309","2021","HH50","Brook silverside",9
+"310","2021","HH50","Brown bullhead",1
+"311","2021","HH50","Emerald shiner",1
+"312","2021","HH50","Gizzard shad",8
+"313","2021","HH50","Largemouth bass",1
+"314","2021","HH50","Logperch",2
+"315","2021","HH50","Pumpkinseed",1
+"316","2021","HH50","Rock bass",4
+"317","2021","HH50","Walleye(yellow pickerel)",1
+"318","2021","HH51","Bigmouth buffalo",2
+"319","2021","HH51","Bluegill",3
+"320","2021","HH51","Brook silverside",5
+"321","2021","HH51","Gizzard shad",1
+"322","2021","HH51","Goldfish",1
+"323","2021","HH51","Logperch",1
+"324","2021","HH51","Rock bass",2
+"325","2021","HH51","Rudd",4
+"326","2021","HH51","Spottail shiner",1
+"327","2021","HH51","Walleye(yellow pickerel)",1
+"328","2021","HH51","Yellow perch",1
+"329","2021","HH52","Brook silverside",3
+"330","2021","HH52","Brown bullhead",1
+"331","2021","HH52","Gizzard shad",12
+"332","2021","HH52","Walleye(yellow pickerel)",1
+"333","2021","HH53","Bluegill",1
+"334","2021","HH53","Brook silverside",3
+"335","2021","HH53","Gizzard shad",8
+"336","2021","HH53","Largemouth bass",2
+"337","2021","HH53","Logperch",5
+"338","2021","HH53","White perch",2
+"339","2021","HH54","Brook silverside",4
+"340","2021","HH54","Gizzard shad",7
+"341","2021","HH54","Logperch",2
+"342","2021","HH55","Bluegill",9
+"343","2021","HH55","Brook silverside",11
+"344","2021","HH55","Brown bullhead",4
+"345","2021","HH55","Gizzard shad",10
+"346","2021","HH55","Goldfish",8
+"347","2021","HH55","Largemouth bass",21
+"348","2021","HH55","Logperch",6
+"349","2021","HH55","Pumpkinseed",1
+"350","2021","HH55","White sucker",1
+"351","2021","HH55","Yellow perch",6
+"352","2021","HH56","Alewife",1
+"353","2021","HH56","Brook silverside",3
+"354","2021","HH56","Emerald shiner",1
+"355","2021","HH56","Gizzard shad",8
+"356","2021","HH56","Largemouth bass",2
+"357","2021","HH56","Pumpkinseed",1
+"358","2021","HH56","Spottail shiner",1
+"359","2021","HH57","Bluegill",2
+"360","2021","HH57","Brook silverside",14
+"361","2021","HH57","Brown bullhead",1
+"362","2021","HH57","Emerald shiner",2
+"363","2021","HH57","Gizzard shad",22
+"364","2021","HH57","Logperch",2
+"365","2021","HH58","Bluegill",10
+"366","2021","HH58","Brook silverside",4
+"367","2021","HH58","Brown bullhead",6
+"368","2021","HH58","Gizzard shad",14
+"369","2021","HH58","Goldfish",2
+"370","2021","HH58","Largemouth bass",5
+"371","2021","HH58","Logperch",5
+"372","2021","HH58","Rudd",1
+"373","2021","HH58","White perch",2
+"374","2021","HH58","Yellow perch",5
+"375","2021","HH59","Bluegill",2
+"376","2021","HH59","Brook silverside",6
+"377","2021","HH59","Brown bullhead",1
+"378","2021","HH59","Emerald shiner",3
+"379","2021","HH59","Gizzard shad",4
+"380","2021","HH59","Goldfish",3
+"381","2021","HH59","Largemouth bass",3
+"382","2021","HH59","Pumpkinseed",1
+"383","2021","HH59","Rock bass",4
+"384","2021","HH59","Rudd",4
+"385","2021","HH59","Spottail shiner",1
+"386","2021","HH59","White perch",1
+"387","2021","HH59","Yellow perch",2
+"388","2021","HH60","Bluegill",8
+"389","2021","HH60","Brook silverside",7
+"390","2021","HH60","Brown bullhead",4
+"391","2021","HH60","Carp",1
+"392","2021","HH60","Emerald shiner",3
+"393","2021","HH60","Gizzard shad",4
+"394","2021","HH60","Goldfish",4
+"395","2021","HH60","Largemouth bass",21
+"396","2021","HH60","Logperch",1
+"397","2021","HH60","Northern pike",1
+"398","2021","HH60","Pumpkinseed",6
+"399","2021","HH60","Rudd",3
+"400","2021","HH60","White perch",1
+"401","2021","HH60","Yellow perch",2
+"402","2022","HH50","Bluegill",17
+"403","2022","HH50","Brook silverside",1
+"404","2022","HH50","Chinook salmon",1
+"405","2022","HH50","Gizzard shad",7
+"406","2022","HH50","Green sunfish",1
+"407","2022","HH50","Largemouth bass",7
+"408","2022","HH50","Pumpkinseed",4
+"409","2022","HH50","Rock bass",16
+"410","2022","HH51","Bluegill",2
+"411","2022","HH51","Brook silverside",20
+"412","2022","HH51","Brown bullhead",13
+"413","2022","HH51","Gizzard shad",14
+"414","2022","HH51","Largemouth bass",4
+"415","2022","HH51","Logperch",7
+"416","2022","HH51","Rock bass",4
+"417","2022","HH51","Rudd",2
+"418","2022","HH51","Walleye(yellow pickerel)",1
+"419","2022","HH51","Yellow perch",1
+"420","2022","HH52","Brook silverside",12
+"421","2022","HH52","Gizzard shad",3
+"422","2022","HH52","Largemouth bass",4
+"423","2022","HH52","Logperch",2
+"424","2022","HH52","Rock bass",3
+"425","2022","HH53","Bluegill",6
+"426","2022","HH53","Brook silverside",5
+"427","2022","HH53","Gizzard shad",6
+"428","2022","HH53","Green sunfish",2
+"429","2022","HH53","Largemouth bass",6
+"430","2022","HH53","Logperch",24
+"431","2022","HH53","Rock bass",4
+"432","2022","HH53","Rudd",1
+"433","2022","HH53","Walleye(yellow pickerel)",1
+"434","2022","HH53","White perch",2
+"435","2022","HH54","Bluegill",5
+"436","2022","HH54","Brook silverside",10
+"437","2022","HH54","Brown bullhead",1
+"438","2022","HH54","Largemouth bass",6
+"439","2022","HH54","Logperch",7
+"440","2022","HH54","Rock bass",1
+"441","2022","HH54","White perch",1
+"442","2022","HH55","Alewife",1
+"443","2022","HH55","Bluegill",5
+"444","2022","HH55","Brook silverside",10
+"445","2022","HH55","Brown bullhead",2
+"446","2022","HH55","Chinook salmon",1
+"447","2022","HH55","Gizzard shad",2
+"448","2022","HH55","Largemouth bass",15
+"449","2022","HH55","Logperch",2
+"450","2022","HH55","Pumpkinseed",1
+"451","2022","HH55","Rock bass",2
+"452","2022","HH55","Rudd",11
+"453","2022","HH55","Spottail shiner",8
+"454","2022","HH55","White perch",7
+"455","2022","HH55","White sucker",1
+"456","2022","HH55","Yellow perch",8
+"457","2022","HH56","Bluegill",2
+"458","2022","HH56","Brook silverside",17
+"459","2022","HH56","Brown bullhead",2
+"460","2022","HH56","Gizzard shad",2
+"461","2022","HH56","Goldfish",2
+"462","2022","HH56","Largemouth bass",8
+"463","2022","HH56","Logperch",1
+"464","2022","HH56","Rudd",4
+"465","2022","HH56","White perch",7
+"466","2022","HH56","Yellow perch",3
+"467","2022","HH57","Alewife",1
+"468","2022","HH57","Bluegill",1
+"469","2022","HH57","Brook silverside",15
+"470","2022","HH57","Brown bullhead",5
+"471","2022","HH57","Carp",1
+"472","2022","HH57","Largemouth bass",7
+"473","2022","HH57","Rudd",2
+"474","2022","HH57","Walleye(yellow pickerel)",1
+"475","2022","HH57","White perch",8
+"476","2022","HH57","Yellow perch",1
+"477","2022","HH58","Alewife",2
+"478","2022","HH58","Bigmouth buffalo",1
+"479","2022","HH58","Bluegill",5
+"480","2022","HH58","Brown bullhead",3
+"481","2022","HH58","Gizzard shad",5
+"482","2022","HH58","Largemouth bass",9
+"483","2022","HH58","Pumpkinseed",2
+"484","2022","HH58","White perch",3
+"485","2022","HH59","Bluegill",2
+"486","2022","HH59","Bluntnose minnow",1
+"487","2022","HH59","Brook silverside",3
+"488","2022","HH59","Brown bullhead",6
+"489","2022","HH59","Carp",1
+"490","2022","HH59","Gizzard shad",4
+"491","2022","HH59","Goldfish",2
+"492","2022","HH59","Largemouth bass",8
+"493","2023","HH50","Bluegill",12
+"494","2023","HH50","Brook silverside",2
+"495","2023","HH50","Brown bullhead",3
+"496","2023","HH50","Gizzard shad",17
+"497","2023","HH50","Green sunfish",2
+"498","2023","HH50","Largemouth bass",5
+"499","2023","HH50","Logperch",4
+"500","2023","HH50","Pumpkinseed",5
+"501","2023","HH50","Rock bass",14
+"502","2023","HH50","Rudd",1
+"503","2023","HH50","Smallmouth bass",2
+"504","2023","HH50","Spottail shiner",1
+"505","2023","HH50","Walleye(yellow pickerel)",1
+"506","2023","HH50","White perch",2
+"507","2023","HH51","American eel",1
+"508","2023","HH51","Bigmouth buffalo",1
+"509","2023","HH51","Bluegill",20
+"510","2023","HH51","Gizzard shad",16
+"511","2023","HH51","Largemouth bass",10
+"512","2023","HH51","Logperch",16
+"513","2023","HH51","Pumpkinseed",5
+"514","2023","HH51","Rock bass",17
+"515","2023","HH51","Rudd",1
+"516","2023","HH51","White perch",1
+"517","2023","HH51","White sucker",2
+"518","2023","HH52","Bluegill",3
+"519","2023","HH52","Brook silverside",3
+"520","2023","HH52","Brown bullhead",2
+"521","2023","HH52","Gizzard shad",7
+"522","2023","HH52","Largemouth bass",19
+"523","2023","HH52","Logperch",18
+"524","2023","HH52","Pumpkinseed",2
+"525","2023","HH52","Rock bass",2
+"526","2023","HH52","Rudd",1
+"527","2023","HH52","Walleye(yellow pickerel)",1
+"528","2023","HH52","White perch",9
+"529","2023","HH53","Bluegill",2
+"530","2023","HH53","Brook silverside",1
+"531","2023","HH53","Brown bullhead",3
+"532","2023","HH53","Gizzard shad",8
+"533","2023","HH53","Green sunfish",2
+"534","2023","HH53","Largemouth bass",1
+"535","2023","HH53","Rock bass",1
+"536","2023","HH53","White perch",5
+"537","2023","HH54","Bluegill",7
+"538","2023","HH54","Brown bullhead",2
+"539","2023","HH54","Gizzard shad",20
+"540","2023","HH54","Green sunfish",1
+"541","2023","HH54","Largemouth bass",12
+"542","2023","HH54","Logperch",4
+"543","2023","HH54","Rock bass",2
+"544","2023","HH54","Round Goby",2
+"545","2023","HH54","Smallmouth bass",1
+"546","2023","HH54","Spottail shiner",1
+"547","2023","HH54","Walleye(yellow pickerel)",2
+"548","2023","HH54","Yellow perch",1
+"549","2023","HH55","Bluegill",12
+"550","2023","HH55","Brook silverside",3
+"551","2023","HH55","Brown bullhead",1
+"552","2023","HH55","Gizzard shad",14
+"553","2023","HH55","Goldfish",1
+"554","2023","HH55","Largemouth bass",6
+"555","2023","HH55","Logperch",1
+"556","2023","HH55","Pumpkinseed",7
+"557","2023","HH55","Rock bass",2
+"558","2023","HH55","Rudd",6
+"559","2023","HH55","White perch",1
+"560","2023","HH55","Yellow perch",4
+"561","2023","HH56","Bluegill",4
+"562","2023","HH56","Brook silverside",2
+"563","2023","HH56","Brown bullhead",2
+"564","2023","HH56","Largemouth bass",5
+"565","2023","HH56","Logperch",3
+"566","2023","HH56","Pumpkinseed",6
+"567","2023","HH56","Rudd",10
+"568","2023","HH56","White perch",2
+"569","2023","HH56","Yellow perch",6
+"570","2023","HH58","Bluegill",2
+"571","2023","HH58","Brook silverside",2
+"572","2023","HH58","Gizzard shad",15
+"573","2023","HH58","Largemouth bass",2
+"574","2023","HH58","Pumpkinseed",6
+"575","2023","HH58","Rudd",1
+"576","2023","HH58","Yellow perch",4
+"577","2023","HH59","Bluegill",1
+"578","2023","HH59","Brook silverside",1
+"579","2023","HH59","Emerald shiner",2
+"580","2023","HH59","Golden shiner",3
+"581","2023","HH59","Largemouth bass",17
+"582","2023","HH59","Logperch",2
+"583","2023","HH59","Pumpkinseed",3
+"584","2023","HH59","Rock bass",7
+"585","2023","HH59","Rudd",2
+"586","2023","HH59","White perch",3
+"587","2023","HH60","Bluegill",20
+"588","2023","HH60","Brook silverside",2
+"589","2023","HH60","Brown bullhead",3
+"590","2023","HH60","Common shiner",1
+"591","2023","HH60","Emerald shiner",2
+"592","2023","HH60","Gizzard shad",1
+"593","2023","HH60","Largemouth bass",8
+"594","2023","HH60","Logperch",15
+"595","2023","HH60","Pumpkinseed",11
+"596","2023","HH60","Rock bass",1
+"597","2023","HH60","Rudd",14
+"598","2023","HH60","Spottail shiner",8
+"599","2023","HH60","White perch",4
+"600","2023","HH60","White sucker",2
+"601","2023","HH60","Yellow perch",10

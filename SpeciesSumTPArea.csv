@@ -1,154 +1,154 @@
-"","Sp_Code","Common_Name","TimePeriod","AreaTP","Count"
-"1","F0051","Bowfin","Pre","Piers 5-7-Pre",1
-"2","F0061","Alewife","Construction","Macassa Bay-Construction",1
-"3","F0061","Alewife","Post","Macassa Bay-Post",4
-"4","F0061","Alewife","Pre","Macassa Bay-Pre",45
-"5","F0061","Alewife","Pre","Piers 5-7-Pre",37
-"6","F0063","Gizzard shad","Construction","Construction Site-Construction",12
-"7","F0063","Gizzard shad","Construction","Macassa Bay-Construction",62
-"8","F0063","Gizzard shad","Construction","Piers 5-7-Construction",24
-"9","F0063","Gizzard shad","Post","Construction Site-Post",10
-"10","F0063","Gizzard shad","Post","Macassa Bay-Post",43
-"11","F0063","Gizzard shad","Post","Piers 5-7-Post",88
-"12","F0063","Gizzard shad","Pre","Construction Site-Pre",70
-"13","F0063","Gizzard shad","Pre","Macassa Bay-Pre",300
-"14","F0063","Gizzard shad","Pre","Piers 5-7-Pre",254
-"15","F0075","Chinook salmon","Post","Macassa Bay-Post",1
-"16","F0075","Chinook salmon","Post","Piers 5-7-Post",1
-"17","F0075","Chinook salmon","Pre","Macassa Bay-Pre",1
-"18","F0131","Northern pike","Construction","Macassa Bay-Construction",1
-"19","F0131","Northern pike","Pre","Construction Site-Pre",1
-"20","F0131","Northern pike","Pre","Piers 5-7-Pre",1
-"21","F0163","White sucker","Construction","Macassa Bay-Construction",1
-"22","F0163","White sucker","Post","Macassa Bay-Post",3
-"23","F0163","White sucker","Post","Piers 5-7-Post",2
-"24","F0163","White sucker","Pre","Construction Site-Pre",1
-"25","F0163","White sucker","Pre","Macassa Bay-Pre",14
-"26","F0163","White sucker","Pre","Piers 5-7-Pre",4
-"27","F0166","Bigmouth buffalo","Construction","Piers 5-7-Construction",2
-"28","F0166","Bigmouth buffalo","Post","Macassa Bay-Post",1
-"29","F0166","Bigmouth buffalo","Post","Piers 5-7-Post",1
-"30","F0166","Bigmouth buffalo","Pre","Macassa Bay-Pre",2
-"31","F0171","Shorthead redhorse","Pre","Construction Site-Pre",1
-"32","F0181","Goldfish","Construction","Macassa Bay-Construction",17
-"33","F0181","Goldfish","Construction","Piers 5-7-Construction",1
-"34","F0181","Goldfish","Post","Macassa Bay-Post",5
-"35","F0181","Goldfish","Pre","Construction Site-Pre",1
-"36","F0181","Goldfish","Pre","Macassa Bay-Pre",24
-"37","F0181","Goldfish","Pre","Piers 5-7-Pre",1
-"38","F0186","Carp","Construction","Macassa Bay-Construction",1
-"39","F0186","Carp","Post","Macassa Bay-Post",2
-"40","F0186","Carp","Pre","Construction Site-Pre",1
-"41","F0186","Carp","Pre","Macassa Bay-Pre",8
-"42","F0186","Carp","Pre","Piers 5-7-Pre",2
-"43","F0194","Golden shiner","Post","Macassa Bay-Post",3
-"44","F0196","Emerald shiner","Construction","Macassa Bay-Construction",9
-"45","F0196","Emerald shiner","Construction","Piers 5-7-Construction",1
-"46","F0196","Emerald shiner","Post","Macassa Bay-Post",4
-"47","F0196","Emerald shiner","Pre","Macassa Bay-Pre",28
-"48","F0196","Emerald shiner","Pre","Piers 5-7-Pre",14
-"49","F0198","Common shiner","Post","Macassa Bay-Post",1
-"50","F0201","Spottail shiner","Construction","Macassa Bay-Construction",2
-"51","F0201","Spottail shiner","Construction","Piers 5-7-Construction",1
-"52","F0201","Spottail shiner","Post","Macassa Bay-Post",16
-"53","F0201","Spottail shiner","Post","Piers 5-7-Post",2
-"54","F0201","Spottail shiner","Pre","Construction Site-Pre",1
-"55","F0201","Spottail shiner","Pre","Macassa Bay-Pre",81
-"56","F0201","Spottail shiner","Pre","Piers 5-7-Pre",7
-"57","F0208","Bluntnose minnow","Post","Macassa Bay-Post",1
-"58","F0220","Rudd","Construction","Macassa Bay-Construction",8
-"59","F0220","Rudd","Construction","Piers 5-7-Construction",4
-"60","F0220","Rudd","Post","Construction Site-Post",1
-"61","F0220","Rudd","Post","Macassa Bay-Post",50
-"62","F0220","Rudd","Post","Piers 5-7-Post",5
-"63","F0220","Rudd","Pre","Macassa Bay-Pre",13
-"64","F0220","Rudd","Pre","Piers 5-7-Pre",1
-"65","F0233","Brown bullhead","Construction","Construction Site-Construction",1
-"66","F0233","Brown bullhead","Construction","Macassa Bay-Construction",16
-"67","F0233","Brown bullhead","Construction","Piers 5-7-Construction",1
-"68","F0233","Brown bullhead","Post","Construction Site-Post",2
-"69","F0233","Brown bullhead","Post","Macassa Bay-Post",24
-"70","F0233","Brown bullhead","Post","Piers 5-7-Post",22
-"71","F0233","Brown bullhead","Pre","Macassa Bay-Pre",115
-"72","F0233","Brown bullhead","Pre","Piers 5-7-Pre",8
-"73","F0251","American eel","Post","Piers 5-7-Post",1
-"74","F0251","American eel","Pre","Construction Site-Pre",1
-"75","F0251","American eel","Pre","Macassa Bay-Pre",1
-"76","F0251","American eel","Pre","Piers 5-7-Pre",3
-"77","F0301","White perch","Construction","Macassa Bay-Construction",4
-"78","F0301","White perch","Construction","Piers 5-7-Construction",2
-"79","F0301","White perch","Post","Construction Site-Post",9
-"80","F0301","White perch","Post","Macassa Bay-Post",35
-"81","F0301","White perch","Post","Piers 5-7-Post",11
-"82","F0301","White perch","Pre","Construction Site-Pre",8
-"83","F0301","White perch","Pre","Macassa Bay-Pre",12
-"84","F0301","White perch","Pre","Piers 5-7-Pre",31
-"85","F0311","Rock bass","Construction","Macassa Bay-Construction",4
-"86","F0311","Rock bass","Construction","Piers 5-7-Construction",6
-"87","F0311","Rock bass","Post","Construction Site-Post",5
-"88","F0311","Rock bass","Post","Macassa Bay-Post",12
-"89","F0311","Rock bass","Post","Piers 5-7-Post",59
-"90","F0311","Rock bass","Pre","Construction Site-Pre",5
-"91","F0311","Rock bass","Pre","Macassa Bay-Pre",14
-"92","F0311","Rock bass","Pre","Piers 5-7-Pre",76
-"93","F0312","Green sunfish","Post","Piers 5-7-Post",8
-"94","F0312","Green sunfish","Pre","Macassa Bay-Pre",1
-"95","F0313","Pumpkinseed","Construction","Macassa Bay-Construction",9
-"96","F0313","Pumpkinseed","Construction","Piers 5-7-Construction",1
-"97","F0313","Pumpkinseed","Post","Construction Site-Post",2
-"98","F0313","Pumpkinseed","Post","Macassa Bay-Post",36
-"99","F0313","Pumpkinseed","Post","Piers 5-7-Post",14
-"100","F0313","Pumpkinseed","Pre","Macassa Bay-Pre",12
-"101","F0313","Pumpkinseed","Pre","Piers 5-7-Pre",24
-"102","F0314","Bluegill","Construction","Macassa Bay-Construction",31
-"103","F0314","Bluegill","Construction","Piers 5-7-Construction",9
-"104","F0314","Bluegill","Post","Construction Site-Post",3
-"105","F0314","Bluegill","Post","Macassa Bay-Post",54
-"106","F0314","Bluegill","Post","Piers 5-7-Post",71
-"107","F0314","Bluegill","Pre","Macassa Bay-Pre",25
-"108","F0314","Bluegill","Pre","Piers 5-7-Pre",77
-"109","F0316","Smallmouth bass","Post","Piers 5-7-Post",3
-"110","F0316","Smallmouth bass","Pre","Construction Site-Pre",2
-"111","F0316","Smallmouth bass","Pre","Piers 5-7-Pre",1
-"112","F0317","Largemouth bass","Construction","Macassa Bay-Construction",52
-"113","F0317","Largemouth bass","Construction","Piers 5-7-Construction",3
-"114","F0317","Largemouth bass","Post","Construction Site-Post",23
-"115","F0317","Largemouth bass","Post","Macassa Bay-Post",85
-"116","F0317","Largemouth bass","Post","Piers 5-7-Post",51
-"117","F0317","Largemouth bass","Pre","Construction Site-Pre",7
-"118","F0317","Largemouth bass","Pre","Macassa Bay-Pre",46
-"119","F0317","Largemouth bass","Pre","Piers 5-7-Pre",96
-"120","F0331","Yellow perch","Construction","Macassa Bay-Construction",15
-"121","F0331","Yellow perch","Construction","Piers 5-7-Construction",1
-"122","F0331","Yellow perch","Post","Macassa Bay-Post",36
-"123","F0331","Yellow perch","Post","Piers 5-7-Post",2
-"124","F0331","Yellow perch","Pre","Construction Site-Pre",3
-"125","F0331","Yellow perch","Pre","Macassa Bay-Pre",25
-"126","F0331","Yellow perch","Pre","Piers 5-7-Pre",11
-"127","F0334","Walleye(yellow pickerel)","Construction","Construction Site-Construction",1
-"128","F0334","Walleye(yellow pickerel)","Construction","Piers 5-7-Construction",2
-"129","F0334","Walleye(yellow pickerel)","Post","Construction Site-Post",1
-"130","F0334","Walleye(yellow pickerel)","Post","Macassa Bay-Post",1
-"131","F0334","Walleye(yellow pickerel)","Post","Piers 5-7-Post",5
-"132","F0334","Walleye(yellow pickerel)","Pre","Macassa Bay-Pre",4
-"133","F0334","Walleye(yellow pickerel)","Pre","Piers 5-7-Pre",2
-"134","F0342","Logperch","Construction","Macassa Bay-Construction",14
-"135","F0342","Logperch","Construction","Piers 5-7-Construction",10
-"136","F0342","Logperch","Post","Construction Site-Post",20
-"137","F0342","Logperch","Post","Macassa Bay-Post",24
-"138","F0342","Logperch","Post","Piers 5-7-Post",62
-"139","F0342","Logperch","Pre","Construction Site-Pre",24
-"140","F0342","Logperch","Pre","Macassa Bay-Pre",53
-"141","F0342","Logperch","Pre","Piers 5-7-Pre",148
-"142","F0361","Brook silverside","Construction","Construction Site-Construction",3
-"143","F0361","Brook silverside","Construction","Macassa Bay-Construction",45
-"144","F0361","Brook silverside","Construction","Piers 5-7-Construction",21
-"145","F0361","Brook silverside","Post","Construction Site-Post",15
-"146","F0361","Brook silverside","Post","Macassa Bay-Post",55
-"147","F0361","Brook silverside","Post","Piers 5-7-Post",39
-"148","F0361","Brook silverside","Pre","Construction Site-Pre",6
-"149","F0361","Brook silverside","Pre","Macassa Bay-Pre",59
-"150","F0361","Brook silverside","Pre","Piers 5-7-Pre",31
-"151","F0366","Round Goby","Post","Piers 5-7-Post",2
-"152","F0366","Round Goby","Pre","Piers 5-7-Pre",2
-"153","F0601","Carp x Goldfish hybrid","Pre","Macassa Bay-Pre",1
+"","Sp_Code","Common_Name","TimePeriod","Area","AreaTP","Count"
+"1","F0051","Bowfin","Pre","Piers 5-7","Piers 5-7-Pre",1
+"2","F0061","Alewife","Construction","Macassa Bay","Macassa Bay-Construction",1
+"3","F0061","Alewife","Post","Macassa Bay","Macassa Bay-Post",4
+"4","F0061","Alewife","Pre","Macassa Bay","Macassa Bay-Pre",45
+"5","F0061","Alewife","Pre","Piers 5-7","Piers 5-7-Pre",37
+"6","F0063","Gizzard shad","Construction","Construction Site","Construction Site-Construction",12
+"7","F0063","Gizzard shad","Construction","Macassa Bay","Macassa Bay-Construction",62
+"8","F0063","Gizzard shad","Construction","Piers 5-7","Piers 5-7-Construction",24
+"9","F0063","Gizzard shad","Post","Construction Site","Construction Site-Post",10
+"10","F0063","Gizzard shad","Post","Macassa Bay","Macassa Bay-Post",43
+"11","F0063","Gizzard shad","Post","Piers 5-7","Piers 5-7-Post",88
+"12","F0063","Gizzard shad","Pre","Construction Site","Construction Site-Pre",70
+"13","F0063","Gizzard shad","Pre","Macassa Bay","Macassa Bay-Pre",300
+"14","F0063","Gizzard shad","Pre","Piers 5-7","Piers 5-7-Pre",254
+"15","F0075","Chinook salmon","Post","Macassa Bay","Macassa Bay-Post",1
+"16","F0075","Chinook salmon","Post","Piers 5-7","Piers 5-7-Post",1
+"17","F0075","Chinook salmon","Pre","Macassa Bay","Macassa Bay-Pre",1
+"18","F0131","Northern pike","Construction","Macassa Bay","Macassa Bay-Construction",1
+"19","F0131","Northern pike","Pre","Construction Site","Construction Site-Pre",1
+"20","F0131","Northern pike","Pre","Piers 5-7","Piers 5-7-Pre",1
+"21","F0163","White sucker","Construction","Macassa Bay","Macassa Bay-Construction",1
+"22","F0163","White sucker","Post","Macassa Bay","Macassa Bay-Post",3
+"23","F0163","White sucker","Post","Piers 5-7","Piers 5-7-Post",2
+"24","F0163","White sucker","Pre","Construction Site","Construction Site-Pre",1
+"25","F0163","White sucker","Pre","Macassa Bay","Macassa Bay-Pre",14
+"26","F0163","White sucker","Pre","Piers 5-7","Piers 5-7-Pre",4
+"27","F0166","Bigmouth buffalo","Construction","Piers 5-7","Piers 5-7-Construction",2
+"28","F0166","Bigmouth buffalo","Post","Macassa Bay","Macassa Bay-Post",1
+"29","F0166","Bigmouth buffalo","Post","Piers 5-7","Piers 5-7-Post",1
+"30","F0166","Bigmouth buffalo","Pre","Macassa Bay","Macassa Bay-Pre",2
+"31","F0171","Shorthead redhorse","Pre","Construction Site","Construction Site-Pre",1
+"32","F0181","Goldfish","Construction","Macassa Bay","Macassa Bay-Construction",17
+"33","F0181","Goldfish","Construction","Piers 5-7","Piers 5-7-Construction",1
+"34","F0181","Goldfish","Post","Macassa Bay","Macassa Bay-Post",5
+"35","F0181","Goldfish","Pre","Construction Site","Construction Site-Pre",1
+"36","F0181","Goldfish","Pre","Macassa Bay","Macassa Bay-Pre",24
+"37","F0181","Goldfish","Pre","Piers 5-7","Piers 5-7-Pre",1
+"38","F0186","Carp","Construction","Macassa Bay","Macassa Bay-Construction",1
+"39","F0186","Carp","Post","Macassa Bay","Macassa Bay-Post",2
+"40","F0186","Carp","Pre","Construction Site","Construction Site-Pre",1
+"41","F0186","Carp","Pre","Macassa Bay","Macassa Bay-Pre",8
+"42","F0186","Carp","Pre","Piers 5-7","Piers 5-7-Pre",2
+"43","F0194","Golden shiner","Post","Macassa Bay","Macassa Bay-Post",3
+"44","F0196","Emerald shiner","Construction","Macassa Bay","Macassa Bay-Construction",9
+"45","F0196","Emerald shiner","Construction","Piers 5-7","Piers 5-7-Construction",1
+"46","F0196","Emerald shiner","Post","Macassa Bay","Macassa Bay-Post",4
+"47","F0196","Emerald shiner","Pre","Macassa Bay","Macassa Bay-Pre",28
+"48","F0196","Emerald shiner","Pre","Piers 5-7","Piers 5-7-Pre",14
+"49","F0198","Common shiner","Post","Macassa Bay","Macassa Bay-Post",1
+"50","F0201","Spottail shiner","Construction","Macassa Bay","Macassa Bay-Construction",2
+"51","F0201","Spottail shiner","Construction","Piers 5-7","Piers 5-7-Construction",1
+"52","F0201","Spottail shiner","Post","Macassa Bay","Macassa Bay-Post",16
+"53","F0201","Spottail shiner","Post","Piers 5-7","Piers 5-7-Post",2
+"54","F0201","Spottail shiner","Pre","Construction Site","Construction Site-Pre",1
+"55","F0201","Spottail shiner","Pre","Macassa Bay","Macassa Bay-Pre",81
+"56","F0201","Spottail shiner","Pre","Piers 5-7","Piers 5-7-Pre",7
+"57","F0208","Bluntnose minnow","Post","Macassa Bay","Macassa Bay-Post",1
+"58","F0220","Rudd","Construction","Macassa Bay","Macassa Bay-Construction",8
+"59","F0220","Rudd","Construction","Piers 5-7","Piers 5-7-Construction",4
+"60","F0220","Rudd","Post","Construction Site","Construction Site-Post",1
+"61","F0220","Rudd","Post","Macassa Bay","Macassa Bay-Post",50
+"62","F0220","Rudd","Post","Piers 5-7","Piers 5-7-Post",5
+"63","F0220","Rudd","Pre","Macassa Bay","Macassa Bay-Pre",13
+"64","F0220","Rudd","Pre","Piers 5-7","Piers 5-7-Pre",1
+"65","F0233","Brown bullhead","Construction","Construction Site","Construction Site-Construction",1
+"66","F0233","Brown bullhead","Construction","Macassa Bay","Macassa Bay-Construction",16
+"67","F0233","Brown bullhead","Construction","Piers 5-7","Piers 5-7-Construction",1
+"68","F0233","Brown bullhead","Post","Construction Site","Construction Site-Post",2
+"69","F0233","Brown bullhead","Post","Macassa Bay","Macassa Bay-Post",24
+"70","F0233","Brown bullhead","Post","Piers 5-7","Piers 5-7-Post",22
+"71","F0233","Brown bullhead","Pre","Macassa Bay","Macassa Bay-Pre",115
+"72","F0233","Brown bullhead","Pre","Piers 5-7","Piers 5-7-Pre",8
+"73","F0251","American eel","Post","Piers 5-7","Piers 5-7-Post",1
+"74","F0251","American eel","Pre","Construction Site","Construction Site-Pre",1
+"75","F0251","American eel","Pre","Macassa Bay","Macassa Bay-Pre",1
+"76","F0251","American eel","Pre","Piers 5-7","Piers 5-7-Pre",3
+"77","F0301","White perch","Construction","Macassa Bay","Macassa Bay-Construction",4
+"78","F0301","White perch","Construction","Piers 5-7","Piers 5-7-Construction",2
+"79","F0301","White perch","Post","Construction Site","Construction Site-Post",9
+"80","F0301","White perch","Post","Macassa Bay","Macassa Bay-Post",35
+"81","F0301","White perch","Post","Piers 5-7","Piers 5-7-Post",11
+"82","F0301","White perch","Pre","Construction Site","Construction Site-Pre",8
+"83","F0301","White perch","Pre","Macassa Bay","Macassa Bay-Pre",12
+"84","F0301","White perch","Pre","Piers 5-7","Piers 5-7-Pre",31
+"85","F0311","Rock bass","Construction","Macassa Bay","Macassa Bay-Construction",4
+"86","F0311","Rock bass","Construction","Piers 5-7","Piers 5-7-Construction",6
+"87","F0311","Rock bass","Post","Construction Site","Construction Site-Post",5
+"88","F0311","Rock bass","Post","Macassa Bay","Macassa Bay-Post",12
+"89","F0311","Rock bass","Post","Piers 5-7","Piers 5-7-Post",59
+"90","F0311","Rock bass","Pre","Construction Site","Construction Site-Pre",5
+"91","F0311","Rock bass","Pre","Macassa Bay","Macassa Bay-Pre",14
+"92","F0311","Rock bass","Pre","Piers 5-7","Piers 5-7-Pre",76
+"93","F0312","Green sunfish","Post","Piers 5-7","Piers 5-7-Post",8
+"94","F0312","Green sunfish","Pre","Macassa Bay","Macassa Bay-Pre",1
+"95","F0313","Pumpkinseed","Construction","Macassa Bay","Macassa Bay-Construction",9
+"96","F0313","Pumpkinseed","Construction","Piers 5-7","Piers 5-7-Construction",1
+"97","F0313","Pumpkinseed","Post","Construction Site","Construction Site-Post",2
+"98","F0313","Pumpkinseed","Post","Macassa Bay","Macassa Bay-Post",36
+"99","F0313","Pumpkinseed","Post","Piers 5-7","Piers 5-7-Post",14
+"100","F0313","Pumpkinseed","Pre","Macassa Bay","Macassa Bay-Pre",12
+"101","F0313","Pumpkinseed","Pre","Piers 5-7","Piers 5-7-Pre",24
+"102","F0314","Bluegill","Construction","Macassa Bay","Macassa Bay-Construction",31
+"103","F0314","Bluegill","Construction","Piers 5-7","Piers 5-7-Construction",9
+"104","F0314","Bluegill","Post","Construction Site","Construction Site-Post",3
+"105","F0314","Bluegill","Post","Macassa Bay","Macassa Bay-Post",54
+"106","F0314","Bluegill","Post","Piers 5-7","Piers 5-7-Post",71
+"107","F0314","Bluegill","Pre","Macassa Bay","Macassa Bay-Pre",25
+"108","F0314","Bluegill","Pre","Piers 5-7","Piers 5-7-Pre",77
+"109","F0316","Smallmouth bass","Post","Piers 5-7","Piers 5-7-Post",3
+"110","F0316","Smallmouth bass","Pre","Construction Site","Construction Site-Pre",2
+"111","F0316","Smallmouth bass","Pre","Piers 5-7","Piers 5-7-Pre",1
+"112","F0317","Largemouth bass","Construction","Macassa Bay","Macassa Bay-Construction",52
+"113","F0317","Largemouth bass","Construction","Piers 5-7","Piers 5-7-Construction",3
+"114","F0317","Largemouth bass","Post","Construction Site","Construction Site-Post",23
+"115","F0317","Largemouth bass","Post","Macassa Bay","Macassa Bay-Post",85
+"116","F0317","Largemouth bass","Post","Piers 5-7","Piers 5-7-Post",51
+"117","F0317","Largemouth bass","Pre","Construction Site","Construction Site-Pre",7
+"118","F0317","Largemouth bass","Pre","Macassa Bay","Macassa Bay-Pre",46
+"119","F0317","Largemouth bass","Pre","Piers 5-7","Piers 5-7-Pre",96
+"120","F0331","Yellow perch","Construction","Macassa Bay","Macassa Bay-Construction",15
+"121","F0331","Yellow perch","Construction","Piers 5-7","Piers 5-7-Construction",1
+"122","F0331","Yellow perch","Post","Macassa Bay","Macassa Bay-Post",36
+"123","F0331","Yellow perch","Post","Piers 5-7","Piers 5-7-Post",2
+"124","F0331","Yellow perch","Pre","Construction Site","Construction Site-Pre",3
+"125","F0331","Yellow perch","Pre","Macassa Bay","Macassa Bay-Pre",25
+"126","F0331","Yellow perch","Pre","Piers 5-7","Piers 5-7-Pre",11
+"127","F0334","Walleye(yellow pickerel)","Construction","Construction Site","Construction Site-Construction",1
+"128","F0334","Walleye(yellow pickerel)","Construction","Piers 5-7","Piers 5-7-Construction",2
+"129","F0334","Walleye(yellow pickerel)","Post","Construction Site","Construction Site-Post",1
+"130","F0334","Walleye(yellow pickerel)","Post","Macassa Bay","Macassa Bay-Post",1
+"131","F0334","Walleye(yellow pickerel)","Post","Piers 5-7","Piers 5-7-Post",5
+"132","F0334","Walleye(yellow pickerel)","Pre","Macassa Bay","Macassa Bay-Pre",4
+"133","F0334","Walleye(yellow pickerel)","Pre","Piers 5-7","Piers 5-7-Pre",2
+"134","F0342","Logperch","Construction","Macassa Bay","Macassa Bay-Construction",14
+"135","F0342","Logperch","Construction","Piers 5-7","Piers 5-7-Construction",10
+"136","F0342","Logperch","Post","Construction Site","Construction Site-Post",20
+"137","F0342","Logperch","Post","Macassa Bay","Macassa Bay-Post",24
+"138","F0342","Logperch","Post","Piers 5-7","Piers 5-7-Post",62
+"139","F0342","Logperch","Pre","Construction Site","Construction Site-Pre",24
+"140","F0342","Logperch","Pre","Macassa Bay","Macassa Bay-Pre",53
+"141","F0342","Logperch","Pre","Piers 5-7","Piers 5-7-Pre",148
+"142","F0361","Brook silverside","Construction","Construction Site","Construction Site-Construction",3
+"143","F0361","Brook silverside","Construction","Macassa Bay","Macassa Bay-Construction",45
+"144","F0361","Brook silverside","Construction","Piers 5-7","Piers 5-7-Construction",21
+"145","F0361","Brook silverside","Post","Construction Site","Construction Site-Post",15
+"146","F0361","Brook silverside","Post","Macassa Bay","Macassa Bay-Post",55
+"147","F0361","Brook silverside","Post","Piers 5-7","Piers 5-7-Post",39
+"148","F0361","Brook silverside","Pre","Construction Site","Construction Site-Pre",6
+"149","F0361","Brook silverside","Pre","Macassa Bay","Macassa Bay-Pre",59
+"150","F0361","Brook silverside","Pre","Piers 5-7","Piers 5-7-Pre",31
+"151","F0366","Round Goby","Post","Piers 5-7","Piers 5-7-Post",2
+"152","F0366","Round Goby","Pre","Piers 5-7","Piers 5-7-Pre",2
+"153","F0601","Carp x Goldfish hybrid","Pre","Macassa Bay","Macassa Bay-Pre",1

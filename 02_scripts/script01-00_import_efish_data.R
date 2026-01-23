@@ -28,6 +28,7 @@
 data_efish_lenW <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/elecfish_lengthweight_HH20182023_NEW.csv")
 data_efish_biomass <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/HH_Biomass2023.csv")
 data_taxon <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/taxon.csv")
+data_metrics <-read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/Lk Ont full sp list 126 2Feb2023.csv")
 
 ### Prep Taxon file ####
 data_taxon <- data_taxon %>% select(1:4)
@@ -41,6 +42,10 @@ data_taxon <- data_taxon %>% rename(Common_Name = COMMON_NAME)
 ### in each column would be 90g and Number.Individuals would be 2
 data_efish_lenW$Biomass <- NULL ### removes the Biomass column
 data_efish_lenW$Number.Individuals <- NULL ### removes the Biomass column
+
+#### Prep Metrics file #####
+data_metrics <- data_metrics %>% select(1,16)
+data_metrics <- data_metrics %>% rename(Sp_Code = MNR.Fish.ID)
 
 cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")
 
@@ -131,7 +136,10 @@ temp_combined <- dplyr::bind_rows(temp_lenw,batch_total)
 ### Sum count data by Transect/YMD/Species
 
 ### Add Taxon info in #####
-combined <- merge(temp_combined, data_taxon, by = "Sp_Code")
+combinedA <- merge(temp_combined, data_taxon, by = "Sp_Code")
+
+### Add Metrics info in ####
+combined <- merge(combinedA, data_metrics, by = "Sp_Code")
 
 ### Add Pre and Post Construction labels
 
