@@ -26,6 +26,8 @@ df <- df %>% ### Makes a column with combined name for guilds
 df <- df %>% ### Makes a column with combined name for guilds
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
+
+
 ### Summary by transect/date/species
 SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Area,Transect) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesSumDate,"SpeciesSumDate.csv")
@@ -241,6 +243,37 @@ ggsave("CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
 
 df_pisc <- df %>% 
  filter(Piscivore == TRUE)
+write.csv(df_pisc,"df_pisc.csv")
+
+CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
+
+###determine juvenile vs adult piscivores or lithophilic species
+df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
+                 ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
+                        ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
+                               ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length>305,"Y",
+                                      ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length<306,"N",
+                                             ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length>457,"Y",
+                                                    ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length<458,"N",
+                                                           ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length>508,"Y",
+                                                                  ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length<509,"N",
+                                                                         ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length>228,"Y",
+                                                                                ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length<229,"N",
+                                             ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length>305,"Y",
+                                                     # ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length>150,"Y",
+                                                     #      ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length>336,"Y",
+                                                     #    ifelse( df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length>273,"Y",  
+                                                     ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length<166,"N",
+                                                            ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length<306,"N",
+                                                                    #  ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length<151,"N",
+                                                                    #     ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length<337,"N",
+                                                                    #   ifelse(df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length<274,"N"
+                                                                    ""))))))))))))))
+
+
+#### Selecting just the adult piscivores######
+df_pisc <- df_pisc %>% 
+ filter(adult == "Y")
 write.csv(df_pisc,"df_pisc.csv")
 
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
