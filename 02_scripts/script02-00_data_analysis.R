@@ -247,7 +247,8 @@ write.csv(df_pisc,"df_pisc.csv")
 
 CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
 
-###determine juvenile vs adult piscivores or lithophilic species
+###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
+### Chinook and American eel)
 df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
                  ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
                         ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
