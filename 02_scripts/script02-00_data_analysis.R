@@ -29,7 +29,7 @@ df <- df %>% ### Makes a column with combined name for guilds
 
 
 ### Summary by transect/date/species
-SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Area,Transect) %>% summarise(Count =length(Common_Name)) 
+SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Month, Area, AreaYear, Transect) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesSumDate,"SpeciesSumDate.csv")
 
 ### Summary by transect/year/species
@@ -74,10 +74,112 @@ write.csv(PivotSpeciesTP,"PivotSpeciesTP.csv")
 ### Mean Species Richness ######
 ################################
 
-TempMeanSpRich <- SpeciesSumYear %>% dplyr::group_by(Transect, Year, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+MeanSpRich <- TempMeanSpRich %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Mean =mean(Count)) 
+write.csv(TempMeanSpRich,"TempMeanSpRich.csv")
+MeanSpRich <- TempMeanSpRich %>%
+ dplyr::group_by(Year, Area, AreaYear) %>%
+ dplyr::summarise(
+  Mean = mean(Count),
+  SE = sd(Count) / sqrt(dplyr::n()),
+  .groups = "drop"
+ )
+
+MeanSpRich$Year <- as.numeric(as.character(MeanSpRich$Year))
+
+options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
+
+
+ggplot(MeanSpRich,
+       aes(x = Year,
+           y = Mean,
+           color = Area)) +
+ geom_line(size = .5) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = Mean - SE,
+                   ymax = Mean + SE),
+               width = 0.2,
+               linewidth = 0.4) +
+ scale_y_continuous(
+  breaks = seq(
+   from = 0,
+   to   = 13,
+   by   = 1
+  )
+ )+
+ ggtitle("Mean Species Richness") +
+ geom_vline(xintercept = 2021,
+            linetype = "dashed",
+            color = "grey") +
+ labs(y = "Mean Species Richness",
+      color = "Area") +
+ theme_bw(base_size = 15) +
+ theme(axis.text.x = element_text(size = 15,
+                                  angle = 45,
+                                  hjust = 1),
+       panel.grid.major = element_blank(),
+       panel.grid.minor = element_blank())
+
+ggsave("MeanSpRichness.png", width = 8, height = 4, dpi = 300)
+
+################################
+### Mean Fall Species Richness ######
+################################
+
+TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, Month, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+TempMeanSpRich <- SpeciesSumDate %>%
+ dplyr::filter(Month %in% c(9, 10)) %>%
+ dplyr::group_by(Transect, Year, Month, YMD, Area, AreaYear) %>%
+ dplyr::summarise(Count = length(Common_Name), .groups = "drop")
+
 MeanSpRich <- TempMeanSpRich %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Mean =mean(Count)) 
 
 
+MeanSpRich <- TempMeanSpRich %>%
+ dplyr::group_by(Year, Area, AreaYear) %>%
+ dplyr::summarise(
+  Mean = mean(Count),
+  SE = sd(Count) / sqrt(dplyr::n()),
+  .groups = "drop"
+ )
+
+MeanSpRich$Year <- as.numeric(as.character(MeanSpRich$Year))
+
+options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
+
+
+ggplot(MeanSpRich,
+       aes(x = Year,
+           y = Mean,
+           color = Area)) +
+ geom_line(size = .5) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = Mean - SE,
+                   ymax = Mean + SE),
+               width = 0.2,
+               linewidth = 0.4) +
+ scale_y_continuous(
+  breaks = seq(
+   from = 0,
+   to   = 11,
+   by   = 1
+  )
+ )+
+
+ ggtitle("Mean Fall Species Richness") +
+ geom_vline(xintercept = 2021,
+            linetype = "dashed",
+            color = "grey") +
+ labs(y = "Mean Species Richness",
+      color = "Area") +
+ theme_bw(base_size = 15) +
+ theme(axis.text.x = element_text(size = 15,
+                                  angle = 45,
+                                  hjust = 1),
+       panel.grid.major = element_blank(),
+       panel.grid.minor = element_blank())
+
+ggsave("MeanFallSpRichness.png", width = 8, height = 4, dpi = 300)
 
 ############################
 ### Total SpRichness Summary by Year/Area ####
@@ -257,35 +359,7 @@ write.csv(df_pisc,"df_pisc.csv")
 
 CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
 
-###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
-### Chinook and American eel)
-df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
-                 ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
-                        ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
-                               ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length>305,"Y",
-                                      ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length<306,"N",
-                                             ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length>457,"Y",
-                                                    ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length<458,"N",
-                                                           ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length>508,"Y",
-                                                                  ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length<509,"N",
-                                                                         ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length>228,"Y",
-                                                                                ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length<229,"N",
-                                             ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length>305,"Y",
-                                                     # ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length>150,"Y",
-                                                     #      ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length>336,"Y",
-                                                     #    ifelse( df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length>273,"Y",  
-                                                     ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length<166,"N",
-                                                            ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length<306,"N",
-                                                                    #  ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length<151,"N",
-                                                                    #     ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length<337,"N",
-                                                                    #   ifelse(df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length<274,"N"
-                                                                    ""))))))))))))))
 
-
-#### Selecting just the adult piscivores######
-df_pisc <- df_pisc %>% 
- filter(adult == "Y")
-write.csv(df_pisc,"df_pisc.csv")
 
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUE <- df_pisc %>%
@@ -359,7 +433,7 @@ ggplot(Pisc_mean_abundance_yr_Area,
  geom_errorbar(aes(ymin = mean_abundance_per_year_transect - se,
                    ymax = mean_abundance_per_year_transect + se),
                width = 0.2, linewidth = 0.5) +
- ggtitle("Mean Adult Piscivore CPUE") +
+ ggtitle("Mean Piscivore CPUE") +
  geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
  labs(y = "Mean CPUE", color = "Area") +
  theme_bw(base_size = 15) +
@@ -367,3 +441,118 @@ ggplot(Pisc_mean_abundance_yr_Area,
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank())
 ggsave("Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
+
+##########################
+### Adult Piscivores #####
+##########################
+
+###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
+### Chinook and American eel)
+df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
+                      ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
+                             ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
+                                    ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length>305,"Y",
+                                           ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length<306,"N",
+                                                  ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length>457,"Y",
+                                                         ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length<458,"N",
+                                                                ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length>508,"Y",
+                                                                       ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length<509,"N",
+                                                                              ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length>228,"Y",
+                                                                                     ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length<229,"N",
+                                                                                            ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length>305,"Y",
+                                                                                                    # ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length>150,"Y",
+                                                                                                    #      ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length>336,"Y",
+                                                                                                    #    ifelse( df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length>273,"Y",  
+                                                                                                    ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length<166,"N",
+                                                                                                           ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length<306,"N",
+                                                                                                                   #  ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length<151,"N",
+                                                                                                                   #     ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length<337,"N",
+                                                                                                                   #   ifelse(df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length<274,"N"
+                                                                                                                   ""))))))))))))))
+
+
+#### Selecting just the adult piscivores######
+df_piscAdult <- df_pisc %>% 
+ filter(adult == "Y")
+write.csv(df_piscAdult,"df_piscAdult.csv")
+
+####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
+PiscCPUEAdult <- df_piscAdult %>%
+ group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
+ reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
+
+#Pisc_mean_CPUE_Adult <- PiscCPUEAdult %>%
+# group_by(Year, Area, Common_Name) %>%
+# summarise(mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+
+#Pisc_mean_abundance_TP_sp_Area <- PiscCPUEAdult %>%
+# group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
+# summarise(mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+
+##### CPUE by time period or year and area######
+####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
+PiscCPUE2Adult <- df_piscAdult %>%
+ group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
+ reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+write.csv(PiscCPUE2Adult,"PiscCPUE2Adult.csv")
+
+
+Pisc_mean_abundance_yr_Area <- PiscCPUE2Adult %>%
+ group_by(Year, Area) %>%
+ summarise(Pisc_mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+
+#### Same as above but with error bars #####
+Pisc_mean_abundance_yr_Area_Adult <- PiscCPUE2Adult %>%
+ group_by(Year, Area) %>%
+ summarise(
+  Pisc_mean_CPUE_Adult = mean(Abundance, na.rm = TRUE),
+  sd = sd(Abundance, na.rm = TRUE),
+  n = n(),
+  se = sd / sqrt(n)
+ )
+###Summary for Time Period
+#Pisc_mean_abundance_TP_Area <- PiscCPUE2 %>%
+# group_by(TimePeriod, Area, AreaTP) %>%
+# summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+
+##### Plot CPUE ######
+Pisc_mean_abundance_yr_Area_Adult$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area_Adult$Year))
+
+options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
+
+
+ggplot(Pisc_mean_abundance_yr_Area_Adult,
+       aes(x = Year,
+           y = Pisc_mean_CPUE_Adult,
+           color = Area)) +
+ geom_line(size = .5) +
+ geom_point(size = 3) +
+ ggtitle("Mean Adult Piscivore CPUE") +
+ geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
+ labs(y = "Mean CPUE", color = "Area") +
+ theme_bw(base_size = 15) +
+ theme(axis.text.x = element_text(size = 15, angle = 45, hjust = 1),
+       panel.grid.major = element_blank(),
+       panel.grid.minor = element_blank())
+ggsave("Adult Pisc CPUE by area.png", width = 8, height = 4, dpi = 300)
+
+#### Plot Pisc CPUE with error bars #####
+Pisc_mean_abundance_yr_Area_Adult$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area_Adult$Year))
+ggplot(Pisc_mean_abundance_yr_Area_Adult,
+       aes(x = Year,
+           y = Pisc_mean_CPUE_Adult,
+           color = Area)) +
+ geom_line(size = .5) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = Pisc_mean_CPUE_Adult - se,
+                   ymax = Pisc_mean_CPUE_Adult + se),
+               width = 0.2, linewidth = 0.5) +
+ ggtitle("Mean Adult Piscivore CPUE") +
+ geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
+ labs(y = "Mean CPUE", color = "Area") +
+ theme_bw(base_size = 15) +
+ theme(axis.text.x = element_text(size = 15, angle = 45, hjust = 1),
+       panel.grid.major = element_blank(),
+       panel.grid.minor = element_blank())
+ggsave("Adult Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
