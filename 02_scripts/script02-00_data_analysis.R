@@ -33,7 +33,7 @@ SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Area,Transect) %>
 write.csv(SpeciesSumDate,"SpeciesSumDate.csv")
 
 ### Summary by transect/year/species
-SpeciesSumYear <- df %>% dplyr::group_by(Common_Name,Year, Area,Transect) %>% summarise(Count =length(Common_Name)) 
+SpeciesSumYear <- df %>% dplyr::group_by(Common_Name,Year, Area,AreaYear, Transect) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesSumYear,"SpeciesSumYear.csv")
 
 #-------------------------------------------------------------------------------------------------------------------
@@ -70,11 +70,21 @@ write.csv(PivotSpeciesTP,"PivotSpeciesTP.csv")
 #---------------------------------------------------------------------------------------------------------------
 ####Species Richnesss############
 
+################################
+### Mean Species Richness ######
+################################
+
+TempMeanSpRich <- SpeciesSumYear %>% dplyr::group_by(Transect, Year, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+MeanSpRich <- TempMeanSpRich %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Mean =mean(Count)) 
+
+
+
 ############################
-### Summary by Year/Area ####
+### Total SpRichness Summary by Year/Area ####
 #############################
-#### Remove Carp x Goldfish hybrid since it is not a species (only in 2018 in and both Goldfish and Carp were found in the same location and year)
+#### Remove Carp x Goldfish hybrid since it is not a species (only found in 2018 in and both Goldfish and Carp were found in the same location and year)
 SpeciesSumYearArea <-SpeciesSumYearArea[!(SpeciesSumYearArea$Common_Name=="Carp x Goldfish hybrid"),] ### removes fish code F000
+
 SpeciesRichYearArea <- SpeciesSumYearArea %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesRichYearArea,"SpeciesRichYearArea.csv")
 
@@ -84,7 +94,7 @@ PivotSpeciesRichAreaYear[is.na(PivotSpeciesRichAreaYear)] <- 0
 
 write.csv(PivotSpeciesRichAreaYear,"PivotSpeciesRichAreaYear.csv")
 
-##### Plot SpRichness ######
+##### Plot Total SpRichness ######
 SpeciesRichYearArea$Year <- as.numeric(as.character(SpeciesRichYearArea$Year))
 
 options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
@@ -349,7 +359,7 @@ ggplot(Pisc_mean_abundance_yr_Area,
  geom_errorbar(aes(ymin = mean_abundance_per_year_transect - se,
                    ymax = mean_abundance_per_year_transect + se),
                width = 0.2, linewidth = 0.5) +
- ggtitle("Piscivore Mean CPUE") +
+ ggtitle("Mean Adult Piscivore CPUE") +
  geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
  labs(y = "Mean CPUE", color = "Area") +
  theme_bw(base_size = 15) +
