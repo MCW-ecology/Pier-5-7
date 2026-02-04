@@ -83,6 +83,14 @@ temp_lenw$Month<-format(as.Date(temp_lenw$YMD), "%m")
 temp_lenw$Year<-format(as.Date(temp_lenw$YMD), "%Y")
 
 
+temp_lenw <- temp_lenw %>%
+ mutate(
+  Date = ymd(YMD),     # convert YMD → Date
+  doy  = yday(Date)    # extract day of year (1–366)
+ )
+
+
+
 #temp_lenw2 <- temp_lenw %>%
 # filter(temp_lenw$Year >= 2018 & temp_lenw$Year <= 2023)
 

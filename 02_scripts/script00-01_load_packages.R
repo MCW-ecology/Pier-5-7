@@ -24,7 +24,11 @@ library('sf') #handle shapefiles, projections, and distance calculations
 library('patchwork') #Add plots together
 library('data.table')
 library('reshape2')
-
+library('dplyr')
+library('glmmTMB')
+library('lubridate')
+library('splines')
+library('emmeans')
 ###Packages off CRAN
 #----------------------------#
 ###Lab package

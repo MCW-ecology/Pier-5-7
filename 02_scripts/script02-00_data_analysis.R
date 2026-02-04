@@ -29,7 +29,7 @@ df <- df %>% ### Makes a column with combined name for guilds
 
 
 ### Summary by transect/date/species
-SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Month, Area, AreaYear, Transect) %>% summarise(Count =length(Common_Name)) 
+SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Month, Area, AreaYear, Transect, TimePeriod, doy) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesSumDate,"SpeciesSumDate.csv")
 
 ### Summary by transect/year/species
@@ -57,7 +57,7 @@ write.csv(PivotSpeciesAreaYear,"PivotSpeciesAreaYear.csv")
 #### Make Pivot table with abundance by TimePeriod/Area as columns #####
 ###############################################################################
 
-### Summary by transect/year/species
+### Summary by transect/Timeperiod/species
 SpeciesSumTPArea <- df %>% dplyr::group_by(Sp_Code, Common_Name,TimePeriod, Area, AreaTP) %>% summarise(Count =length(Common_Name)) 
 write.csv(SpeciesSumTPArea,"SpeciesSumTPArea.csv")
 
@@ -71,7 +71,7 @@ write.csv(PivotSpeciesTP,"PivotSpeciesTP.csv")
 ####Species Richnesss############
 
 ################################
-### Mean Species Richness ######
+### Mean Species Richness by year ######
 ################################
 
 TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
@@ -121,6 +121,275 @@ ggplot(MeanSpRich,
        panel.grid.minor = element_blank())
 
 ggsave("MeanSpRichness.png", width = 8, height = 4, dpi = 300)
+
+
+
+
+#############################################
+#### Mean Species Richness by Time Period####
+#############################################
+
+TempMeanSpRichTP <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear, TimePeriod, doy) %>% summarise(Count =length(Common_Name)) 
+MeanSpRichTP <- TempMeanSpRichTP %>% dplyr::group_by(Area, TimePeriod) %>% summarise(Mean =mean(Count)) 
+write.csv(TempMeanSpRichTP,"TempMeanSpRichTP.csv")
+MeanSpRichTP <- TempMeanSpRichTP %>%
+ dplyr::group_by(Area, TimePeriod) %>%
+ dplyr::summarise(
+  Mean = mean(Count),
+  SE = sd(Count) / sqrt(dplyr::n()),
+  .groups = "drop"
+ )
+
+
+# Boxplot (distribution of Count) grouped by Area within TimePeriod
+
+
+TempMeanSpRichTP_noConst <- TempMeanSpRichTP %>% ### Removes the Construction from TimePeriod
+ dplyr::filter(TimePeriod != "Construction")
+
+TempMeanSpRichTP_noConst <- TempMeanSpRichTP_noConst %>%  ### Reorders Pre and Post on the X axis
+ dplyr::filter(Area != "Construction") %>%
+ dplyr::mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
+
+
+ggplot(TempMeanSpRichTP_noConst, aes(x = TimePeriod, y = Count, fill = Area)) +
+ geom_boxplot(position = position_dodge(width = 0.8), outlier.alpha = 0.4) +
+ labs(
+  x = "Time Period",
+  y = "Species richness (Count)",
+  fill = "Area",
+  title = "Species Richness by Time Period and Area"
+ ) +
+ theme_bw() +
+ theme(
+  axis.text.x = element_text(angle = 45, hjust = 1),
+  plot.title = element_text(face = "bold")
+ )
+ggsave("SpRichBoxPlot.png", width = 8, height = 4, dpi = 300)
+#########################################################################################################
+####Test difference in Species Richness between Pre and Post (Negative Binomial GLMM - repeated measures)
+#########################################################################################################
+###Your response (Count = richness) is a count and is usually overdispersed.
+###You have repeated measures (same transects sampled repeatedly) → include Transect as a random effect.
+###You want to compare Pre vs Post and see if the change differs among Areas → include TimePeriod * Area.
+###Multiple years within each TimePeriod - this allows Year to be modelled as a random effect helping to avoid confounding
+###Sampling dates vary widely (May to Oct), creates strong seasonal pattern in richness, a spline for DayOfYear controls for this
+
+###Fixed effects:TimePeriod * Area
+###Random effects:(1 | Transect) — repeated measures within each transect
+###               (1 | Year) — accounts for multi‑year variation within Pre and Post
+###Seasonality control:A smooth spline on day‑of‑year because sampling spans May → October
+###Family:Negative binomial (richness is a count and likely overdispersed)
+###Note: code written by CoPilot
+
+
+dat <- TempMeanSpRichTP %>%
+ filter(Area != "Construction") %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre","Post")),
+  Area = factor(Area),
+  Transect = factor(Transect),
+  Year = factor(Year),
+  doy = yday(as.Date(YMD))
+ )
+
+# Final recommended model
+m_nb <- glmmTMB(
+ Count ~ TimePeriod * Area + ns(doy, df = 4) +
+  (1 | Transect) + (1 | Year),
+ family = nbinom2(),
+ data = dat
+)
+
+# Test main effects and interaction
+### Note interaction is not significant
+m_full <- m_nb
+m_noInt <- update(m_full, . ~ . - TimePeriod:Area)
+anova(m_full, m_noInt)
+
+### This sets up the dataset so that things line up if NAs are dropped
+vars_needed <- c("Count", "TimePeriod", "Area", "doy", "Transect", "Year")
+dat_cc <- dat %>%
+ dplyr::select(all_of(vars_needed)) %>%
+ tidyr::drop_na()  # drops rows with NA in any of these columns
+
+### Can now move on to test the main effects
+# Test TimePeriod main effect
+# There is an overall Pre-Post difference which is similar across all three areas
+m_noInt <- glmmTMB(
+ Count ~ TimePeriod + Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
+ family = nbinom2(),
+ data = dat_cc
+)
+# Test Area main effect
+m_noTP <- glmmTMB(
+ Count ~ Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
+ family = nbinom2(),
+ data = dat_cc
+)
+anova(m_noInt, m_noTP)
+
+
+# Overall Pre vs Post effect (averaged across Areas, adjusted for doy)
+emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
+emm_tp
+pairs(emm_tp)   # Pre vs Post contrast (on response scale)
+
+#### Make Plot of Model ajusted Mean Sp Richness by TimePeriod
+
+
+# Get model-adjusted means on response scale (back-transformed)
+emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
+
+# Convert to a data frame for ggplot
+emm_df <- as.data.frame(emm_tp) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ )
+
+
+ggplot(emm_df, aes(x = TimePeriod, y = response)) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL), width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean species richness",
+  title = "Species Richness (Adjusted Means ± 95% CI)"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+ggsave("SpRichGLMMTimePeriod.png", width = 8, height = 4, dpi = 300)
+
+#### Make Plot of Model ajusted Mean Sp Richness by TimePeriod and Area
+
+# Get adjusted means (back-transformed) for each TimePeriod within each Area
+emm_area <- emmeans(m_noInt, ~ TimePeriod | Area, type = "response")
+
+emm_area_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ )
+
+ggplot(emm_area_df, aes(x = TimePeriod, y = response)) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               width = 0.12, linewidth = 0.8) +
+ facet_wrap(~ Area) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean species richness",
+  title = "Adjusted Mean Species Richness (±95% CI) by Area and Time Period"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold"),
+  strip.text = element_text(face = "bold")
+ )
+ggsave("SpRichGLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
+
+####Same as above with the Spline for DayOfYear #####
+
+#Prep the datatable
+dat_cc2 <- dat %>%
+ filter(Area != "Construction") %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area = factor(Area),
+  Transect = factor(Transect),
+  Year = factor(Year)
+ ) %>%
+ select(Count, TimePeriod, Area, Transect, Year) %>%
+ drop_na()
+
+#Fit the additive model
+m_noInt_nodoy <- glmmTMB(
+ Count ~ TimePeriod + Area + (1 | Transect) + (1 | Year),
+ family = nbinom2(),
+ data = dat_cc2
+)
+#Fit interaction model
+m_full_nodoy <- glmmTMB(
+ Count ~ TimePeriod * Area + (1 | Transect) + (1 | Year),
+ family = nbinom2(),
+ data = dat_cc2
+)
+anova(m_full_nodoy, m_noInt_nodoy)
+
+#Note Pre Post does not differ among areas (interaction not statistically significant)
+
+#Test TimePeriod main effect (overall Pre vs Post)
+m_noTP_nodoy <- update(m_noInt_nodoy, . ~ . - TimePeriod)
+anova(m_noInt_nodoy, m_noTP_nodoy)
+
+#Test Area main effect (overall area differences)
+m_noArea_nodoy <- update(m_noInt_nodoy, . ~ . - Area)
+anova(m_noInt_nodoy, m_noArea_nodoy)
+
+
+emm_tp_nodoy <- emmeans(m_noInt_nodoy, ~ TimePeriod, type = "response")
+emm_tp_nodoy
+pairs(emm_tp_nodoy)
+
+###Note Pre and Post are significant overall, but ARea is not
+
+##Plot overall Pre Post without spline
+
+# 1) Get model-adjusted means on response scale (back-transformed)
+emm_tp_nodoy <- emmeans(m_noInt_nodoy, ~ TimePeriod, type = "response")
+
+# 2) Convert to a data frame for ggplot
+emm_df_nodoy <- as.data.frame(emm_tp_nodoy) %>%
+ mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
+
+# 3) Plot: adjusted mean ± 95% CI
+ggplot(emm_df_nodoy, aes(x = TimePeriod, y = response)) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean species richness",
+  title = "Species Richness (Adjusted Means ± 95% CI): Pre vs Post"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
+# Plot Pre and post by area without the spline
+
+
+# Adjusted means for Pre vs Post within each Area (back-transformed)
+emm_area_nodoy <- emmeans(m_noInt_nodoy, ~ TimePeriod | Area, type = "response")
+
+emm_area_df_nodoy <- as.data.frame(emm_area_nodoy) %>%
+  mutate(
+    TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+    Area = factor(Area)
+  )
+
+ggplot(emm_area_df_nodoy, aes(x = TimePeriod, y = response)) +
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                width = 0.12, linewidth = 0.8) +
+  facet_wrap(~ Area) +
+  labs(
+    x = "Time Period",
+    y = "Model-adjusted mean species richness",
+    title = "Adjusted Mean Species Richness (±95% CI) by Area and Time Period"
+  ) +
+  theme_bw() +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.title = element_text(face = "bold"),
+    strip.text = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 0, hjust = 0.5)
+  )
 
 ################################
 ### Mean Fall Species Richness ######
@@ -232,6 +501,10 @@ PivotSpeciesRichTPArea[is.na(PivotSpeciesRichTPArea)] <- 0
 write.csv(PivotSpeciesRichTPArea,"PivotSpeciesRichTPArea.csv")
 
 #-----------------------------------------------------------------------------------------------------------------------
+###############
+#### CPUE #####
+###############
+
 ##################################################
 ####Number transects sampled for CPUE ############
 ##################################################
