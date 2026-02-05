@@ -536,34 +536,34 @@ write.csv(PivotTransects,"PivotTransects.csv")
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 TempCPUE <- df %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(TempCPUE,"TempCPUE.csv")
 
 mean_abundance_yr_sp_Area <- TempCPUE %>%
  group_by(Year, Area, Common_Name) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 mean_abundance_TP_sp_Area <- TempCPUE %>%
  group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### CPUE by time period or year and area######
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 TempCPUE2 <- df %>%
- group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy) %>%
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(TempCPUE2,"TempCPUE2.csv")
 
 mean_abundance_yr_Area <- TempCPUE2 %>%
  group_by(Year, Area) %>%
- summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### same as above but with error bars #####
 mean_abundance_yr_Area <- TempCPUE2 %>%
  group_by(Year, Area) %>%
  summarise(
-  mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE),
-  sd = sd(Abundance, na.rm = TRUE),
+  mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE),
+  sd = sd(CPUE, na.rm = TRUE),
   n = n(),
   se = sd / sqrt(n)
  )
@@ -571,7 +571,7 @@ mean_abundance_yr_Area <- TempCPUE2 %>%
 
 mean_abundance_TP_Area <- TempCPUE2 %>%
  group_by(TimePeriod, Area, AreaTP) %>%
- summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### Plot CPUE ######
 mean_abundance_yr_Area$Year <- as.numeric(as.character(mean_abundance_yr_Area$Year))
@@ -637,42 +637,42 @@ CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUE <- df_pisc %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUE,"PiscCPUE.csv")
 
 Pisc_mean_abundance_yr_sp_Area <- PiscCPUE %>%
  group_by(Year, Area, Common_Name) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 Pisc_mean_abundance_TP_sp_Area <- PiscCPUE %>%
  group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### CPUE by time period or year and area######
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUE2 <- df_pisc %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUE2,"PiscCPUE2.csv")
 
 
 Pisc_mean_abundance_yr_Area <- PiscCPUE2 %>%
  group_by(Year, Area) %>%
- summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 #### Same as above but with error bars #####
 Pisc_mean_abundance_yr_Area <- PiscCPUE2 %>%
  group_by(Year, Area) %>%
  summarise(
-  mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE),
-  sd = sd(Abundance, na.rm = TRUE),
+  mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE),
+  sd = sd(CPUE, na.rm = TRUE),
   n = n(),
   se = sd / sqrt(n)
  )
 
 Pisc_mean_abundance_TP_Area <- PiscCPUE2 %>%
  group_by(TimePeriod, Area, AreaTP) %>%
- summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+ summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### Plot CPUE ######
 Pisc_mean_abundance_yr_Area$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area$Year))
@@ -752,42 +752,42 @@ write.csv(df_piscAdult,"df_piscAdult.csv")
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUEAdult <- df_piscAdult %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
 
 #Pisc_mean_CPUE_Adult <- PiscCPUEAdult %>%
 # group_by(Year, Area, Common_Name) %>%
-# summarise(mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+# summarise(mean_CPUE_Adult = mean(CPUE, na.rm = TRUE))
 
 #Pisc_mean_abundance_TP_sp_Area <- PiscCPUEAdult %>%
 # group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
-# summarise(mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+# summarise(mean_CPUE_Adult = mean(CPUE, na.rm = TRUE))
 
 ##### CPUE by time period or year and area######
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUE2Adult <- df_piscAdult %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
- reframe(Abundance = sum(Count))  # Using reframe to return ungrouped data
+ reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUE2Adult,"PiscCPUE2Adult.csv")
 
 
 Pisc_mean_abundance_yr_Area <- PiscCPUE2Adult %>%
  group_by(Year, Area) %>%
- summarise(Pisc_mean_CPUE_Adult = mean(Abundance, na.rm = TRUE))
+ summarise(Pisc_mean_CPUE_Adult = mean(CPUE, na.rm = TRUE))
 
 #### Same as above but with error bars #####
 Pisc_mean_abundance_yr_Area_Adult <- PiscCPUE2Adult %>%
  group_by(Year, Area) %>%
  summarise(
-  Pisc_mean_CPUE_Adult = mean(Abundance, na.rm = TRUE),
-  sd = sd(Abundance, na.rm = TRUE),
+  Pisc_mean_CPUE_Adult = mean(CPUE, na.rm = TRUE),
+  sd = sd(CPUE, na.rm = TRUE),
   n = n(),
   se = sd / sqrt(n)
  )
 ###Summary for Time Period
 #Pisc_mean_abundance_TP_Area <- PiscCPUE2 %>%
 # group_by(TimePeriod, Area, AreaTP) %>%
-# summarise(mean_abundance_per_year_transect = mean(Abundance, na.rm = TRUE))
+# summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
 
 ##### Plot CPUE ######
 Pisc_mean_abundance_yr_Area_Adult$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area_Adult$Year))
@@ -829,3 +829,166 @@ ggplot(Pisc_mean_abundance_yr_Area_Adult,
        panel.grid.major = element_blank(),
        panel.grid.minor = element_blank())
 ggsave("Adult Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
+
+
+####Box Plots for CPUE by TimePeriod for the different areas #####
+
+####Some Tests
+is.integer(TempCPUE2$CPUE)          # TRUE/FALSE (may return FALSE if stored as numeric)
+all(TempCPUE2$CPUE %% 1 == 0, na.rm=TRUE)  # are they all whole numbers?
+summary(TempCPUE2$CPUE)
+mean(TempCPUE2$CPUE == 0, na.rm=TRUE)      # proportion of zeros
+
+
+TempCPUE2 <- TempCPUE2 %>% ### Removes the Construction from TimePeriod
+ dplyr::filter(TimePeriod != "Construction")
+
+TempCPUE2 <- TempCPUE2 %>%  ### Reorders Pre and Post on the X axis
+ dplyr::filter(Area != "Construction") %>%
+ dplyr::mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
+
+
+ggplot(TempCPUE2, aes(x = TimePeriod, y = CPUE, fill = Area)) +
+ geom_boxplot(position = position_dodge(width = 0.8), outlier.alpha = 0.4) +
+ labs(
+  x = "Time Period",
+  y = "CPUE",
+  fill = "Area",
+  title = "CPUE Boxplot"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
+#########################################################################################################
+####Test difference in CPUE between Pre and Post (Negative Binomial GLMM - repeated measures)
+#########################################################################################################
+###Your response (CPUE) is a count and is usually overdispersed.
+###You have repeated measures (same transects sampled repeatedly) → include Transect as a random effect.
+###You want to compare Pre vs Post and see if the change differs among Areas → include TimePeriod * Area.
+###Multiple years within each TimePeriod - this allows Year to be modelled as a random effect helping to avoid confounding
+###Sampling dates vary widely (May to Oct), creates strong seasonal pattern in richness, a spline for DayOfYear controls for this
+
+###Fixed effects:TimePeriod * Area
+###Random effects:(1 | Transect) — repeated measures within each transect
+###               (1 | Year) — accounts for multi‑year variation within Pre and Post
+###Seasonality control:A smooth spline on day‑of‑year because sampling spans May → October
+###Family:Negative binomial (richness is a count and likely overdispersed)
+###Note: code written by CoPilot
+
+#### Clean and set factor order
+TempCPUE2_clean <- TempCPUE2 %>%
+ filter(!is.na(TimePeriod)) %>%
+ filter(tolower(Area) != "construction") %>% 
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area = factor(Area),
+  Transect = factor(Transect),
+  Year = factor(Year)
+ )
+
+###Fit full interaction model
+m_cpue_full <- glmmTMB(
+ CPUE ~ TimePeriod * Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
+ family = nbinom2(),
+ data = TempCPUE2_clean
+)
+
+###Test whether Pre/Post changes differ by Area
+m_cpue_noInt <- update(m_cpue_full, . ~ . - TimePeriod:Area)
+anova(m_cpue_full, m_cpue_noInt)
+
+#If interaction not supported, test main effect of TimePeriod
+m_cpue_noTP <- update(m_cpue_noInt, . ~ . - TimePeriod)
+anova(m_cpue_noInt, m_cpue_noTP)
+
+#Effect sizes (Pre vs Post within each Area)
+emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
+
+#Diagnostics (strongly recommended)
+res <- simulateResiduals(m_cpue_full)
+plot(res)
+testDispersion(res)
+testZeroInflation(res)
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall <- emmeans(m_cpue_noInt, ~ TimePeriod, type = "response")
+emm_overall
+pairs(emm_overall)
+
+#Multiple comparisons note (important if you plan to report "per area" p-values)
+con <- emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
+con$contrasts
+summary(con$contrasts, adjust = "holm")        # or "bonferroni"
+
+
+###Plot overall CPUE differences by TimePeriod
+
+# Overall adjusted means (averaged across Areas)
+emm_cpue_tp <- emmeans(m_cpue_noInt, ~ TimePeriod, type = "response")
+
+emm_cpue_tp_df <- as.data.frame(emm_cpue_tp) %>%
+ mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
+
+ggplot(emm_cpue_tp_df, aes(x = TimePeriod, y = response)) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean CPUE",
+  title = "CPUE (Adjusted Means ± 95% CI): Pre vs Post"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
+###Plot CPUE by TimePeriod and Area
+emm_cpue_area <- emmeans(m_cpue_full, ~ TimePeriod | Area, type = "response")
+
+emm_cpue_area_df <- as.data.frame(emm_cpue_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area = factor(Area)
+ )
+
+ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response)) +
+ geom_point(size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               width = 0.12, linewidth = 0.8) +
+ facet_wrap(~ Area) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean CPUE",
+  title = "CPUE (Adjusted Means ± 95% CI) by Area and Time Period"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold"),
+  strip.text = element_text(face = "bold")
+ )
+
+####Another example plot
+pd <- position_dodge(width = 0.45)
+
+ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response, colour = Area, group = Area)) +
+ geom_point(position = pd, size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               position = pd, width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean CPUE",
+  colour = "Area",
+  title = "CPUE (Adjusted Means ± 95% CI) by Time Period and Area"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
