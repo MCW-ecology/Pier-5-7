@@ -336,6 +336,34 @@ pairs(emm_tp_nodoy)
 
 ###Note Pre and Post are significant overall, but ARea is not
 
+#### Plot of Species Richness Model ajusted means stacked by colour
+
+emm_area <- emmeans(m_noInt, ~ TimePeriod | Area, type = "response")
+emm_area_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area = factor(Area)
+ )
+
+pd <- position_dodge(width = 0.45)
+
+ggplot(emm_area_df, aes(x = TimePeriod, y = response, colour = Area, group = Area)) +
+ geom_point(position = pd, size = 3) +
+ geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+               position = pd, width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean species richness",
+  colour = "Area",
+  title = "Adjusted Mean Species Richness (±95% CI) by Time Period and Area"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+ggsave("SpRichGLMMTimePeriodAreaStacked.png", width = 8, height = 4, dpi = 300)
+
 ##Plot overall Pre Post without spline
 
 # 1) Get model-adjusted means on response scale (back-transformed)
@@ -861,7 +889,7 @@ ggplot(TempCPUE2, aes(x = TimePeriod, y = CPUE, fill = Area)) +
   plot.title = element_text(face = "bold"),
   axis.title = element_text(face = "bold")
  )
-
+ggsave("CPUE boxplot by area with error bars.png", width = 8, height = 4, dpi = 300)
 #########################################################################################################
 ####Test difference in CPUE between Pre and Post (Negative Binomial GLMM - repeated measures)
 #########################################################################################################
@@ -946,6 +974,7 @@ ggplot(emm_cpue_tp_df, aes(x = TimePeriod, y = response)) +
   plot.title = element_text(face = "bold"),
   axis.title = element_text(face = "bold")
  )
+ggsave("CPUE_GLMMTimePeriod.png", width = 8, height = 4, dpi = 300)
 
 ###Plot CPUE by TimePeriod and Area
 emm_cpue_area <- emmeans(m_cpue_full, ~ TimePeriod | Area, type = "response")
@@ -972,6 +1001,7 @@ ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response)) +
   axis.title = element_text(face = "bold"),
   strip.text = element_text(face = "bold")
  )
+ggsave("CPUE_GLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
 
 ####Another example plot
 pd <- position_dodge(width = 0.45)
@@ -991,4 +1021,4 @@ ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response, colour = Area, group 
   plot.title = element_text(face = "bold"),
   axis.title = element_text(face = "bold")
  )
-
+ggsave("CPUE_GLMMTimePeriodAreaStacked.png", width = 8, height = 4, dpi = 300)
