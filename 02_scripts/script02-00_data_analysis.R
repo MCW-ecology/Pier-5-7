@@ -230,10 +230,23 @@ m_noTP <- glmmTMB(
 anova(m_noInt, m_noTP)
 
 
+# Area-specific adjusted means and contrasts (richness)
+con_rich <- emmeans(m_full, pairwise ~ TimePeriod | Area, type = "response")
+
+# Look at per-area Pre vs Post contrasts (no adjustment first)
+con_rich$contrasts
+
+# Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
+summary(con_rich$contrasts, adjust = "holm")
+# or
+summary(con_rich$contrasts, adjust = "bonferroni")
+
 # Overall Pre vs Post effect (averaged across Areas, adjusted for doy)
 emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
 emm_tp
 pairs(emm_tp)   # Pre vs Post contrast (on response scale)
+
+####Results for contrasts "holm": Piers 5-7 P=0.0574, Construction site P = 0.6145, Macassa P = <0.0001
 
 #### Make Plot of Model ajusted Mean Sp Richness by TimePeriod
 
@@ -749,7 +762,7 @@ ggsave("Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300
 
 ###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
 ### Chinook and American eel)
-df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
+df$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
                       ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
                              ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
                                     ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length>305,"Y",
@@ -773,13 +786,13 @@ df_pisc$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>16
 
 
 #### Selecting just the adult piscivores######
-df_piscAdult <- df_pisc %>% 
+df_piscAdult <- df%>% 
  filter(adult == "Y")
 write.csv(df_piscAdult,"df_piscAdult.csv")
 
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUEAdult <- df_piscAdult %>%
- group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
+ group_by(YMD, Year, doy, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
 
@@ -794,7 +807,7 @@ write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
 ##### CPUE by time period or year and area######
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
 PiscCPUE2Adult <- df_piscAdult %>%
- group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
+ group_by(YMD, Year, doy, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 write.csv(PiscCPUE2Adult,"PiscCPUE2Adult.csv")
 
@@ -859,6 +872,7 @@ ggplot(Pisc_mean_abundance_yr_Area_Adult,
 ggsave("Adult Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
 
 
+#---------------------------------------------------------------------------------------------------------------------
 ####Box Plots for CPUE by TimePeriod for the different areas #####
 
 ####Some Tests
