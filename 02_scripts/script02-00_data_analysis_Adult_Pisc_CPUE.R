@@ -10,7 +10,7 @@
 ##
 ## Author: M Croft-White
 ##
-## Date Created:21Jan2026
+## Date Created:11Feb2026
 ##
 ## --------------------------------------------------------------#
 ## Modification Notes:
@@ -25,6 +25,13 @@ df <- df %>% ### Makes a column with combined name for guilds
 #### Make a combined column of Area and TimePeriod
 df <- df %>% ### Makes a column with combined name for guilds
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
+
+df <- df %>%
+ dplyr::filter(TimePeriod %in% c("Pre", "Post"))
+
+events <- df %>%
+ distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
+
 
 ###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
 ### Chinook and American eel)
@@ -56,47 +63,13 @@ TempCPUE <- df %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name, doy) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 
-##################################################################
-#### Box Plot of Adult CPUE
-######################################################
-## ===== Box plot: Adult piscivore CPUE by TimePeriod (Pre/Post) and Area =====
 
-library(dplyr)
-library(ggplot2)
-library(stringr)
 
-# 1) Clean/prepare plotting data (keep Construction Site in Area; exclude bad/NA TimePeriod)
-pisc_box <- PiscCPUE2Adult %>%
- mutate(TimePeriod = str_trim(TimePeriod)) %>%           # trim whitespace
- filter(!is.na(TimePeriod)) %>%                          # drop NA time periods
- filter(!str_detect(str_to_lower(TimePeriod),            # exclude "Construction" in TimePeriod ONLY
-                    "^construction\\b")) %>%
- mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))) %>%
- droplevels()
+df <- df %>% ### Removes the Construction from TimePeriod
+ dplyr::filter(TimePeriod != "Construction")
+df <- df %>% ### Reorders the data
+dplyr::mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
 
-# 2) Box plot grouped by Area within each TimePeriod
-pd <- position_dodge(width = 0.8)
-
-p_box <- ggplot(pisc_box, aes(x = TimePeriod, y = CPUE, fill = Area)) +
- geom_boxplot(position = pd, outlier.alpha = 0.4) +
- # Optional (recommended when n is small): show the raw points too
- geom_jitter(aes(color = Area),
-             position = position_jitterdodge(jitter.width = 0.12, dodge.width = 0.8),
-             alpha = 0.45, size = 1.6, show.legend = FALSE) +
- labs(
-  x = "Time Period",
-  y = "CPUE (Adult piscivores)",
-  fill = "Area",
-  title = "Adult Piscivores — CPUE by Time Period and Area"
- ) +
- theme_bw() +
- theme(
-  axis.text.x = element_text(angle = 45, hjust = 1),
-  plot.title  = element_text(face = "bold")
- )
-
-print(p_box)
-ggsave("fig_cpue_adult_pisc_box_TimePeriod_Area.png", p_box, width = 8, height = 4.5, dpi = 300)
 #########################################################################################################
 ####Test difference in Adult Piscivore CPUE between Pre and Post (Negative Binomial GLMM - repeated measures)
 #########################################################################################################
@@ -123,6 +96,7 @@ pisc_counts <- df %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy) %>%
  summarise(CPUE = sum(Count), .groups = "drop")
 
+
 # 3) Join to events and fill missing with 0 (very important for modeling)
 PiscCPUE2Adult <- events %>%
  left_join(pisc_counts, by = c("YMD","Year","Transect","Area","AreaTP","AreaYear","TimePeriod","doy")) %>%
@@ -131,8 +105,7 @@ PiscCPUE2Adult <- events %>%
 ### Prep a clean dataset
 
 pisc_ad <- PiscCPUE2Adult %>%
- filter(!is.na(TimePeriod)) %>%
- filter(tolower(Area) != "construction") %>% 
+ filter(tolower(TimePeriod) != "construction") %>% 
  mutate(
   TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
   Area = factor(Area),
@@ -140,9 +113,8 @@ pisc_ad <- PiscCPUE2Adult %>%
   Year = factor(Year)
  )
 
-pisc_ad <- pisc_ad %>%
- filter(!is.na(TimePeriod))
-
+#pisc_ad <- PiscCPUE2Adult
+#pisc_ad$CPUE <- as.integer(pisc_ad$CPUE)
 
 ####Fit a negative binomial GLMM (primary model)
 ####Note, got an error here, model would not converge. Small sample size, low counts, small n per cell
@@ -168,10 +140,116 @@ m_pisc_noArea <- update(m_pisc_noInt, . ~ . - Area)
 anova(m_pisc_noInt, m_pisc_noArea)
 
 
+##################################################################
+#### Box Plot of Adult Piscivore CPUE ######################
+######################################################
+## ===== Box plot: Adult piscivore CPUE by TimePeriod (Pre/Post) and Area =====
 
 
+# How many observations and unique values per group?
+PiscCPUE2Adult %>%
+ group_by(TimePeriod, Area) %>%
+ summarise(
+  n_nonmiss = sum(!is.na(CPUE)),
+  n_unique  = n_distinct(CPUE[!is.na(CPUE)]),
+  min_CPUE  = min(CPUE, na.rm = TRUE),
+  max_CPUE  = max(CPUE, na.rm = TRUE),
+  .groups = "drop"
+ ) %>%
+ arrange(Area, TimePeriod)
 
 
+#Box plot grouped by Area within each TimePeriod
+pd <- position_dodge(width = 0.8)
+
+p_box <- ggplot(PiscCPUE2Adult, aes(x = TimePeriod, y = CPUE, fill = Area)) +
+ geom_boxplot(position = pd, outlier.alpha = 0.4) +
+ # Optional (recommended when n is small): show the raw points too
+ 
+ geom_jitter(
+  aes(color = Area),
+  position = position_jitterdodge(jitter.width = 0.12, dodge.width = 0.8),
+  size = 1.6,
+  alpha = 0.5
+ )+
+
+ labs(
+  x = "Time Period",
+  y = "CPUE (Adult piscivores)",
+  fill = "Area",
+  title = "Adult Piscivores — CPUE by Time Period and Area"
+ ) +
+ theme_bw() +
+ theme(
+  axis.text.x = element_text(angle = 45, hjust = 1),
+  plot.title  = element_text(face = "bold")
+ )
+
+print(p_box)
+ggsave("fig_cpue_adult_pisc_box_TimePeriod_Area.png", p_box, width = 8, height = 4.5, dpi = 300)
+
+#---------------------------------------------------------------
+
+PiscCPUE2Adult <- PiscCPUE2Adult %>%  ### Reorders Pre and Post on the X axis
+ dplyr::filter(Area != "Construction") %>%
+ dplyr::mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")))
+
+
+ggplot(pisc_counts, aes(x = TimePeriod, y = CPUE, fill = Area)) +
+ geom_boxplot(position = position_dodge(width = 0.8, preserve = "single"), outlier.alpha = 0.4) +
+ labs(
+  x = "Time Period",
+  y = "CPUE",
+  fill = "Area",
+  title = "CPUE Boxplot"
+ ) +
+ theme_bw() +
+ theme(
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
+
+pd2 <- position_dodge2(width = 0.8, preserve = "single")
+
+ggplot(pisc_counts, aes(
+ x = TimePeriod,
+ y = CPUE,
+ fill = Area,
+ group = interaction(TimePeriod, Area)
+)) +
+ geom_boxplot(position = pd2, outlier.shape = NA, alpha = 0.8) +
+ geom_jitter(aes(color = Area),
+             position = position_jitterdodge(0.12, 0.8),
+             alpha = 0.55, size = 1.6, show.legend = FALSE) +
+ labs(
+  x = "Time Period",
+  y = "CPUE (Adult piscivores)",
+  title = "Adult Piscivores — CPUE by Time Period and Area"
+ ) +
+ theme_bw() +
+ theme(axis.text.x = element_text(angle = 45, hjust = 1),
+       plot.title = element_text(face = "bold"))
+
+
+PiscCPUE2Adult |>
+ dplyr::filter(TimePeriod == "Post", Area == "Piers 5-7") |>
+ dplyr::summarise(
+  n_total = dplyr::n(),
+  n_nonmiss = sum(!is.na(CPUE) & is.finite(CPUE)),
+  n_dropped = n_total - n_nonmiss
+ )
+
+
+unique(PiscCPUE2Adult$Area)  # look for both "Piers 5-7" and "Piers 5–7"
+
+PiscCPUE2Adult <- PiscCPUE2Adult |>
+ dplyr::mutate(
+  Area = gsub("\u2013", "-", Area, fixed = TRUE),  # en-dash -> hyphen
+  Area = stringr::str_squish(Area)
+ ) |>
+ droplevels()
+``
 
 #--------------------------------------------------------------------------------------------------------------------
 ##################################################
@@ -182,7 +260,7 @@ df_pisc <- df %>%
  filter(Piscivore == TRUE)
 write.csv(df_pisc,"df_pisc.csv")
 
-CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
+#CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
 
 
 
