@@ -59,44 +59,44 @@ TempCPUE <- df %>%
 ##################################################################
 #### Box Plot of Adult CPUE
 ######################################################
+## ===== Box plot: Adult piscivore CPUE by TimePeriod (Pre/Post) and Area =====
 
 library(dplyr)
 library(ggplot2)
 library(stringr)
 
-# Use your richness data frame here
-dat_box <- TempMeanSpRichTP %>%
- # 1) Exclude "Construction" from the TimePeriod column (case-insensitive & trims spaces)
- mutate(TimePeriod = str_trim(TimePeriod)) %>%
- filter(!is.na(TimePeriod)) %>%
- filter(!str_detect(str_to_lower(TimePeriod), "^construction\\b")) %>%
- # 2) Order TimePeriod as Pre, Post
+# 1) Clean/prepare plotting data (keep Construction Site in Area; exclude bad/NA TimePeriod)
+pisc_box <- PiscCPUE2Adult %>%
+ mutate(TimePeriod = str_trim(TimePeriod)) %>%           # trim whitespace
+ filter(!is.na(TimePeriod)) %>%                          # drop NA time periods
+ filter(!str_detect(str_to_lower(TimePeriod),            # exclude "Construction" in TimePeriod ONLY
+                    "^construction\\b")) %>%
  mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))) %>%
- # Keep all Area values, including "Construction Site"
  droplevels()
 
-# If you're plotting CPUE from a different table, just change y = Count -> y = CPUE and the data frame name above.
-
-# Grouped box plot (boxes per Area within each TimePeriod)
+# 2) Box plot grouped by Area within each TimePeriod
 pd <- position_dodge(width = 0.8)
 
-p <- ggplot(dat_box, aes(x = TimePeriod, y = Count, fill = Area)) +
+p_box <- ggplot(pisc_box, aes(x = TimePeriod, y = CPUE, fill = Area)) +
  geom_boxplot(position = pd, outlier.alpha = 0.4) +
+ # Optional (recommended when n is small): show the raw points too
+ geom_jitter(aes(color = Area),
+             position = position_jitterdodge(jitter.width = 0.12, dodge.width = 0.8),
+             alpha = 0.45, size = 1.6, show.legend = FALSE) +
  labs(
   x = "Time Period",
-  y = "Species richness (Count)",   # If using CPUE, change this to "CPUE"
+  y = "CPUE (Adult piscivores)",
   fill = "Area",
-  title = "Species Richness by Time Period and Area"
+  title = "Adult Piscivores — CPUE by Time Period and Area"
  ) +
  theme_bw() +
  theme(
-  axis.text.x  = element_text(angle = 45, hjust = 1),
-  plot.title   = element_text(face = "bold")
+  axis.text.x = element_text(angle = 45, hjust = 1),
+  plot.title  = element_text(face = "bold")
  )
 
-print(p)
-ggsave("BoxPlot_TimePeriod_Area.png", p, width = 8, height = 4, dpi = 300)
-
+print(p_box)
+ggsave("fig_cpue_adult_pisc_box_TimePeriod_Area.png", p_box, width = 8, height = 4.5, dpi = 300)
 #########################################################################################################
 ####Test difference in Adult Piscivore CPUE between Pre and Post (Negative Binomial GLMM - repeated measures)
 #########################################################################################################
