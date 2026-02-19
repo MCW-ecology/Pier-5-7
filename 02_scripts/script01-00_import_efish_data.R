@@ -29,6 +29,7 @@ data_efish_lenW <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_d
 data_efish_biomass <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/HH_Biomass2023.csv")
 data_taxon <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/taxon.csv")
 data_metrics <-read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/Lk Ont full sp list 126 2Feb2023.csv")
+data_habitat <-read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/Efish_hab_data.csv")
 
 ### Prep Taxon file ####
 data_taxon <- data_taxon %>% select(1:4)
@@ -49,6 +50,8 @@ data_metrics <- data_metrics %>% rename(Sp_Code = MNR.Fish.ID)
 
 cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")
 
+
+
 ############################
 ####Selecting Transects#####
 ############################
@@ -57,7 +60,7 @@ temp_lenw <- subset(data_efish_lenW, Transect %in% c("HH50","HH51","HH52","HH53"
 cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 temp_lenw <- temp_lenw %>% rename(Sp_Code = Species)
 
-
+temp_hab <- subset(data_habitat, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 
 temp_biomass <- subset(data_efish_biomass, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 cat("Loaded", format(nrow(temp_biomass), big.mark = ","), "records\n")
@@ -69,6 +72,9 @@ temp_lenw$Area <- ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH53","HH54"),
         ifelse(temp_lenw$Transect %in% c("HH52"),"Construction Site",
                "Macassa Bay"))
 
+temp_hab$Area <- ifelse(temp_hab$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
+                         ifelse(temp_lenw$Transect %in% c("HH52"),"Construction Site",
+                                "Macassa Bay"))
 
 temp_biomass$Area <- ifelse(temp_biomass$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
                          ifelse(temp_biomass$Transect %in% c("HH52"),"Construction Site",
@@ -89,7 +95,17 @@ temp_lenw <- temp_lenw %>%
   doy  = yday(Date)    # extract day of year (1–366)
  )
 
+temp_hab$YMD <- format(as.Date(temp_hab$Date), format = "%Y-%m-%d")
+temp_hab$MonthYear<-format(as.Date(temp_hab$YMD), "%b-%Y")
+temp_hab$Month<-format(as.Date(temp_hab$YMD), "%m")
+temp_hab$Year<-format(as.Date(temp_hab$YMD), "%Y")
 
+
+temp_hab <- temp_hab %>%
+ mutate(
+  Date = ymd(YMD),     # convert YMD → Date
+  doy  = yday(Date)    # extract day of year (1–366)
+ )
 
 #temp_lenw2 <- temp_lenw %>%
 # filter(temp_lenw$Year >= 2018 & temp_lenw$Year <= 2023)
@@ -117,6 +133,20 @@ cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 # Check and handle NAs
 # temp_na_count <- sum(is.na(data_raw))
 # cat("Missing values:", temp_na_count, "\n")
+
+############################
+#### Prep habitat file #####
+
+
+#### Make a combined column of area and year
+df <- df %>% 
+ unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
+#### Make a combined column of Area and TimePeriod
+df <- df %>% 
+ unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
+
+events <- data_habitat %>%
+ distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
 
 #########################################################
 ####Add in Batch Count to Individual Count ##############

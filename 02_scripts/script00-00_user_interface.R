@@ -21,6 +21,8 @@
 ### Core Data Processing
 #----------------------------#
 
+R.version.string
+
 setwd("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/")
 source("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/02_scripts/script00-01_load_packages.R") 
 
