@@ -60,7 +60,7 @@ temp_lenw <- subset(data_efish_lenW, Transect %in% c("HH50","HH51","HH52","HH53"
 cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 temp_lenw <- temp_lenw %>% rename(Sp_Code = Species)
 
-temp_hab <- subset(data_habitat, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
+temp_hab  <- subset(data_habitat, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 
 temp_biomass <- subset(data_efish_biomass, Transect %in% c("HH50","HH51","HH52","HH53","HH54","HH55","HH56","HH57","HH58","HH59","HH60"))
 cat("Loaded", format(nrow(temp_biomass), big.mark = ","), "records\n")
@@ -119,7 +119,13 @@ temp_biomass$Year<-format(as.Date(temp_biomass$YMD), "%Y")
 ####Selecting night data###############
 #######################################
 
+test1 <- temp_lenw %>%
+ distinct(Time, Time.Period)
+
 temp_lenw <- subset(temp_lenw, Time.Period %in% c("2"))
+cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
+
+temp_hab <- subset(temp_hab, Time_Period %in% c("2"))
 cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 
 temp_biomass <- subset(temp_biomass, Time.Period %in% c("2"))
@@ -139,15 +145,24 @@ cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 
 
 #### Make a combined column of area and year
-df <- df %>% 
+temp_hab <- temp_hab %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
 #### Make a combined column of Area and TimePeriod
-df <- df %>% 
+
+temp_hab$TimePeriod <- as.factor(
+ ifelse(temp_hab$Year <= 2020, "Pre",
+        ifelse(combined$Year == 2021, "Construction",
+               "Post")))
+
+temp_hab <- temp_hab %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-events <- data_habitat %>%
+
+
+events <- temp_hab %>%
  distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
 
+saveRDS(events, "01_data/events.rds")
 #########################################################
 ####Add in Batch Count to Individual Count ##############
 #########################################################

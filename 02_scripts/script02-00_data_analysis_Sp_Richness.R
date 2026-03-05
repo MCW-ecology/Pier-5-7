@@ -18,6 +18,7 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
+events <- readRDS("01_data/events.rds")
 
 #### Make a combined column of area and year
 df <- df %>% 
@@ -70,9 +71,18 @@ write.csv(PivotSpeciesTP,"PivotSpeciesTP.csv")
 #---------------------------------------------------------------------------------------------------------------
 ####Species Richnesss############
 
+SpeciesSumDate <- SpeciesSumDate[SpeciesSumDate$Common_Name != "Carp x Goldfish hybrid", ]
+
+TotalSp <- SpeciesSumDate %>% dplyr::group_by(Common_Name) %>% summarise(Count =length(Transect))
+
+TotalSpArea <- SpeciesSumDate %>% dplyr::group_by(Common_Name, Area) %>% summarise(Count =length(Common_Name))
+TotalSpArea2 <- TotalSpArea %>% dplyr::group_by(Area) %>% summarise(Count =length(Common_Name))
+
 ################################
 ### Mean Species Richness by year ######
 ################################
+
+
 
 TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
 MeanSpRich <- TempMeanSpRich %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Mean =mean(Count)) 
@@ -131,6 +141,12 @@ ggsave("MeanSpRichness.png", width = 8, height = 4, dpi = 300)
 
 TempMeanSpRichTP <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear, TimePeriod, doy) %>% summarise(Count =length(Common_Name)) 
 MeanSpRichTP <- TempMeanSpRichTP %>% dplyr::group_by(Area, TimePeriod) %>% summarise(Mean =mean(Count)) 
+
+TempMeanSpRichTP <- events %>%
+ left_join(TempMeanSpRichTP, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod","doy")) %>%
+ mutate(Count = tidyr::replace_na(Count, 0))
+
+
 write.csv(TempMeanSpRichTP,"TempMeanSpRichTP.csv")
 MeanSpRichTP <- TempMeanSpRichTP %>%
  dplyr::group_by(Area, TimePeriod) %>%
