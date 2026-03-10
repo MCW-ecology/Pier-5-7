@@ -31,6 +31,8 @@ data_taxon <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/0
 data_metrics <-read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/Lk Ont full sp list 126 2Feb2023.csv")
 data_habitat <-read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/Efish_hab_data.csv")
 
+
+
 ### Prep Taxon file ####
 data_taxon <- data_taxon %>% select(1:4)
 data_taxon <- data_taxon %>% rename(Sp_Code = ACCESS_CODE)
@@ -73,7 +75,7 @@ temp_lenw$Area <- ifelse(temp_lenw$Transect %in% c("HH50","HH51","HH53","HH54"),
                "Macassa Bay"))
 
 temp_hab$Area <- ifelse(temp_hab$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
-                         ifelse(temp_lenw$Transect %in% c("HH52"),"Construction Site",
+                         ifelse(temp_hab$Transect %in% c("HH52"),"Construction Site",
                                 "Macassa Bay"))
 
 temp_biomass$Area <- ifelse(temp_biomass$Transect %in% c("HH50","HH51","HH53","HH54"),"Piers 5-7",
@@ -115,6 +117,10 @@ temp_biomass$MonthYear<-format(as.Date(temp_biomass$YMD), "%b-%Y")
 temp_biomass$Month<-format(as.Date(temp_biomass$YMD), "%m")
 temp_biomass$Year<-format(as.Date(temp_biomass$YMD), "%Y")
 
+
+
+
+
 #######################################
 ####Selecting night data###############
 #######################################
@@ -151,7 +157,7 @@ temp_hab <- temp_hab %>%
 
 temp_hab$TimePeriod <- as.factor(
  ifelse(temp_hab$Year <= 2020, "Pre",
-        ifelse(combined$Year == 2021, "Construction",
+        ifelse(temp_hab$Year == 2021, "Construction",
                "Post")))
 
 temp_hab <- temp_hab %>% 

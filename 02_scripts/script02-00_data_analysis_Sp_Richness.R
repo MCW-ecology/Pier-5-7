@@ -117,7 +117,7 @@ ggplot(MeanSpRich,
    by   = 1
   )
  )+
- ggtitle("Mean Species Richness") +
+ #ggtitle("Mean Species Richness") +
  geom_vline(xintercept = 2021,
             linetype = "dashed",
             color = "grey") +
@@ -182,6 +182,49 @@ ggplot(TempMeanSpRichTP_noConst, aes(x = TimePeriod, y = Count, fill = Area)) +
   plot.title = element_text(face = "bold")
  )
 ggsave("SpRichBoxPlot.png", width = 8, height = 4, dpi = 300)
+
+#### Unique species found in each Area
+
+# Macassa Bay
+
+macassa_only_species <- SpeciesSumDate %>%
+ distinct(Area, Common_Name) %>%                # unique area–species combos
+ group_by(Common_Name) %>%
+ summarise(n_areas = n_distinct(Area),
+           in_macassa = any(Area == "Macassa Bay"),
+           .groups = "drop") %>%
+ filter(in_macassa, n_areas == 1) %>%           # only appears in Macassa
+ select(Common_Name) %>%
+ arrange(Common_Name)
+
+macassa_only_species
+
+
+# Piers 5–7
+piers_only_species <- SpeciesSumDate %>%
+ distinct(Area, Common_Name) %>%                # unique area–species combos
+ group_by(Common_Name) %>%
+ summarise(n_areas = n_distinct(Area),
+           in_piers = any(Area == "Piers 5-7"),
+           .groups = "drop") %>%
+ filter(in_piers, n_areas == 1) %>%           # only appears in Macassa
+ select(Common_Name) %>%
+ arrange(Common_Name)
+
+constr_only_species
+
+# Construction Site
+constr_only_species <- SpeciesSumDate %>%
+ distinct(Area, Common_Name) %>%                # unique area–species combos
+ group_by(Common_Name) %>%
+ summarise(n_areas = n_distinct(Area),
+           in_constr = any(Area == "Construction Site"),
+           .groups = "drop") %>%
+ filter(in_constr, n_areas == 1) %>%           # only appears in Macassa
+ select(Common_Name) %>%
+ arrange(Common_Name)
+
+constr_only_species
 #########################################################################################################
 ####Test difference in Species Richness between Pre and Post (Negative Binomial GLMM - repeated measures)
 #########################################################################################################
@@ -320,7 +363,35 @@ ggplot(emm_area_df, aes(x = TimePeriod, y = response)) +
  )
 ggsave("SpRichGLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
 
-####Same as above with the Spline for DayOfYear #####
+#### Make a table of model adjusted means ####
+
+library(emmeans)
+library(dplyr)
+library(readr)      # for write_csv
+library(tidyr)
+library(knitr)      # for kable (optional pretty print)
+library(kableExtra) # optional: nicer HTML/LaTeX tables
+
+# Assuming your final inference model is m_noInt
+# (additive TimePeriod + Area + spline + random effects)
+emm_area <- emmeans(m_noInt, ~ TimePeriod | Area, type = "response")
+
+# Convert to a clean data frame
+emm_area_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ ) %>%
+ rename(
+  Mean = response,
+  LCL  = asymp.LCL,
+  UCL  = asymp.UCL
+ ) %>%
+ select(Area, TimePeriod, Mean, SE, LCL, UCL)
+
+########################################################
+####Same as above without the Spline for DayOfYear #####
+########################################################
+
 
 #Prep the datatable
 dat_cc2 <- dat %>%

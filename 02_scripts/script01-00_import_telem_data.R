@@ -46,7 +46,7 @@ cat("Loaded", format(nrow(temp_telem), big.mark = ","), "records\n")
 temp_telem2 <- subset(temp_telem, station %in% c("HAM-036", "HAM-011", "HAM-053", "HAM-057", "HAM-054", "HAM-056", "HAM-055", "HAM-052"))
 cat("Loaded", format(nrow(temp_telem2), big.mark = ","), "records\n")
 
-saveRDS(temp_telem2, "01_data/telem_subset.rds")
+saveRDS(temp_telem2, "01_data/03_large_files_LFS/01_raw_files/telem_subset.rds")
 
 data_subset <- readRDS("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/03_large_files_LFS/01_raw_files/telem_subset.rds")
 
