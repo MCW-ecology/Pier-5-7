@@ -52,7 +52,11 @@ data_metrics <- data_metrics %>% rename(Sp_Code = MNR.Fish.ID)
 
 cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")
 
+Combined <- data_habitat %>%
+ left_join(data_efish_lenW,
+           by = c("Sample"))
 
+write.csv(Combined,"TransectsCombSample.csv")
 
 ############################
 ####Selecting Transects#####
@@ -163,7 +167,7 @@ temp_hab$TimePeriod <- as.factor(
 temp_hab <- temp_hab %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-
+saveRDS(temp_hab, "01_data/temp_hab.rds")
 
 events <- temp_hab %>%
  distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)

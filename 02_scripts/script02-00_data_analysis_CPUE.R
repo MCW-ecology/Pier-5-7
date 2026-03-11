@@ -18,9 +18,9 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
+events <- readRDS("01_data/events.rds")
 
-#### Make a combined column of area and year
-df <- df %>% 
+#### Make a combined column of area and yeardf <- df %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
 #### Make a combined column of Area and TimePeriod
 df <- df %>% 
@@ -36,6 +36,7 @@ df <- df %>%
 
 ### Summary by TimePeriod/Area/species/Transect
 SpeciesSumTP <- df %>% dplyr::group_by(Common_Name,TimePeriod,Transect, Area) %>% summarise(Count =length(Common_Name))
+
 write.csv(SpeciesSumTP,"SpeciesSumTPTransect.csv")
 
 ### Summary by TimePeriod/Area/species
@@ -54,6 +55,24 @@ TransectSumDate4 <- as.data.table(TransectSumDate4)
 PivotTransects <- dcast(TransectSumDate4, Transect+Area ~ Year, value.var = "CountofTransects")
 write.csv(PivotTransects,"PivotTransects.csv")
 
+### Number of Transects in Events
+TempEvents <- events %>% dplyr::group_by(Year, Area, Transect, YMD) %>% summarise(Count =length(Transect))
+TempEvents2 <- TempEvents %>% dplyr::group_by(Year,Area,Transect) %>% summarise(Coun =sum(Count))
+PivotTransectsEvents <- dcast(TempEvents, Transect+Area ~ Year, value.var = "Count")
+
+### Make a table with them joined
+
+
+TransectsComb <- TempEvents2 %>%
+ left_join(TransectSumDate4,
+           by = c("Year", "Transect", "Area"))
+
+
+TransectsComb2 <- events %>%
+ left_join(TransectSumDate,
+           by = c("YMD", "Transect"))
+write.csv(TransectsComb2,"TransectsCombYMDTransect.csv")
+
 ##################################################
 ##### CPUE by species year, time period area######
 ##################################################
@@ -62,8 +81,12 @@ write.csv(PivotTransects,"PivotTransects.csv")
 TempCPUE <- df %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
-write.csv(TempCPUE,"TempCPUE.csv")
 
+
+TempCPUE <- events %>%
+ left_join(TempCPUE, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod", "AreaTP")) %>%
+ mutate(CPUE = tidyr::replace_na(CPUE, 0))
+write.csv(TempCPUE,"TempCPUE.csv")
 mean_abundance_yr_sp_Area <- TempCPUE %>%
  group_by(Year, Area, Common_Name) %>%
  summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
@@ -77,6 +100,11 @@ mean_abundance_TP_sp_Area <- TempCPUE %>%
 TempCPUE2 <- df %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
+
+
+TempCPUE2 <- events %>%
+ left_join(TempCPUE2, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod", "AreaTP", "doy")) %>%
+ mutate(CPUE = tidyr::replace_na(CPUE, 0))
 write.csv(TempCPUE2,"TempCPUE2.csv")
 
 mean_abundance_yr_Area <- TempCPUE2 %>%
@@ -136,7 +164,7 @@ ggplot(mean_abundance_yr_Area,
   width = 0.2,
   linewidth = 0.5
  ) +
- ggtitle("Mean CPUE") +
+ #ggtitle("Mean CPUE") +
  geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
  labs(y = "Mean CPUE", color = "Area") +
  theme_bw(base_size = 15) +
@@ -147,98 +175,7 @@ ggplot(mean_abundance_yr_Area,
 ggsave("CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
 
 
-##################################################
-##### Piscivore CPUE by species year, time period area######
-##################################################
 
-df_pisc <- df %>% 
- filter(Piscivore == TRUE)
-write.csv(df_pisc,"df_pisc.csv")
-
-CommonNamePisc <- df_pisc %>% dplyr::group_by(Common_Name, Length) %>% summarise(Count =length(Common_Name)) 
-
-
-
-####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
-PiscCPUE <- df_pisc %>%
- group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
- reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
-write.csv(PiscCPUE,"PiscCPUE.csv")
-
-Pisc_mean_abundance_yr_sp_Area <- PiscCPUE %>%
- group_by(Year, Area, Common_Name) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
-
-Pisc_mean_abundance_TP_sp_Area <- PiscCPUE %>%
- group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
- summarise(mean_abundance_sp_per_year_transect = mean(CPUE, na.rm = TRUE))
-
-##### CPUE by time period or year and area######
-####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
-PiscCPUE2 <- df_pisc %>%
- group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
- reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
-write.csv(PiscCPUE2,"PiscCPUE2.csv")
-
-
-Pisc_mean_abundance_yr_Area <- PiscCPUE2 %>%
- group_by(Year, Area) %>%
- summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
-
-#### Same as above but with error bars #####
-Pisc_mean_abundance_yr_Area <- PiscCPUE2 %>%
- group_by(Year, Area) %>%
- summarise(
-  mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE),
-  sd = sd(CPUE, na.rm = TRUE),
-  n = n(),
-  se = sd / sqrt(n)
- )
-
-Pisc_mean_abundance_TP_Area <- PiscCPUE2 %>%
- group_by(TimePeriod, Area, AreaTP) %>%
- summarise(mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE))
-
-##### Plot CPUE ######
-Pisc_mean_abundance_yr_Area$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area$Year))
-
-options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
-
-
-ggplot(Pisc_mean_abundance_yr_Area,
-       aes(x = Year,
-           y = mean_abundance_per_year_transect,
-           color = Area)) +
- geom_line(size = .5) +
- geom_point(size = 3) +
- ggtitle("Piscivore Mean CPUE") +
- geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
- labs(y = "Mean CPUE", color = "Area") +
- theme_bw(base_size = 15) +
- theme(axis.text.x = element_text(size = 15, angle = 45, hjust = 1),
-       panel.grid.major = element_blank(),
-       panel.grid.minor = element_blank())
-ggsave("Pisc CPUE by area.png", width = 8, height = 4, dpi = 300)
-
-#### Plot Pisc CPUE with error bars #####
-Pisc_mean_abundance_yr_Area$Year <- as.numeric(as.character(Pisc_mean_abundance_yr_Area$Year))
-ggplot(Pisc_mean_abundance_yr_Area,
-       aes(x = Year,
-           y = mean_abundance_per_year_transect,
-           color = Area)) +
- geom_line(size = .5) +
- geom_point(size = 3) +
- geom_errorbar(aes(ymin = mean_abundance_per_year_transect - se,
-                   ymax = mean_abundance_per_year_transect + se),
-               width = 0.2, linewidth = 0.5) +
- ggtitle("Mean Piscivore CPUE") +
- geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
- labs(y = "Mean CPUE", color = "Area") +
- theme_bw(base_size = 15) +
- theme(axis.text.x = element_text(size = 15, angle = 45, hjust = 1),
-       panel.grid.major = element_blank(),
-       panel.grid.minor = element_blank())
-ggsave("Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
 
 ##########################
 ### Adult Piscivores #####
@@ -293,6 +230,10 @@ write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
 PiscCPUE2Adult <- df_piscAdult %>%
  group_by(YMD, Year, doy, Transect, Area, AreaTP, AreaYear, TimePeriod) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
+
+PiscCPUE2Adult <- events %>%
+ left_join(PiscCPUE2Adult, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod", "AreaTP")) %>%
+ mutate(CPUE = tidyr::replace_na(CPUE, 0))
 write.csv(PiscCPUE2Adult,"PiscCPUE2Adult.csv")
 
 
@@ -415,11 +356,25 @@ TempCPUE2_clean <- TempCPUE2 %>%
   Year = factor(Year)
  )
 
+# Build a complete-case dataset for all variables used across candidate models
+vars_needed <- c("CPUE", "TimePeriod", "Area", "doy", "Transect", "Year")
+
+dat_cc <- TempCPUE2_clean %>%
+ dplyr::select(all_of(vars_needed)) %>%
+ tidyr::drop_na() %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area      = factor(Area),
+  Transect  = factor(Transect),
+  Year      = factor(Year)
+ )
+
+
 ###Fit full interaction model
 m_cpue_full <- glmmTMB(
  CPUE ~ TimePeriod * Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
  family = nbinom2(),
- data = TempCPUE2_clean
+ data = dat_cc
 )
 
 ###Test whether Pre/Post changes differ by Area
@@ -512,11 +467,52 @@ ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response, colour = Area, group 
   x = "Time Period",
   y = "Model-adjusted mean CPUE",
   colour = "Area",
-  title = "CPUE (Adjusted Means ± 95% CI) by Time Period and Area"
+ # title = "CPUE (Adjusted Means ± 95% CI) by Time Period and Area"
  ) +
  theme_bw() +
  theme(
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
   plot.title = element_text(face = "bold"),
   axis.title = element_text(face = "bold")
  )
+
 ggsave("CPUE_GLMMTimePeriodAreaStacked.png", width = 8, height = 4, dpi = 300)
+
+### Diagnostics show zero inflation in the dat-cc dataset but not the original data
+### Running zero inflated GLMM to test
+
+m_cpue_zi <- glmmTMB(
+ CPUE ~ TimePeriod + Area + ns(doy, 4) + (1|Transect) + (1|Year),
+ ziformula = ~ 1,   # intercept-only zero inflation
+ family = nbinom2(),
+ data = dat_cc
+)
+
+AIC(m_cpue_noInt, m_cpue_zi)
+
+
+res_zi <- simulateResiduals(m_cpue_zi)
+plot(res_zi)
+testZeroInflation(res_zi)
+
+# Re-check interaction within the ZI family (same ziformula on both)
+m_cpue_zi_full <- update(m_cpue_zi, . ~ TimePeriod * Area)
+m_cpue_zi_add  <- update(m_cpue_zi_full, . ~ . - TimePeriod:Area)
+anova(m_cpue_zi_full, m_cpue_zi_add)  # LRT for interaction (valid here)
+
+
+# Overall Pre vs Post (averaged across Areas, adjusted for doy, random effects)
+emm_overall_zi <- emmeans(m_cpue_zi, ~ TimePeriod, type = "response")
+emm_overall_zi
+pairs(emm_overall_zi)  # ratio Post vs Pre (tested on log scale)
+
+
+emm_area_zi <- emmeans(m_cpue_zi, ~ TimePeriod | Area, type = "response")
+as.data.frame(emm_area_zi)
+
+
+con3 <- pairs(emm_area_zi, by = NULL, adjust = "holm")
+con3
+
+

@@ -85,6 +85,12 @@ TotalSpArea2 <- TotalSpArea %>% dplyr::group_by(Area) %>% summarise(Count =lengt
 
 
 TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+
+TempMeanSpRich <- events %>%
+ left_join(TempMeanSpRich, by = c("YMD","Year","Transect","Area","AreaYear")) %>%
+ mutate(Count = tidyr::replace_na(Count, 0))
+
+
 MeanSpRich <- TempMeanSpRich %>% dplyr::group_by(Year, Area, AreaYear) %>% summarise(Mean =mean(Count)) 
 write.csv(TempMeanSpRich,"TempMeanSpRich.csv")
 MeanSpRich <- TempMeanSpRich %>%
@@ -140,7 +146,6 @@ ggsave("MeanSpRichness.png", width = 8, height = 4, dpi = 300)
 #############################################
 
 TempMeanSpRichTP <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear, TimePeriod, doy) %>% summarise(Count =length(Common_Name)) 
-MeanSpRichTP <- TempMeanSpRichTP %>% dplyr::group_by(Area, TimePeriod) %>% summarise(Mean =mean(Count)) 
 
 TempMeanSpRichTP <- events %>%
  left_join(TempMeanSpRichTP, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod","doy")) %>%
@@ -211,7 +216,7 @@ piers_only_species <- SpeciesSumDate %>%
  select(Common_Name) %>%
  arrange(Common_Name)
 
-constr_only_species
+piers_only_species
 
 # Construction Site
 constr_only_species <- SpeciesSumDate %>%
@@ -296,9 +301,9 @@ con_rich <- emmeans(m_full, pairwise ~ TimePeriod | Area, type = "response")
 con_rich$contrasts
 
 # Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
-summary(con_rich$contrasts, adjust = "holm")
+summary(con_rich$contrasts, adjust = "holm") #Holm is better than Bonferroni and R's emmeans recommends it
 # or
-summary(con_rich$contrasts, adjust = "bonferroni")
+#summary(con_rich$contrasts, adjust = "bonferroni")
 
 # Overall Pre vs Post effect (averaged across Areas, adjusted for doy)
 emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
@@ -363,6 +368,46 @@ ggplot(emm_area_df, aes(x = TimePeriod, y = response)) +
  )
 ggsave("SpRichGLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
 
+### Plot of coloured by area ####
+
+
+## Get model-adjusted means (back-transformed) for each TimePeriod within each Area
+emm_area <- emmeans(m_noInt, ~ TimePeriod | Area, type = "response")
+
+## Tidy for plotting
+emm_area_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ ) %>%
+ rename(
+  Mean = response,
+  LCL  = asymp.LCL,
+  UCL  = asymp.UCL
+ )
+
+## Plot: points and 95% CI, TimePeriod on x-axis, colour by Area
+ggplot(emm_area_df, aes(x = TimePeriod, y = Mean, colour = Area)) +
+ geom_point(position = position_dodge(width = 0.4), size = 3) +
+ geom_errorbar(aes(ymin = LCL, ymax = UCL),
+               position = position_dodge(width = 0.4),
+               width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean species richness",
+ # title = "Adjusted Mean Species Richness (±95% CI) by Time Period and Area",
+  colour = "Area"
+ ) +
+ theme_bw() +
+ theme(
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  plot.title = element_text(face = "bold"),
+  axis.title = element_text(face = "bold")
+ )
+
+## Optional: save to file
+ggsave("SpRichGLMM_TimePeriod_colouredByArea.png", width = 7.5, height = 4.5, dpi = 300)
+
 #### Make a table of model adjusted means ####
 
 library(emmeans)
@@ -387,6 +432,13 @@ emm_area_df <- as.data.frame(emm_area) %>%
   UCL  = asymp.UCL
  ) %>%
  select(Area, TimePeriod, Mean, SE, LCL, UCL)
+
+#Diagnostics (strongly recommended)
+res <- simulateResiduals(m_full)
+plot(res)
+testDispersion(res)
+testZeroInflation(res)
+
 
 ########################################################
 ####Same as above without the Spline for DayOfYear #####
