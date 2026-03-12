@@ -155,19 +155,19 @@ cat("Loaded", format(nrow(temp_lenw), big.mark = ","), "records\n")
 
 
 #### Make a combined column of area and year
-temp_hab <- temp_hab %>% 
+temp_hab2 <- temp_hab %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
 #### Make a combined column of Area and TimePeriod
 
-temp_hab$TimePeriod <- as.factor(
- ifelse(temp_hab$Year <= 2020, "Pre",
-        ifelse(temp_hab$Year == 2021, "Construction",
+temp_hab2$TimePeriod <- as.factor(
+ ifelse(temp_hab2$Year <= 2020, "Pre",
+        ifelse(temp_hab2$Year == 2021, "Construction",
                "Post")))
 
-temp_hab <- temp_hab %>% 
+temp_hab3 <- temp_hab2 %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-saveRDS(temp_hab, "01_data/temp_hab.rds")
+saveRDS(temp_hab3, "01_data/temp_hab.rds")
 
 events <- temp_hab %>%
  distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
