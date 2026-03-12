@@ -20,7 +20,8 @@
 df <- readRDS("01_data/Efish_processed.rds")
 events <- readRDS("01_data/events.rds")
 
-#### Make a combined column of area and yeardf <- df %>% 
+#### Make a combined column of area and year
+df <- df %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
 #### Make a combined column of Area and TimePeriod
 df <- df %>% 
@@ -57,21 +58,21 @@ write.csv(PivotTransects,"PivotTransects.csv")
 
 ### Number of Transects in Events
 TempEvents <- events %>% dplyr::group_by(Year, Area, Transect, YMD) %>% summarise(Count =length(Transect))
-TempEvents2 <- TempEvents %>% dplyr::group_by(Year,Area,Transect) %>% summarise(Coun =sum(Count))
-PivotTransectsEvents <- dcast(TempEvents, Transect+Area ~ Year, value.var = "Count")
-
+TempEvents2 <- TempEvents %>% dplyr::group_by(Year,Area,Transect) %>% summarise(Count =sum(Count))
+PivotTransectsEvents <- dcast(TempEvents2, Transect+Area ~ Year, value.var = "Count")
+write.csv(PivotTransectsEvents,"PivotTransectsEvents.csv")
 ### Make a table with them joined
 
 
-TransectsComb <- TempEvents2 %>%
- left_join(TransectSumDate4,
-           by = c("Year", "Transect", "Area"))
+#TransectsComb <- TempEvents2 %>%
+# left_join(TransectSumDate4,
+#           by = c("Year", "Transect", "Area"))
 
 
-TransectsComb2 <- events %>%
- left_join(TransectSumDate,
-           by = c("YMD", "Transect"))
-write.csv(TransectsComb2,"TransectsCombYMDTransect.csv")
+#TransectsComb2 <- events %>%
+# left_join(TransectSumDate,
+#           by = c("YMD", "Transect"))
+#write.csv(TransectsComb2,"TransectsComb2.csv")
 
 ##################################################
 ##### CPUE by species year, time period area######
@@ -479,40 +480,33 @@ ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response, colour = Area, group 
 
 ggsave("CPUE_GLMMTimePeriodAreaStacked.png", width = 8, height = 4, dpi = 300)
 
-### Diagnostics show zero inflation in the dat-cc dataset but not the original data
-### Running zero inflated GLMM to test
+#### Make a table of model adjusted means ####
 
-m_cpue_zi <- glmmTMB(
- CPUE ~ TimePeriod + Area + ns(doy, 4) + (1|Transect) + (1|Year),
- ziformula = ~ 1,   # intercept-only zero inflation
- family = nbinom2(),
- data = dat_cc
-)
+library(emmeans)
+library(dplyr)
+library(readr)      # for write_csv
+library(tidyr)
+library(knitr)      # for kable (optional pretty print)
+library(kableExtra) # optional: nicer HTML/LaTeX tables
 
-AIC(m_cpue_noInt, m_cpue_zi)
+# Assuming your final inference model is m_noInt
+# (additive TimePeriod + Area + spline + random effects)
+emm_area <- emmeans(m_cpue_noInt, ~ TimePeriod | Area, type = "response")
 
+# Convert to a clean data frame
+emm_area_CPUE_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ ) %>%
+ rename(
+  Mean = response,
+  LCL  = asymp.LCL,
+  UCL  = asymp.UCL
+ ) %>%
+ select(Area, TimePeriod, Mean, SE, LCL, UCL)
 
-res_zi <- simulateResiduals(m_cpue_zi)
-plot(res_zi)
-testZeroInflation(res_zi)
-
-# Re-check interaction within the ZI family (same ziformula on both)
-m_cpue_zi_full <- update(m_cpue_zi, . ~ TimePeriod * Area)
-m_cpue_zi_add  <- update(m_cpue_zi_full, . ~ . - TimePeriod:Area)
-anova(m_cpue_zi_full, m_cpue_zi_add)  # LRT for interaction (valid here)
-
-
-# Overall Pre vs Post (averaged across Areas, adjusted for doy, random effects)
-emm_overall_zi <- emmeans(m_cpue_zi, ~ TimePeriod, type = "response")
-emm_overall_zi
-pairs(emm_overall_zi)  # ratio Post vs Pre (tested on log scale)
-
-
-emm_area_zi <- emmeans(m_cpue_zi, ~ TimePeriod | Area, type = "response")
-as.data.frame(emm_area_zi)
-
-
-con3 <- pairs(emm_area_zi, by = NULL, adjust = "holm")
-con3
-
-
+#Diagnostics (strongly recommended)
+res <- simulateResiduals(m_full)
+plot(res)
+testDispersion(res)
+testZeroInflation(res)

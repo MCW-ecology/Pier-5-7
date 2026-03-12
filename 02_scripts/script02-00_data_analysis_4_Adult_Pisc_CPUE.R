@@ -18,7 +18,7 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
-
+events <- readRDS("01_data/events.rds")
 #### Make a combined column of area and year
 df <- df %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
@@ -26,8 +26,6 @@ df <- df %>%
 df <- df %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-events <- df %>%
- distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
 
 
 ###determine juvenile vs adult piscivores species (ref is Scott and Crossman for all, except OFFLHD for
@@ -61,21 +59,22 @@ df$adult<-ifelse(df$Common_Name=="Smallmouth bass" & df$Length>165,"Y",
 
 
 
-
+#### Summarize the Adult Piscivores
 df_counts <- df %>%
  dplyr::filter(adult %in% c("Y"))
 df_counts <- df_counts %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
 
-
-PiscCPUE2Adult <- events %>%
- left_join(df_counts, by = c("YMD","Year","Transect","Area","AreaTP","AreaYear","TimePeriod","doy")) %>%
+PiscCPUE <- events %>%
+ left_join(df_counts, by = c("YMD","Year","Transect","Area","AreaYear","TimePeriod", "AreaTP", "doy")) %>%
  mutate(CPUE = tidyr::replace_na(CPUE, 0))
+write.csv(PiscCPUE,"PiscCPUE.csv")
+
 
 
 ##### Plot CPUE by year with error bars ######
-mean_abundance_yr_Area <- PiscCPUE2Adult %>%
+mean_abundance_yr_Area <- PiscCPUE %>%
  group_by(Year, Area) %>%
  summarise(
   mean_abundance_per_year_transect = mean(CPUE, na.rm = TRUE),
@@ -100,7 +99,7 @@ ggplot(mean_abundance_yr_Area,
   width = 0.2,
   linewidth = 0.5
  ) +
- ggtitle("Mean Adult Piscivore CPUE") +
+ #ggtitle("Mean Adult Piscivore CPUE") +
  geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
  labs(y = "Mean CPUE", color = "Area") +
  theme_bw(base_size = 15) +
@@ -127,7 +126,7 @@ ggsave("Adult Pisc CPUE by area with error bars.png", width = 8, height = 4, dpi
 ###Family:Negative binomial (richness is a count and likely overdispersed)
 ###Note: code written by CoPilot
 
-pisc_ad <- PiscCPUE2Adult %>%
+pisc_ad <- PiscCPUE %>%
  dplyr::filter(TimePeriod %in% c("Pre", "Post"))
 
 ### Prep a clean dataset
@@ -172,7 +171,7 @@ m_pisc_full_lin <- glmmTMB(
  family = nbinom2(),
  data = pisc_ad
 )
-
+#Note this would not converge, so try with Month below instead of spline
 
 pisc_ad$Month <- factor(format(as.Date(pisc_ad$YMD), "%m"))
 
@@ -181,6 +180,18 @@ m_pisc_full_m <- glmmTMB(
  family = nbinom2(),
  data = pisc_ad
 )
+
+m_pisc_full_2 <- glmmTMB(
+ CPUE ~ TimePeriod * Area + (1|Transect) + (1|Year),
+ family = nbinom2(),
+ data = pisc_ad
+)
+
+#Diagnostics (strongly recommended)
+res <- simulateResiduals(m_pisc_full_2)
+plot(res)
+testDispersion(res)
+testZeroInflation(res)
 
 m_pisc_noInt_m <- update(m_pisc_full_m, . ~ . - TimePeriod:Area)
 

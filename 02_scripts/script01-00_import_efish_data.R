@@ -169,7 +169,7 @@ temp_hab3 <- temp_hab2 %>%
 
 saveRDS(temp_hab3, "01_data/temp_hab.rds")
 
-events <- temp_hab %>%
+events <- temp_hab3 %>%
  distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
 
 saveRDS(events, "01_data/events.rds")

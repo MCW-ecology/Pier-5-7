@@ -20,6 +20,7 @@
 temp_df <- readRDS("01_data/Efish_processed.rds")
 guilds <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/SpeciesList.csv")
 df <- merge(temp_df, guilds, by = "Common_Name")
+events <- readRDS("01_data/events.rds")
 #### Make a combined column of area and year
 df <- df %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)
@@ -28,8 +29,6 @@ df <- df %>%
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
 
-events <- df %>%
- distinct(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy)
 
 df_counts_guild <- df %>%
  dplyr::filter(Repoductive_guild %in% c("Lithophils"))
@@ -67,7 +66,7 @@ ggplot(mean_abundance_yr_Area,
   width = 0.2,
   linewidth = 0.5
  ) +
- ggtitle("Mean Lithophils CPUE") +
+ #ggtitle("Mean Lithophils CPUE") +
  geom_vline(xintercept = 2021, linetype = "dashed", color = "grey") +
  labs(y = "Mean CPUE", color = "Area") +
  theme_bw(base_size = 15) +
@@ -122,16 +121,32 @@ anova(m_guild_full, m_guild_noInt)
 # Test overall TimePeriod effect (Pre vs Post averaged over areas)
 m_guild_noTP <- update(m_guild_noInt, . ~ . - TimePeriod)
 anova(m_guild_noInt, m_guild_noTP)
-
+emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
 # Test overall Area effect (averaged over TimePeriod)
 m_guild_noArea <- update(m_guild_noInt, . ~ . - Area)
 anova(m_guild_noInt, m_guild_noArea)
 
 
-con_guild <- emmeans(m_guild_full, pairwise ~ TimePeriod | Area, type = "response")
+con_guild <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
 summary(con_guild$contrasts, adjust = "holm")
-emmeans(m_guild_full, ~ TimePeriod, type = "response")
+emmeans(m_guild_noInt, ~ TimePeriod, type = "response") ##since full model wasn't sign, report additive model means
 
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall <- emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
+emm_overall
+pairs(emm_overall)
+
+#Multiple comparisons note (important if you plan to report "per area" p-values)
+con <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
+con$contrasts
+summary(con$contrasts, adjust = "holm")        # or "bonferroni"
+
+
+#Diagnostics (strongly recommended)
+res <- simulateResiduals(m_guild_full)
+plot(res)
+testDispersion(res)
+testZeroInflation(res)
 
 ##############################################################
 #### Plot Lithophils overall model by area
@@ -240,16 +255,20 @@ p_area_grouped <- ggplot(emm_area_df,
  labs(
   x = "Time Period",
   y = "Model-adjusted mean CPUE (Lithophils)",
-  colour = "Area",
-  title = "Lithophil CPUE — Adjusted Means (±95% CI) by Time Period and Area"
+  colour = "Area"
+  # title = "Lithophil CPUE — Adjusted Means (±95% CI) by Time Period and Area"
  ) +
  theme_bw() +
  theme(
+  panel.grid.major = element_blank(),   # <-- remove major grid lines
+  panel.grid.minor = element_blank(),   # <-- remove minor grid lines
   plot.title = element_text(face = "bold"),
   axis.title = element_text(face = "bold")
  )
 
 print(p_area_grouped)
+ggsave("fig_lithophil_byArea_PrePost_grouped.png",
+       p_area_grouped, width = 7.5, height = 4.5, dpi = 300)
 ggsave("fig_lithophil_byArea_PrePost_grouped.png",
        p_area_grouped, width = 7.5, height = 4.5, dpi = 300)
 ``

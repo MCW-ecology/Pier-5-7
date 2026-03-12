@@ -66,7 +66,7 @@ ggplot() +
   aes(x = Year, y = mean_temperature, color = Area),
   size = 3
  ) +
- geom_vline(xintercept = 2021, linetype = "dashed", color = "grey40", linewidth = 1) +
+ geom_vline(xintercept = 2021, linetype = "dashed", color = "grey", linewidth = 1) +
  labs(
   title = "Temperature",
   x = "Year",
@@ -112,7 +112,7 @@ ggplot() +
   aes(x = Year, y = mean_conductivity, color = Area),
   size = 3
  ) +
- geom_vline(xintercept = 2021, linetype = "dashed", color = "grey40", linewidth = 1) +
+ geom_vline(xintercept = 2021, linetype = "dashed", color = "grey", linewidth = 1) +
  labs(
   title = "Conductivity",
   x = "Year",
@@ -156,7 +156,7 @@ ggplot() +
   aes(x = Year, y = mean_DO, color = Area),
   size = 3
  ) +
- geom_vline(xintercept = 2021, linetype = "dashed", color = "grey40", linewidth = 1) +
+ geom_vline(xintercept = 2021, linetype = "dashed", color = "grey", linewidth = 1) +
  labs(
   title = "Dissolved Oxygen",
   x = "Year",
@@ -174,7 +174,7 @@ ggsave("DO_withRawPoints.png", width = 8, height = 4, dpi = 300)
 
 
 ######################################################################################
-######### Test Pre Vs Post ###########################################################
+######### Test Pre Vs Post for YSI Temperature ###########################################################
 ####Gaussian Linear Mixed Model (LMM) with the same structure:
 
 #Fixed effects: TimePeriod * Area
@@ -329,3 +329,222 @@ ggplot(emm_area_df, aes(x = TimePeriod, y = Mean, colour = Area, group = Area)) 
   axis.title = element_text(face = "bold"),
   plot.title = element_text(face = "bold")
  )
+ggsave("Temperature by Area.png", width = 8, height = 4, dpi = 300)
+######################################################################################
+######### Test Pre Vs Post for YSI Conductivity ######################################
+####Gaussian Linear Mixed Model (LMM) with the same structure:
+
+#Fixed effects: TimePeriod * Area
+#Random effects: (1 | Transect) + (1 | Year) (repeated measures)
+#Seasonality control: spline for doy (May–Oct sampling)
+#Family: gaussian() (continuous temperature)
+#Note: error with the Gausian model because not enough variance in the data, had to use lmer for
+#additive model. Still no significant difference. 
+
+library(dplyr)
+library(tidyr)
+
+dat_cond <- hab %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area       = factor(Area),
+  Transect   = factor(Transect),
+  Year       = factor(Year)
+ )
+
+vars_needed <- c("Conductivity", "TimePeriod", "Area", "doy", "Transect", "Year")
+
+dat_cc <- dat_cond %>%
+ select(all_of(vars_needed)) %>%
+ drop_na()
+
+
+# Full model with interaction
+m_cond_full <- glmmTMB(
+ Conductivity ~ TimePeriod * Area + ns(doy, df = 4) +
+  (1|Transect) + (1|Year),
+ family = gaussian(),
+ data = dat_cc
+)
+
+# Additive model (no interaction)
+#m_cond_noInt <- update(m_cond_full, . ~ . - TimePeriod:Area)
+
+#dat_cc2 <- dat_cc %>%
+# mutate(doy_s = scale(doy))
+
+
+#m_cond_noInt <- glmmTMB(
+# Conductivity ~ TimePeriod + Area + ns(doy_s, df = 3) + (1|Transect) + (1|Year),
+# family = gaussian(),
+# data = dat_cc2
+#)
+
+
+library(lme4)
+library(lmerTest)   # gives p-values
+
+m_cond_noInt_lmer <- lmer(
+ Conductivity ~ TimePeriod + Area + ns(doy, 4) +
+  (1|Transect) + (1|Year),
+ data = dat_cc,
+ REML = TRUE
+)
+
+summary(m_cond_noInt_lmer)
+
+
+# Test interaction
+anova(m_cond_full, m_cond_noInt_lmer)
+
+m_cond_noTP <- update(m_cond_noInt, . ~ . - TimePeriod)
+anova(m_cond_noInt, m_cond_noTP)
+
+m_cond_noArea <- update(m_cond_noInt, . ~ . - Area)
+anova(m_cond_noInt, m_cond_noArea)
+
+library(emmeans)
+
+# Overall adjusted means (averaged across Areas)
+emm_tp <- emmeans(m_cond_noInt, ~ TimePeriod)
+emm_tp
+pairs(emm_tp)     # Post - Pre difference, Gaussian test
+
+emm_area <- emmeans(m_cond_noInt, ~ TimePeriod | Area)
+emm_area
+
+# Pre vs Post within each Area
+con_area <- pairs(emm_area)    
+
+# Apply Holm across all contrasts
+summary(con_area, by = NULL, adjust = "holm")
+
+#### Diagnostics
+res_cond <- simulateResiduals(m_cond_noInt, n = 1000)
+plot(res_cond)
+testDispersion(res_cond)
+
+
+library(lme4)
+library(lmerTest)   # p-values for fixed effects
+
+# Fit ML (REML = FALSE) for model comparison
+m_cond_full_lmer <- lmer(
+ Conductivity ~ TimePeriod * Area + ns(doy, 4) + (1|Transect) + (1|Year),
+ data = dat_cc, REML = FALSE
+)
+m_cond_add_lmer <- lmer(
+ Conductivity ~ TimePeriod + Area + ns(doy, 4) + (1|Transect) + (1|Year),
+ data = dat_cc, REML = FALSE
+)
+
+anova(m_cond_full_lmer, m_cond_add_lmer)  # LRT for interaction
+
+# Then refit the additive model with REML for estimates (if interaction not significant)
+m_cond_noInt_lmer <- update(m_cond_add_lmer, REML = TRUE)
+
+# emmeans on the REML fit is fine
+library(emmeans)
+emm_tp   <- emmeans(m_cond_noInt_lmer, ~ TimePeriod)
+emm_area <- emmeans(m_cond_noInt_lmer, ~ TimePeriod | Area)
+
+m_cond_noInt_lmer <- update(m_cond_add_lmer, REML = TRUE)
+emm_tp <- emmeans(m_cond_noInt_lmer, ~ TimePeriod)
+
+######################################################################################
+######### Test Pre Vs Post for YSI DO ######################################
+####Gaussian Linear Mixed Model (LMM) with the same structure:
+
+#Fixed effects: TimePeriod * Area
+#Random effects: (1 | Transect) + (1 | Year) (repeated measures)
+#Seasonality control: spline for doy (May–Oct sampling)
+#Family: gaussian() (continuous temperature)
+#Note: error with the Gausian model because not enough variance in the data, had to use lmer for
+#additive model. Still no significant difference. 
+
+library(dplyr)
+library(tidyr)
+
+dat_do <- hab %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post")),
+  Area       = factor(Area),
+  Transect   = factor(Transect),
+  Year       = factor(Year)
+ )
+
+vars_needed <- c("DO", "TimePeriod", "Area", "doy", "Transect", "Year")
+
+dat_cc <- dat_do %>%
+ select(all_of(vars_needed)) %>%
+ drop_na()
+
+library(glmmTMB)
+library(splines)
+
+m_do_full <- glmmTMB(
+ DO ~ TimePeriod * Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
+ family = gaussian(),
+ data = dat_cc
+)
+
+m_do_noInt <- update(m_do_full, . ~ . - TimePeriod:Area)
+
+anova(m_do_full, m_do_noInt)  # LRT for interaction
+
+# Using glmmTMB:
+m_do_noTP   <- update(m_do_noInt, . ~ . - TimePeriod)
+anova(m_do_noInt, m_do_noTP)   # overall Pre vs Post
+
+m_do_noArea <- update(m_do_noInt, . ~ . - Area)
+anova(m_do_noInt, m_do_noArea) # overall Area differences
+
+# Using lmer (REML for inference; for main effects, you can also use Type III tests from lmerTest)
+#anova(m_do_noInt_lmer)  # Satterthwaite p-values per fixed effect (lmerTest)
+
+library(emmeans)
+
+# Pick the fitted additive model object you are using:
+#   - For glmmTMB:   model_use <- m_do_noInt
+#   - For lmer:      model_use <- m_do_noInt_lmer
+model_use <- m_do_noInt   # <-- change to m_do_noInt_lmer if using lmer
+
+# Overall Pre vs Post (averaged over Areas)
+emm_tp <- emmeans(model_use, ~ TimePeriod)
+emm_tp
+pairs(emm_tp)   # Post - Pre, Gaussian test
+
+# Area-wise adjusted means (descriptive context)
+emm_area <- emmeans(model_use, ~ TimePeriod | Area)
+emm_area
+
+# If you want per-area Pre vs Post tests with Holm across Areas:
+con_area <- pairs(emm_area)                        # Pre vs Post within each Area
+summary(con_area, by = NULL, adjust = "holm")      # Holm across the 3 contrasts
+
+library(dplyr)
+library(ggplot2)
+
+emm_area_df <- as.data.frame(emm_area) %>%
+ mutate(TimePeriod = factor(TimePeriod, levels = c("Pre","Post"))) %>%
+ rename(Mean = emmean, LCL = asymp.LCL, UCL = asymp.UCL)
+
+pd <- position_dodge(width = 0.45)
+
+ggplot(emm_area_df, aes(x = TimePeriod, y = Mean, colour = Area, group = Area)) +
+ geom_point(position = pd, size = 3) +
+ geom_errorbar(aes(ymin = LCL, ymax = UCL), position = pd, width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean DO (mg/L)",
+  title = "Adjusted Mean Dissolved Oxygen (±95% CI) by Area and Time Period",
+  colour = "Area"
+ ) +
+ theme_bw() +
+ theme(
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.title = element_text(face = "bold"),
+  plot.title = element_text(face = "bold")
+ )
+ggsave("DO by Area.png", width = 8, height = 4, dpi = 300)
