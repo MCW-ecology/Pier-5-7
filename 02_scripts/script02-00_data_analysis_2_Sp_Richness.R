@@ -68,12 +68,43 @@ PivotSpeciesTP[is.na(PivotSpeciesTP)] <- 0
 
 write.csv(PivotSpeciesTP,"PivotSpeciesTP.csv") 
 
+#########################################################################
+#### Abundance by species ###############################################
+#########################################################################
+TotalFish <- df %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") 
+
+TotalFishTP <- df %>%
+ group_by(TimePeriod) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop")
+
+TotalFishArea <- df %>%
+ group_by(Area) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop")
+
+SpAbun <- df %>%
+ group_by(Common_Name) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+
+SpAbunArea <- df %>%
+ group_by(Common_Name, Area) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+
+PivotSpAbunArea <- dcast(SpAbunArea, Common_Name ~ Area, value.var = "Total_Count")
+PivotSpAbunArea[is.na(PivotSpAbunArea)] <- 0
+
+TempSpNative <- df %>% dplyr::group_by(Common_Name, Native) %>% summarise(Count =length(Common_Name))
+SpNative <- TempSpNative %>% dplyr::group_by(Native) %>% summarise(Count =length(Common_Name))
 #---------------------------------------------------------------------------------------------------------------
 ####Species Richnesss############
 
 SpeciesSumDate <- SpeciesSumDate[SpeciesSumDate$Common_Name != "Carp x Goldfish hybrid", ]
 
 TotalSp <- SpeciesSumDate %>% dplyr::group_by(Common_Name) %>% summarise(Count =length(Transect))
+
+SpNative <- SpeciesSumDate %>% dplyr::group_by(Common_Name) %>% summarise(Count =length(Transect))
 
 TotalSpArea <- SpeciesSumDate %>% dplyr::group_by(Common_Name, Area) %>% summarise(Count =length(Common_Name))
 TotalSpArea2 <- TotalSpArea %>% dplyr::group_by(Area) %>% summarise(Count =length(Common_Name))

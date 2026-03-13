@@ -31,7 +31,12 @@ library('splines')
 library('emmeans')
 library('DHARMa')
 library('lubridate')
-
+library(glmmTMB)
+library(splines)
+library(emmeans)
+library(readr)      # for write_csv
+library(knitr)      # for kable (optional pretty print)
+library(kableExtra)
 
 ###Packages off CRAN
 #----------------------------#

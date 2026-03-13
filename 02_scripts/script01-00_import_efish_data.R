@@ -47,7 +47,7 @@ data_efish_lenW$Biomass <- NULL ### removes the Biomass column
 data_efish_lenW$Number.Individuals <- NULL ### removes the Biomass column
 
 #### Prep Metrics file #####
-data_metrics <- data_metrics %>% select(1,16)
+data_metrics <- data_metrics %>% select(1,5,7,11,16)
 data_metrics <- data_metrics %>% rename(Sp_Code = MNR.Fish.ID)
 
 cat("Loaded", format(nrow(data_efish_lenW), big.mark = ","), "records\n")

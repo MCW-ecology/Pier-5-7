@@ -137,26 +137,93 @@ confint(pairs(emmeans(m_NN_full, ~ TimePeriod | Area, type = "link")))
 
 
 #Diagnostics (strongly recommended)
-res <- simulateResiduals(m_pisc_full_2)
+res <- simulateResiduals(m_NN_full)
 plot(res)
 testDispersion(res)
 testZeroInflation(res)
 
-m_pisc_noInt_m <- update(m_pisc_full_m, . ~ . - TimePeriod:Area)
+m_NN_noInt <- update(m_NN_full, . ~ . - TimePeriod:Area)
 
 # Test whether Pre–Post change differs by Area (interaction)
-anova(m_pisc_full_m, m_pisc_noInt_m)
+anova(m_NN_full, m_NN_noInt)
 
-m_pisc_noInt_m <- update(m_pisc_full_m, . ~ . - TimePeriod:Area)
+m_NN_noInt <- update(m_NN_full, . ~ . - TimePeriod:Area)
 
-anova(m_pisc_noInt_m, update(m_pisc_noInt_m, . ~ . - TimePeriod))
+anova(m_NN_noInt, update(m_NN_noInt, . ~ . - TimePeriod))
 
-anova(m_pisc_noInt_m, update(m_pisc_noInt_m, . ~ . - Area))
-
-
-con_pisc_m <- emmeans(m_pisc_full_m, pairwise ~ TimePeriod | Area, type = "response")
-summary(con_pisc_m$contrasts, adjust = "holm")
+anova(m_NN_noInt, update(m_NN_noInt, . ~ . - Area))
 
 
-emmeans(m_pisc_noInt_m, ~ TimePeriod, type = "response")
-pairs(emmeans(m_pisc_noInt_m, ~ TimePeriod), type = "response")
+con_NN <- emmeans(m_NN_full, pairwise ~ TimePeriod | Area, type = "response")
+summary(con_NN$contrasts, adjust = "holm")
+
+
+emmeans(m_NN_noInt, ~ TimePeriod, type = "response")
+pairs(emmeans(m_NN_noInt, ~ TimePeriod), type = "response")
+
+#### Make a table of model adjusted means ####
+
+library(emmeans)
+library(dplyr)
+
+# Use the interaction model (significant interaction)
+emm_area <- emmeans(m_NN_full, ~ TimePeriod | Area, type = "response")
+
+# Tidy for tables/plots
+emm_area_NN_df <- as.data.frame(emm_area) %>%
+ mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))) %>%
+ rename(
+  Mean = response,      # back-transformed mean CPUE
+  LCL  = asymp.LCL,     # 95% lower CI on response scale
+  UCL  = asymp.UCL      # 95% upper CI on response scale
+ ) %>%
+ select(Area, TimePeriod, Mean, SE, LCL, UCL)
+
+emm_area_NN_df
+
+####Plot Model ajusted means coloured by area
+library(emmeans)
+library(dplyr)
+library(ggplot2)
+
+# 1) Get adjusted means for each Area × TimePeriod from the interaction model
+emm_area <- emmeans(m_NN_full, ~ TimePeriod | Area, type = "response")
+
+# 2) Tidy for plotting (handle column names from emmeans)
+plot_df <- as.data.frame(emm_area) %>%
+ mutate(TimePeriod = factor(TimePeriod, levels = c("Pre","Post")),
+        Area = factor(Area)) %>%
+ # Standardize column names for plotting
+ rename(
+  Mean = response,
+  LCL  = asymp.LCL,
+  UCL  = asymp.UCL
+ )
+
+# 3) Plot (points + 95% CI; colours by Area; dodged to avoid overlap)
+pd <- position_dodge(width = 0.45)
+
+p_nn <- ggplot(plot_df, aes(x = TimePeriod, y = Mean, colour = Area, group = Area)) +
+ # Optional: connect Pre→Post within Area (comment out if you don’t want lines)
+ #geom_line(position = pd, linewidth = 0.8, alpha = 0.7) +
+ geom_point(position = pd, size = 3) +
+ geom_errorbar(aes(ymin = LCL, ymax = UCL),
+               position = pd, width = 0.12, linewidth = 0.8) +
+ labs(
+  x = "Time Period",
+  y = "Model-adjusted mean Non-native CPUE",
+  colour = "Area",
+  #title = "Non-native CPUE — Adjusted Means (±95% CI) by Area and Time Period"
+ ) +
+ theme_bw() +
+ theme(
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.title = element_text(face = "bold"),
+  plot.title = element_text(face = "bold")
+ )
+
+p_nn
+
+# 4) Save
+ggsave("NN_CPUE_AdjustedMeans_ByArea.png", p_nn, width = 8, height = 4.5, dpi = 300)

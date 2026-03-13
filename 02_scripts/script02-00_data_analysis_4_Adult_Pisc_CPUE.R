@@ -287,7 +287,7 @@ p_area_grouped <- ggplot(emm_area_df, aes(x = TimePeriod, y = response,
   x = "Time Period",
   y = "Model-adjusted mean CPUE (Adult piscivores)",
   colour = "Area",
-  title = "Adult Piscivores — CPUE (Adjusted Means ± 95% CI) by Time Period and Area"
+ # title = "Adult Piscivores — CPUE (Adjusted Means ± 95% CI) by Time Period and Area"
  ) +
  theme_bw() +
  theme(
