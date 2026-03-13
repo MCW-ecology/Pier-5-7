@@ -141,6 +141,31 @@ con <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
 con$contrasts
 summary(con$contrasts, adjust = "holm")        # or "bonferroni"
 
+#### Make a table of model adjusted means ####
+
+library(emmeans)
+library(dplyr)
+library(readr)      # for write_csv
+library(tidyr)
+library(knitr)      # for kable (optional pretty print)
+library(kableExtra) # optional: nicer HTML/LaTeX tables
+
+# Assuming your final inference model is m_noInt
+# (additive TimePeriod + Area + spline + random effects)
+emm_area <- emmeans(m_guild_noInt, ~ TimePeriod | Area, type = "response")
+
+# Convert to a clean data frame
+emm_area_guild_df <- as.data.frame(emm_area) %>%
+ mutate(
+  TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))
+ ) %>%
+ rename(
+  Mean = response,
+  LCL  = asymp.LCL,
+  UCL  = asymp.UCL
+ ) %>%
+ select(Area, TimePeriod, Mean, SE, LCL, UCL)
+
 
 #Diagnostics (strongly recommended)
 res <- simulateResiduals(m_guild_full)
