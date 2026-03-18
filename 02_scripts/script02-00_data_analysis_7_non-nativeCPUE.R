@@ -107,12 +107,12 @@ m_NN_full <- glmmTMB(
 )
 
 # Reduced (no interaction) for the LRT:
-# Note: would not converge
 m_NN_noInt <- update(m_NN_full, . ~ . - TimePeriod:Area)
 
 # Test whether Pre–Post change differs by Area (interaction)
 anova(m_NN_full, m_NN_noInt)
 
+### Interaction is significant so don't need to run additive models
 
 # Test overall TimePeriod effect (Pre vs Post averaged over areas)
 #m_NN_noTP <- update(m_NN_noInt, . ~ . - TimePeriod)

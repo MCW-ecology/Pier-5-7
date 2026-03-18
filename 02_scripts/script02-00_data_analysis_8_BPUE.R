@@ -168,11 +168,11 @@ m_bpue_add <- update(m_bpue_full, . ~ . - TimePeriod:Area)
 anova(m_bpue_full, m_bpue_add)   # LRT for interaction
 
 
-# Overall Pre vs Post (averaged across Areas)
+# Test overall TimePeriod effect (Pre vs Post averaged over areas)
 m_bpue_noTP <- update(m_bpue_add, . ~ . - TimePeriod)
 anova(m_bpue_add, m_bpue_noTP)
 
-# Overall Area differences
+# Test overall Area effect (averaged over TimePeriod)
 m_bpue_noArea <- update(m_bpue_add, . ~ . - Area)
 anova(m_bpue_add, m_bpue_noArea)
 

@@ -178,53 +178,6 @@ ggsave("CPUE by area with error bars.png", width = 8, height = 4, dpi = 300)
 
 
 
-##########################
-### Adult Piscivores #####
-##########################
-
-###determine juvenile vs adult piscivores or lithophilic species (ref is Scott and Crossman for all, except OFFLHD for
-### Chinook and American eel)
-df$adult<-ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length>165,"Y",
-                 ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length>254,"Y",
-                        ifelse(df_pisc$Common_Name=="Largemouth bass" & df_pisc$Length<255,"N",
-                               ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length>305,"Y",
-                                      ifelse(df_pisc$Common_Name=="Northern pike" & df_pisc$Length<306,"N",
-                                             ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length>457,"Y",
-                                                    ifelse(df_pisc$Common_Name=="Bowfin" & df_pisc$Length<458,"N",
-                                                           ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length>508,"Y",
-                                                                  ifelse(df_pisc$Common_Name=="Chinook salmon" & df_pisc$Length<509,"N",
-                                                                         ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length>228,"Y",
-                                                                                ifelse(df_pisc$Common_Name=="American eel" & df_pisc$Length<229,"N",
-                                                                                       ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length>305,"Y",
-                                                                                               # ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length>150,"Y",
-                                                                                               #      ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length>336,"Y",
-                                                                                               #    ifelse( df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length>273,"Y",  
-                                                                                               ifelse(df_pisc$Common_Name=="Smallmouth bass" & df_pisc$Length<166,"N",
-                                                                                                      ifelse( df_pisc$Common_Name=="Walleye(yellow pickerel)" & df_pisc$Length<306,"N",
-                                                                                                              #  ifelse( df_pisc$Common_Name=="White perch" & df_pisc$Length<151,"N",
-                                                                                                              #     ifelse( df_pisc$Common_Name=="White sucker" & df_pisc$Length<337,"N",
-                                                                                                              #   ifelse(df_pisc$Common_Name=="Gizzard shad" & df_pisc$Length<274,"N"
-                                                                                                              ""))))))))))))))
-
-
-#### Selecting just the adult piscivores######
-df_piscAdult <- df%>% 
- filter(adult == "Y")
-write.csv(df_piscAdult,"df_piscAdult.csv")
-
-####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
-PiscCPUEAdult <- df_piscAdult %>%
- group_by(YMD, Year, doy, Transect, Area, AreaTP, AreaYear, TimePeriod, Common_Name) %>%
- reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
-write.csv(PiscCPUEAdult,"PiscCPUEAdult.csv")
-
-#Pisc_mean_CPUE_Adult <- PiscCPUEAdult %>%
-# group_by(Year, Area, Common_Name) %>%
-# summarise(mean_CPUE_Adult = mean(CPUE, na.rm = TRUE))
-
-#Pisc_mean_abundance_TP_sp_Area <- PiscCPUEAdult %>%
-# group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
-# summarise(mean_CPUE_Adult = mean(CPUE, na.rm = TRUE))
 
 ##### CPUE by time period or year and area######
 ####Summarizing here by YMD, Year and Transect because in some years the transects were sampled more than once
@@ -382,9 +335,13 @@ m_cpue_full <- glmmTMB(
 m_cpue_noInt <- update(m_cpue_full, . ~ . - TimePeriod:Area)
 anova(m_cpue_full, m_cpue_noInt)
 
-#If interaction not supported, test main effect of TimePeriod
+# Test overall TimePeriod effect (Pre vs Post averaged over areas)
 m_cpue_noTP <- update(m_cpue_noInt, . ~ . - TimePeriod)
 anova(m_cpue_noInt, m_cpue_noTP)
+
+# Test overall Area effect (averaged over TimePeriod)
+m_cpue_noArea <- update(m_cpue_noInt, . ~ . - Area)
+anova(m_cpue_noInt, m_cpue_noArea)
 
 #Effect sizes (Pre vs Post within each Area)
 emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")

@@ -28,10 +28,38 @@ df <- df %>%
 df <- df %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-
-
 df_counts_guild <- df %>%
  dplyr::filter(Repoductive_guild %in% c("Lithophils"))
+
+### Some summary tables
+
+####Some summary tables
+
+
+df_guild_sum <- df_counts_guild %>%
+ group_by(Common_Name) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+
+df_guild_sum_Area <- df_counts_guild %>%
+ group_by(Common_Name, Area) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+Pivotdf_guild_sum_Area <- dcast(df_guild_sum_Area, Common_Name ~ Area, value.var = "Total_Count")
+Pivotdf_guild_sum_Area[is.na(Pivotdf_guild_sum_Area)] <- 0
+
+
+
+df_guild_sum_AreaTP <- df_counts_guild %>%
+ group_by(Common_Name, AreaTP) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+Pivotdf_guild_sum_AreaTP <- dcast(df_guild_sum_AreaTP, Common_Name ~ AreaTP, value.var = "Total_Count")
+Pivotdf_guild_sum_AreaTP[is.na(Pivotdf_guild_sum_AreaTP)] <- 0
+
+### Joining events and counts to get CPUE
+
+
 df_counts_guild <- df_counts_guild %>%
  group_by(YMD, Year, Transect, Area, AreaTP, AreaYear, TimePeriod, doy) %>%
  reframe(CPUE = sum(Count))  # Using reframe to return ungrouped data
@@ -39,6 +67,8 @@ df_counts_guild <- df_counts_guild %>%
 GuildCPUE <- events %>%
  left_join(df_counts_guild, by = c("YMD","Year","Transect","Area","AreaTP","AreaYear","TimePeriod","doy")) %>%
  mutate(CPUE = tidyr::replace_na(CPUE, 0))
+
+
 
 ##### Plot CPUE by year with error bars ######
 mean_abundance_yr_Area <- GuildCPUE %>%
@@ -122,6 +152,7 @@ anova(m_guild_full, m_guild_noInt)
 m_guild_noTP <- update(m_guild_noInt, . ~ . - TimePeriod)
 anova(m_guild_noInt, m_guild_noTP)
 emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
+
 # Test overall Area effect (averaged over TimePeriod)
 m_guild_noArea <- update(m_guild_noInt, . ~ . - Area)
 anova(m_guild_noInt, m_guild_noArea)

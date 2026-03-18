@@ -1,0 +1,877 @@
+"","YMD","Year","Transect","Area","AreaTP","AreaYear","TimePeriod","doy","Common_Name","BPUE"
+"1","2018-05-28","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Brown bullhead",652
+"2","2018-05-28","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Gizzard shad",4058
+"3","2018-05-28","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Goldfish",769
+"4","2018-05-28","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Largemouth bass",2875
+"5","2018-05-28","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"White sucker",400
+"6","2018-05-28","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Gizzard shad",3481
+"7","2018-05-28","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Spottail shiner",18
+"8","2018-05-28","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"White perch",32
+"9","2018-05-28","2018","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Gizzard shad",2645
+"10","2018-05-28","2018","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Rudd",65
+"11","2018-05-28","2018","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Spottail shiner",45
+"12","2018-05-28","2018","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Gizzard shad",5206
+"13","2018-05-28","2018","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",148,"Spottail shiner",11
+"14","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Carp",1023
+"15","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Carp x Goldfish hybrid",908
+"16","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Gizzard shad",15832
+"17","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Rock bass",728
+"18","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Spottail shiner",3
+"19","2018-05-29","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"White perch",193
+"20","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Bluegill",19
+"21","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Brown bullhead",489
+"22","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Gizzard shad",8096
+"23","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Goldfish",1218
+"24","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Pumpkinseed",24
+"25","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Rock bass",309
+"26","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Rudd",138
+"27","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Spottail shiner",25
+"28","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"Walleye(yellow pickerel)",417
+"29","2018-05-29","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",149,"White sucker",2039
+"30","2018-05-30","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Bluegill",105
+"31","2018-05-30","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Gizzard shad",17462
+"32","2018-05-30","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Bowfin",2280
+"33","2018-05-30","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Brown bullhead",67
+"34","2018-05-30","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Gizzard shad",18179
+"35","2018-05-30","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Goldfish",410
+"36","2018-05-30","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",150,"American eel",566
+"37","2018-05-30","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",150,"Gizzard shad",27858
+"38","2018-05-30","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Bluegill",106
+"39","2018-05-30","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Brown bullhead",23
+"40","2018-05-30","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Gizzard shad",19406
+"41","2018-05-30","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Rock bass",250
+"42","2018-05-30","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"White perch",34
+"43","2018-05-30","2018","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",150,"Gizzard shad",3053
+"44","2018-06-26","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"Gizzard shad",40452
+"45","2018-06-26","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"White perch",99
+"46","2018-06-26","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"Gizzard shad",39610
+"47","2018-06-26","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"Logperch",9
+"48","2018-06-26","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"White perch",130
+"49","2018-06-26","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",177,"Gizzard shad",5517
+"50","2018-06-26","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",177,"Rock bass",142
+"51","2018-06-26","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",177,"White perch",143
+"52","2018-06-26","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"Gizzard shad",12985
+"53","2018-06-26","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,"White perch",284
+"54","2018-06-26","2018","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",177,NA,0
+"55","2018-06-26","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Gizzard shad",4163
+"56","2018-06-26","2018","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Largemouth bass",1
+"57","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Alewife",228
+"58","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"American eel",269
+"59","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Brown bullhead",666
+"60","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Carp",4970
+"61","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Gizzard shad",3777
+"62","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Largemouth bass",490
+"63","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"White perch",148
+"64","2018-06-26","2018","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Yellow perch",183
+"65","2018-06-26","2018","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Gizzard shad",5033
+"66","2018-06-26","2018","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",177,"Spottail shiner",13
+"67","2018-06-27","2018","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Gizzard shad",2328
+"68","2018-06-27","2018","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Spottail shiner",15
+"69","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Brown bullhead",1507
+"70","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Gizzard shad",6857
+"71","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Goldfish",691
+"72","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Largemouth bass",3260
+"73","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Rudd",1331
+"74","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"White sucker",2324
+"75","2018-06-27","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Yellow perch",44
+"76","2018-06-27","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Carp",5200
+"77","2018-06-27","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Gizzard shad",3002
+"78","2018-06-27","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Largemouth bass",1368
+"79","2018-06-27","2018","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",178,"Yellow perch",24
+"80","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Bluegill",27
+"81","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Brook silverside",0.6
+"82","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Brown bullhead",76
+"83","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Largemouth bass",20
+"84","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Logperch",13
+"85","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Rock bass",332
+"86","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Round Goby",7
+"87","2018-08-09","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"White perch",120
+"88","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Brook silverside",0.5
+"89","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Gizzard shad",1073
+"90","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Largemouth bass",175
+"91","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Logperch",15
+"92","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Rock bass",139
+"93","2018-08-09","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Smallmouth bass",84
+"94","2018-08-09","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",221,"Carp",4159.8
+"95","2018-08-09","2018","HH52","Construction Site","Construction Site-Pre","Construction Site-2018","Pre",221,"Largemouth bass",1582
+"96","2018-08-09","2018","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",221,"Gizzard shad",514
+"97","2018-08-09","2018","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",221,"Gizzard shad",1676
+"98","2018-08-09","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",221,"Goldfish",875
+"99","2018-08-09","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",221,"Spottail shiner",6
+"100","2018-08-09","2018","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2018","Pre",221,"White perch",615
+"101","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Bluegill",1144
+"102","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Brook silverside",2.9
+"103","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Gizzard shad",5
+"104","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Largemouth bass",598
+"105","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Rock bass",326
+"106","2018-10-11","2018","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Spottail shiner",7
+"107","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Bluegill",241
+"108","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Gizzard shad",822
+"109","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Largemouth bass",283.6
+"110","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Logperch",233
+"111","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Pumpkinseed",80
+"112","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Rock bass",173
+"113","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Spottail shiner",19
+"114","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"White perch",7
+"115","2018-10-11","2018","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2018","Pre",284,"Yellow perch",257
+"116","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Bluegill",143
+"117","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Carp",3260
+"118","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Emerald shiner",2
+"119","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Gizzard shad",709
+"120","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Largemouth bass",128
+"121","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Logperch",5
+"122","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Rock bass",477
+"123","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"White perch",125
+"124","2019-05-21","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Yellow perch",102
+"125","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Bluegill",52
+"126","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Gizzard shad",1549
+"127","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Rock bass",1191
+"128","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Spottail shiner",5
+"129","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"White perch",48
+"130","2019-05-21","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"White sucker",523
+"131","2019-05-21","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",141,"Rock bass",199
+"132","2019-05-21","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",141,"Spottail shiner",5
+"133","2019-05-21","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",141,"White perch",53
+"134","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"American eel",840
+"135","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Bluegill",86
+"136","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Brown bullhead",37
+"137","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Emerald shiner",4
+"138","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Largemouth bass",291
+"139","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Pumpkinseed",27
+"140","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Rock bass",240
+"141","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"White perch",631
+"142","2019-05-21","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Yellow perch",16
+"143","2019-05-21","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Alewife",20
+"144","2019-05-21","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Bluegill",4
+"145","2019-05-21","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",141,"Emerald shiner",25
+"146","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",140
+"147","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Brook silverside",4
+"148","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Emerald shiner",12
+"149","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",8863
+"150","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Goldfish",1080
+"151","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Largemouth bass",1595
+"152","2019-05-23","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Rudd",8
+"153","2019-05-23","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",80
+"154","2019-05-23","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",7857
+"155","2019-05-23","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",111
+"156","2019-05-23","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",2618
+"157","2019-05-23","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",28
+"158","2019-05-23","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Emerald shiner",5
+"159","2019-05-23","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",741
+"160","2019-05-23","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",32
+"161","2019-05-23","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Emerald shiner",17
+"162","2019-05-23","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",2452
+"163","2019-05-23","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"White sucker",1051
+"164","2019-05-23","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Alewife",77
+"165","2019-05-23","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Brook silverside",3
+"166","2019-05-23","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Gizzard shad",4406
+"167","2019-05-23","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"Rock bass",62
+"168","2019-05-23","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",143,"White sucker",4359
+"169","2019-06-11","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",162,"Gizzard shad",5844
+"170","2019-06-11","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",162,"Rock bass",228
+"171","2019-06-11","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",162,"Smallmouth bass",1590
+"172","2019-06-11","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",162,"White perch",215
+"173","2019-06-11","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",162,"White sucker",869
+"174","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Alewife",97
+"175","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Carp",4800
+"176","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Gizzard shad",7270
+"177","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Largemouth bass",34
+"178","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Northern pike",3640
+"179","2019-06-11","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"White perch",302
+"180","2019-06-11","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Alewife",176
+"181","2019-06-11","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Emerald shiner",6
+"182","2019-06-11","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Gizzard shad",2599
+"183","2019-06-11","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",162,"Walleye(yellow pickerel)",121
+"184","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Alewife",15
+"185","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Bluegill",25
+"186","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Brook silverside",3
+"187","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Gizzard shad",8361
+"188","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Goldfish",1162
+"189","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Green sunfish",61
+"190","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Largemouth bass",3312
+"191","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Pumpkinseed",39
+"192","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Rock bass",170
+"193","2019-06-12","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"White sucker",1932
+"194","2019-06-12","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Alewife",25
+"195","2019-06-12","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Emerald shiner",5
+"196","2019-06-12","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",163,"Gizzard shad",2802
+"197","2019-06-13","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",164,NA,0
+"198","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Alewife",581
+"199","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Bluegill",100
+"200","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Gizzard shad",2032
+"201","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Largemouth bass",65
+"202","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Rock bass",153
+"203","2019-06-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"White sucker",2756
+"204","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Alewife",105
+"205","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Bluegill",29
+"206","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Brown bullhead",39
+"207","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Gizzard shad",1727
+"208","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"Rock bass",382
+"209","2019-06-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",168,"White sucker",481
+"210","2019-06-18","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Alewife",56
+"211","2019-06-18","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,NA,0
+"212","2019-06-18","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Alewife",25
+"213","2019-06-18","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Gizzard shad",3470
+"214","2019-06-18","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Alewife",27
+"215","2019-06-18","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Brook silverside",3
+"216","2019-06-18","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Largemouth bass",3770
+"217","2019-06-18","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"Rock bass",223
+"218","2019-06-18","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",169,"White sucker",980
+"219","2019-07-16","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",197,"Gizzard shad",4
+"220","2019-07-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"American eel",540
+"221","2019-07-17","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"Gizzard shad",5940
+"222","2019-07-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"Gizzard shad",4342
+"223","2019-07-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"Largemouth bass",1380
+"224","2019-07-17","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"Rock bass",256
+"225","2019-07-17","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",198,"Gizzard shad",4650
+"226","2019-07-17","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",198,"Gizzard shad",5850
+"227","2019-07-17","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,"Rudd",122
+"228","2019-07-17","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,NA,0
+"229","2019-07-17","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,"Gizzard shad",790
+"230","2019-07-17","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,NA,0
+"231","2019-07-17","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,NA,0
+"232","2019-07-17","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,"Brown bullhead",407
+"233","2019-07-17","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",198,"Largemouth bass",910
+"234","2019-08-20","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Bluegill",84
+"235","2019-08-20","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Gizzard shad",413
+"236","2019-08-20","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Largemouth bass",939
+"237","2019-08-20","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Rock bass",126
+"238","2019-08-20","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Emerald shiner",1
+"239","2019-08-20","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Gizzard shad",700
+"240","2019-08-20","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Largemouth bass",24
+"241","2019-08-20","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"White perch",262
+"242","2019-08-20","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",232,"Goldfish",492
+"243","2019-08-20","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",232,"Smallmouth bass",178
+"244","2019-08-20","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",232,"Yellow perch",64
+"245","2019-08-20","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Gizzard shad",722
+"246","2019-08-20","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Largemouth bass",13
+"247","2019-08-20","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Logperch",28
+"248","2019-08-20","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",232,"Brook silverside",1.5
+"249","2019-08-21","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brook silverside",3
+"250","2019-08-21","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brown bullhead",438
+"251","2019-08-21","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Goldfish",1782
+"252","2019-08-21","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Largemouth bass",2448
+"253","2019-08-21","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brook silverside",0.5
+"254","2019-08-21","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brown bullhead",141
+"255","2019-08-21","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Gizzard shad",42
+"256","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brook silverside",1.5
+"257","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brown bullhead",1500
+"258","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Carp",5930
+"259","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Gizzard shad",8
+"260","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Goldfish",99
+"261","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Spottail shiner",33
+"262","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"White perch",136
+"263","2019-08-21","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Yellow perch",198
+"264","2019-08-21","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brown bullhead",922
+"265","2019-08-21","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Largemouth bass",2124
+"266","2019-08-21","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Rudd",173
+"267","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Bigmouth buffalo",8010
+"268","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brook silverside",3
+"269","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Brown bullhead",1827
+"270","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Goldfish",2070
+"271","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Largemouth bass",1950
+"272","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"Spottail shiner",12
+"273","2019-08-21","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",233,"White perch",31
+"274","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Bluegill",92
+"275","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Brook silverside",10
+"276","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Largemouth bass",2065
+"277","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Logperch",53
+"278","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Pumpkinseed",358
+"279","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Rock bass",380
+"280","2019-10-16","2019","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Yellow perch",111
+"281","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Bluegill",64
+"282","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Brook silverside",5
+"283","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Largemouth bass",337
+"284","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Logperch",160
+"285","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Pumpkinseed",51
+"286","2019-10-16","2019","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Rock bass",460
+"287","2019-10-16","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",289,"Brook silverside",6
+"288","2019-10-16","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",289,"Largemouth bass",1445
+"289","2019-10-16","2019","HH52","Construction Site","Construction Site-Pre","Construction Site-2019","Pre",289,"Logperch",107
+"290","2019-10-16","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Bluegill",86
+"291","2019-10-16","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Brook silverside",6
+"292","2019-10-16","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Emerald shiner",4
+"293","2019-10-16","2019","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Logperch",65
+"294","2019-10-16","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Brook silverside",11
+"295","2019-10-16","2019","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2019","Pre",289,"Emerald shiner",3
+"296","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Bluegill",53
+"297","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brook silverside",8
+"298","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",3532
+"299","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Emerald shiner",2
+"300","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Largemouth bass",182
+"301","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Logperch",15
+"302","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Rock bass",1
+"303","2019-10-16","2019","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Yellow perch",58
+"304","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brook silverside",6.5
+"305","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",1691
+"306","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Emerald shiner",8
+"307","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Gizzard shad",1088
+"308","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Logperch",7
+"309","2019-10-16","2019","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Pumpkinseed",41
+"310","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Bluegill",31
+"311","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brook silverside",1
+"312","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",1039
+"313","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Chinook salmon",7120
+"314","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Gizzard shad",1360
+"315","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Logperch",8
+"316","2019-10-16","2019","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Pumpkinseed",50
+"317","2019-10-16","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brook silverside",6
+"318","2019-10-16","2019","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",957
+"319","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Bluegill",30
+"320","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",898
+"321","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Gizzard shad",1700
+"322","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Largemouth bass",1391
+"323","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Logperch",127
+"324","2019-10-16","2019","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Yellow perch",10
+"325","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Bluegill",55
+"326","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brook silverside",1
+"327","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Brown bullhead",2628
+"328","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Carp",1722
+"329","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Gizzard shad",30
+"330","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Goldfish",480
+"331","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Logperch",51
+"332","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Pumpkinseed",60
+"333","2019-10-16","2019","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2019","Pre",289,"Yellow perch",75
+"334","2020-07-16","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",198,"Gizzard shad",14287
+"335","2020-07-16","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",198,"Alewife",32
+"336","2020-07-16","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",198,"Gizzard shad",4724
+"337","2020-07-16","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",198,"Gizzard shad",7232
+"338","2020-07-16","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",198,"Gizzard shad",833
+"339","2020-07-16","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",198,"Gizzard shad",14569
+"340","2020-07-16","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Brown bullhead",548
+"341","2020-07-16","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",124
+"342","2020-07-16","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Goldfish",1056
+"343","2020-07-16","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",17
+"344","2020-07-16","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",1091
+"345","2020-07-16","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Brown bullhead",255
+"346","2020-07-16","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",2748
+"347","2020-07-16","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Brown bullhead",153
+"348","2020-07-16","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Emerald shiner",9
+"349","2020-07-16","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",2002
+"350","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Brown bullhead",134
+"351","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Carp",2880
+"352","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Gizzard shad",1458
+"353","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Goldfish",763
+"354","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Largemouth bass",882
+"355","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Pumpkinseed",41
+"356","2020-07-16","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",198,"Spottail shiner",16
+"357","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Bluegill",170
+"358","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Brook silverside",5
+"359","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Brown bullhead",3586
+"360","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Largemouth bass",523
+"361","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Logperch",52
+"362","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Rudd",16
+"363","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Spottail shiner",8
+"364","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Walleye(yellow pickerel)",37
+"365","2020-09-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",265,"Yellow perch",31
+"366","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Bluegill",42
+"367","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Brown bullhead",237
+"368","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Gizzard shad",30
+"369","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Largemouth bass",283
+"370","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Logperch",75
+"371","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Pumpkinseed",128
+"372","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Rock bass",991
+"373","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Round Goby",2
+"374","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Walleye(yellow pickerel)",840.1
+"375","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"White perch",82
+"376","2020-09-23","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Yellow perch",68
+"377","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Bluegill",107
+"378","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Gizzard shad",76
+"379","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Largemouth bass",399
+"380","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Logperch",254
+"381","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Rock bass",531
+"382","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Rudd",69
+"383","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Spottail shiner",11
+"384","2020-09-23","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Yellow perch",349
+"385","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Gizzard shad",341
+"386","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Largemouth bass",55
+"387","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Logperch",93
+"388","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Northern pike",1380
+"389","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Rock bass",191
+"390","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Shorthead redhorse",526
+"391","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"White perch",91
+"392","2020-09-23","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",267,"Yellow perch",66
+"393","2020-09-23","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Bluegill",37
+"394","2020-09-23","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Largemouth bass",2306
+"395","2020-09-23","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Logperch",330
+"396","2020-09-23","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Rock bass",361
+"397","2020-09-23","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"White perch",45
+"398","2020-09-23","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Brook silverside",1
+"399","2020-09-23","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"Gizzard shad",552
+"400","2020-09-23","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",267,"White perch",9
+"401","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Bluegill",31
+"402","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brook silverside",9
+"403","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brown bullhead",7177
+"404","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Gizzard shad",1009
+"405","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Goldfish",1381
+"406","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Largemouth bass",264
+"407","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Rock bass",83
+"408","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Walleye(yellow pickerel)",880
+"409","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"White perch",15
+"410","2020-09-24","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Yellow perch",64
+"411","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brook silverside",0.5
+"412","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brown bullhead",754
+"413","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Gizzard shad",334
+"414","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Largemouth bass",8
+"415","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Logperch",23
+"416","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Walleye(yellow pickerel)",23
+"417","2020-09-24","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Yellow perch",6
+"418","2020-09-24","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Bluegill",90
+"419","2020-09-24","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Gizzard shad",1776
+"420","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brook silverside",1
+"421","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brown bullhead",2421
+"422","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Carp",1034
+"423","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Gizzard shad",1551
+"424","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Goldfish",1272
+"425","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Rudd",362
+"426","2020-09-24","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Yellow perch",9
+"427","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Alewife",1.2
+"428","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Bluegill",50
+"429","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Brown bullhead",453
+"430","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Emerald shiner",29.2
+"431","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Gizzard shad",474
+"432","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Goldfish",799
+"433","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Largemouth bass",222
+"434","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Logperch",14
+"435","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Pumpkinseed",50
+"436","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Rock bass",85
+"437","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"White perch",22
+"438","2020-09-24","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",268,"Yellow perch",84
+"439","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Bluegill",198
+"440","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brook silverside",13
+"441","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brown bullhead",272
+"442","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Gizzard shad",1030
+"443","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Goldfish",118
+"444","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Largemouth bass",166
+"445","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Pumpkinseed",47
+"446","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Spottail shiner",11
+"447","2020-10-20","2020","HH55","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"White perch",17
+"448","2020-10-20","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brook silverside",3
+"449","2020-10-20","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brown bullhead",268
+"450","2020-10-20","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Emerald shiner",3
+"451","2020-10-20","2020","HH56","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Largemouth bass",6
+"452","2020-10-20","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Bigmouth buffalo",6760
+"453","2020-10-20","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brook silverside",2
+"454","2020-10-20","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Emerald shiner",2
+"455","2020-10-20","2020","HH57","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Gizzard shad",2170
+"456","2020-10-20","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brook silverside",2
+"457","2020-10-20","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brown bullhead",229
+"458","2020-10-20","2020","HH58","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Gizzard shad",1230
+"459","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Bluegill",112
+"460","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brook silverside",9
+"461","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Brown bullhead",2470
+"462","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Gizzard shad",2020
+"463","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Goldfish",1170
+"464","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Pumpkinseed",2
+"465","2020-10-20","2020","HH59","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",294,"Yellow perch",15
+"466","2020-10-21","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Bluegill",199
+"467","2020-10-21","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Largemouth bass",2660
+"468","2020-10-21","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Logperch",163
+"469","2020-10-21","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Pumpkinseed",42
+"470","2020-10-21","2020","HH50","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Rock bass",215
+"471","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Bluegill",224
+"472","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Brook silverside",5
+"473","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Largemouth bass",21
+"474","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Logperch",143
+"475","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Pumpkinseed",91
+"476","2020-10-21","2020","HH51","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Rock bass",957
+"477","2020-10-21","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",295,"Brook silverside",3
+"478","2020-10-21","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",295,"Gizzard shad",2800
+"479","2020-10-21","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",295,"Largemouth bass",70
+"480","2020-10-21","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",295,"Logperch",19
+"481","2020-10-21","2020","HH52","Construction Site","Construction Site-Pre","Construction Site-2020","Pre",295,"Rock bass",77
+"482","2020-10-21","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Gizzard shad",1100
+"483","2020-10-21","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Largemouth bass",21
+"484","2020-10-21","2020","HH53","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Logperch",118
+"485","2020-10-21","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Gizzard shad",1960
+"486","2020-10-21","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Logperch",13
+"487","2020-10-21","2020","HH54","Piers 5-7","Piers 5-7-Pre","Piers 5-7-2020","Pre",295,"Spottail shiner",13
+"488","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Brook silverside",2
+"489","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Emerald shiner",5
+"490","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Goldfish",800
+"491","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Largemouth bass",46
+"492","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Logperch",179
+"493","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Rock bass",172
+"494","2020-10-21","2020","HH60","Macassa Bay","Macassa Bay-Pre","Macassa Bay-2020","Pre",295,"Spottail shiner",21
+"495","2021-07-28","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Gizzard shad",4655
+"496","2021-07-28","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Bigmouth buffalo",6100
+"497","2021-07-28","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Gizzard shad",969
+"498","2021-07-28","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Rock bass",176
+"499","2021-07-28","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Rudd",53
+"500","2021-07-28","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Yellow perch",136
+"501","2021-07-28","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Bluegill",20
+"502","2021-07-28","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Gizzard shad",2974
+"503","2021-07-28","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"White perch",47
+"504","2021-07-28","2021","HH54","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",209,"Gizzard shad",1964
+"505","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Bluegill",13
+"506","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Brown bullhead",344
+"507","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Gizzard shad",1744
+"508","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Goldfish",3069
+"509","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Largemouth bass",229.9
+"510","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Logperch",13
+"511","2021-07-28","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Yellow perch",319
+"512","2021-07-28","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Alewife",9
+"513","2021-07-28","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Emerald shiner",5
+"514","2021-07-28","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Gizzard shad",1017
+"515","2021-07-28","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Pumpkinseed",21
+"516","2021-07-28","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Bluegill",62
+"517","2021-07-28","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Emerald shiner",8
+"518","2021-07-28","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Gizzard shad",778
+"519","2021-07-28","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Logperch",8
+"520","2021-07-28","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Bluegill",49
+"521","2021-07-28","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Brown bullhead",667
+"522","2021-07-28","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Goldfish",719
+"523","2021-07-28","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Largemouth bass",1226
+"524","2021-07-28","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Rudd",596
+"525","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Bluegill",36
+"526","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Brown bullhead",325
+"527","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Emerald shiner",5.1
+"528","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Gizzard shad",1567
+"529","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Goldfish",3133
+"530","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Largemouth bass",805
+"531","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Rudd",120
+"532","2021-07-28","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",209,"Yellow perch",274
+"533","2021-07-29","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",210,"Gizzard shad",5462
+"534","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Brown bullhead",553
+"535","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Emerald shiner",1
+"536","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Gizzard shad",1705
+"537","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Rock bass",242
+"538","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Rudd",102
+"539","2021-07-29","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",210,"Yellow perch",233
+"540","2021-08-24","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Bluegill",85
+"541","2021-08-24","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Brook silverside",1.6
+"542","2021-08-24","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Brown bullhead",146
+"543","2021-08-24","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Gizzard shad",855
+"544","2021-08-24","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Rock bass",108
+"545","2021-08-24","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Bluegill",25
+"546","2021-08-24","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Rudd",156
+"547","2021-08-24","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Spottail shiner",2
+"548","2021-08-24","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",236,"Gizzard shad",850
+"549","2021-08-24","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Brook silverside",1
+"550","2021-08-24","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Gizzard shad",591
+"551","2021-08-24","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Largemouth bass",2662
+"552","2021-08-24","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"Logperch",16
+"553","2021-08-24","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",236,"White perch",205
+"554","2021-08-25","2021","HH54","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",237,"Gizzard shad",298
+"555","2021-08-25","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",237,"Bluegill",23
+"556","2021-08-25","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",237,"Gizzard shad",17
+"557","2021-08-25","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",237,"Goldfish",1148
+"558","2021-08-25","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",237,"Largemouth bass",8
+"559","2021-08-26","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Gizzard shad",21
+"560","2021-08-26","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Largemouth bass",5
+"561","2021-08-26","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Gizzard shad",88
+"562","2021-08-26","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Brook silverside",1
+"563","2021-08-26","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Gizzard shad",90
+"564","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Bluegill",13
+"565","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Gizzard shad",20
+"566","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Goldfish",1137
+"567","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Largemouth bass",4
+"568","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Pumpkinseed",31
+"569","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Rock bass",41
+"570","2021-08-26","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"White perch",50
+"571","2021-08-26","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Bluegill",27
+"572","2021-08-26","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Gizzard shad",16
+"573","2021-08-26","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",238,"Largemouth bass",34
+"574","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Bluegill",68
+"575","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",18
+"576","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brown bullhead",378
+"577","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Gizzard shad",828
+"578","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Goldfish",1021
+"579","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Largemouth bass",408
+"580","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Logperch",46
+"581","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Pumpkinseed",31
+"582","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"White sucker",41
+"583","2021-10-19","2021","HH55","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Yellow perch",37
+"584","2021-10-19","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",4
+"585","2021-10-19","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Largemouth bass",6
+"586","2021-10-19","2021","HH56","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Spottail shiner",5
+"587","2021-10-19","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",24
+"588","2021-10-19","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brown bullhead",401
+"589","2021-10-19","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Gizzard shad",636
+"590","2021-10-19","2021","HH57","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Logperch",5
+"591","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Bluegill",280
+"592","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",13
+"593","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brown bullhead",394
+"594","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Goldfish",87
+"595","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Largemouth bass",93
+"596","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Logperch",52
+"597","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"White perch",162
+"598","2021-10-19","2021","HH58","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Yellow perch",67
+"599","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Bluegill",26
+"600","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",12
+"601","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Emerald shiner",15
+"602","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Goldfish",1601
+"603","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Largemouth bass",167
+"604","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Rock bass",37
+"605","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Rudd",203
+"606","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Spottail shiner",8
+"607","2021-10-19","2021","HH59","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Yellow perch",139
+"608","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Bluegill",81
+"609","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brook silverside",14
+"610","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Brown bullhead",405
+"611","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Carp",31
+"612","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Gizzard shad",18
+"613","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Goldfish",1450
+"614","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Largemouth bass",666
+"615","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Logperch",6
+"616","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Northern pike",1800
+"617","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Pumpkinseed",191
+"618","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"Rudd",12
+"619","2021-10-19","2021","HH60","Macassa Bay","Macassa Bay-Construction","Macassa Bay-2021","Construction",292,"White perch",15
+"620","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Bluegill",42
+"621","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Brook silverside",16
+"622","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Emerald shiner",3
+"623","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Largemouth bass",72
+"624","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Logperch",21
+"625","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Pumpkinseed",37
+"626","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Rock bass",278
+"627","2021-10-20","2021","HH50","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Walleye(yellow pickerel)",2820
+"628","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Bigmouth buffalo",1080
+"629","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Bluegill",70
+"630","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Brook silverside",8
+"631","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Goldfish",990
+"632","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Logperch",9
+"633","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Rock bass",83
+"634","2021-10-20","2021","HH51","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Walleye(yellow pickerel)",3090
+"635","2021-10-20","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",293,"Brook silverside",7
+"636","2021-10-20","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",293,"Brown bullhead",771
+"637","2021-10-20","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",293,"Gizzard shad",50
+"638","2021-10-20","2021","HH52","Construction Site","Construction Site-Construction","Construction Site-2021","Construction",293,"Walleye(yellow pickerel)",1700
+"639","2021-10-20","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Brook silverside",2
+"640","2021-10-20","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Gizzard shad",59
+"641","2021-10-20","2021","HH53","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Logperch",40
+"642","2021-10-20","2021","HH54","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Brook silverside",7
+"643","2021-10-20","2021","HH54","Piers 5-7","Piers 5-7-Construction","Piers 5-7-2021","Construction",293,"Logperch",16
+"644","2022-08-02","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",214,"Gizzard shad",701
+"645","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Gizzard shad",5190
+"646","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Green sunfish",13
+"647","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Largemouth bass",99
+"648","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Logperch",26
+"649","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Rock bass",254
+"650","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Walleye(yellow pickerel)",990
+"651","2022-08-02","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"White perch",52
+"652","2022-08-02","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"Largemouth bass",5288
+"653","2022-08-02","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",214,"White perch",14
+"654","2022-08-03","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",215,"Bluegill",16
+"655","2022-08-03","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",215,"Gizzard shad",5114
+"656","2022-08-03","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",215,"Largemouth bass",2498
+"657","2022-08-03","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",215,"Rock bass",194
+"658","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Alewife",28
+"659","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Bluegill",183
+"660","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Brown bullhead",389
+"661","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Gizzard shad",1980
+"662","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Largemouth bass",67
+"663","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Logperch",12
+"664","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Spottail shiner",37
+"665","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"White perch",78
+"666","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"White sucker",11
+"667","2022-08-04","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Yellow perch",422
+"668","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Bluegill",2.1
+"669","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Brown bullhead",655
+"670","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Gizzard shad",1820
+"671","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Goldfish",1720
+"672","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Largemouth bass",1.4
+"673","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"White perch",123.2
+"674","2022-08-04","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Yellow perch",108
+"675","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Alewife",13
+"676","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Bluegill",13
+"677","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Brook silverside",3
+"678","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Largemouth bass",14
+"679","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Walleye(yellow pickerel)",693
+"680","2022-08-04","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"White perch",93
+"681","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Alewife",33
+"682","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Bigmouth buffalo",2460
+"683","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Bluegill",60
+"684","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Brown bullhead",930
+"685","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Gizzard shad",3740
+"686","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Largemouth bass",1676
+"687","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"Pumpkinseed",17
+"688","2022-08-04","2022","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",216,"White perch",72
+"689","2022-08-05","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",217,"Gizzard shad",9842
+"690","2022-08-05","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",217,"Logperch",23
+"691","2022-08-05","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",217,"Walleye(yellow pickerel)",3480
+"692","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Bluegill",694
+"693","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brook silverside",3
+"694","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Chinook salmon",4300
+"695","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Green sunfish",117
+"696","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Largemouth bass",371
+"697","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Pumpkinseed",64
+"698","2022-10-24","2022","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rock bass",859
+"699","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Bluegill",25
+"700","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brook silverside",38.4
+"701","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brown bullhead",2246
+"702","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Gizzard shad",899
+"703","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Largemouth bass",1010
+"704","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Logperch",58
+"705","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rock bass",506
+"706","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rudd",8
+"707","2022-10-24","2022","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Yellow perch",20
+"708","2022-10-24","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",297,"Brook silverside",25.8
+"709","2022-10-24","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",297,"Gizzard shad",1900
+"710","2022-10-24","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",297,"Largemouth bass",554
+"711","2022-10-24","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",297,"Logperch",24
+"712","2022-10-24","2022","HH52","Construction Site","Construction Site-Post","Construction Site-2022","Post",297,"Rock bass",386
+"713","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Bluegill",185
+"714","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brook silverside",8
+"715","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Green sunfish",73
+"716","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Largemouth bass",219
+"717","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Logperch",255
+"718","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rock bass",148
+"719","2022-10-24","2022","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rudd",12
+"720","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Bluegill",108
+"721","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brook silverside",14.3
+"722","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Brown bullhead",192
+"723","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Largemouth bass",362
+"724","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Logperch",57
+"725","2022-10-24","2022","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2022","Post",297,"Rock bass",52
+"726","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Bluegill",2
+"727","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brook silverside",23.2
+"728","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Chinook salmon",4580
+"729","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Largemouth bass",742
+"730","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Logperch",11
+"731","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Pumpkinseed",5
+"732","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Rock bass",7
+"733","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Rudd",330
+"734","2022-10-25","2022","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Yellow perch",48
+"735","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Bluegill",3
+"736","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brook silverside",30.3
+"737","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Largemouth bass",462
+"738","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Logperch",10
+"739","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Rudd",332
+"740","2022-10-25","2022","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Yellow perch",33
+"741","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brook silverside",27
+"742","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brown bullhead",1902
+"743","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Carp",7680
+"744","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Largemouth bass",1058
+"745","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Rudd",10
+"746","2022-10-25","2022","HH57","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Yellow perch",13
+"747","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Bluegill",4
+"748","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Bluntnose minnow",4
+"749","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brook silverside",4
+"750","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Brown bullhead",3010
+"751","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Carp",4040
+"752","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Gizzard shad",3692
+"753","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Goldfish",1314
+"754","2022-10-25","2022","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2022","Post",298,"Largemouth bass",794
+"755","2023-05-10","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"Gizzard shad",13330
+"756","2023-05-10","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"Rock bass",295
+"757","2023-05-10","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"White perch",118
+"758","2023-05-10","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"Gizzard shad",1530
+"759","2023-05-10","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"Largemouth bass",266
+"760","2023-05-10","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"Rock bass",403
+"761","2023-05-10","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",130,"White sucker",95
+"762","2023-05-11","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",131,"Gizzard shad",760
+"763","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"Bluegill",45
+"764","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"Brown bullhead",62
+"765","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"Gizzard shad",6140
+"766","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"Green sunfish",26
+"767","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"Rock bass",26
+"768","2023-05-11","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",131,"White perch",281
+"769","2023-07-20","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",201,"Bigmouth buffalo",4210
+"770","2023-07-20","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",201,"Gizzard shad",9780
+"771","2023-07-20","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",201,"Largemouth bass",2090
+"772","2023-07-20","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",201,"Rock bass",287
+"773","2023-07-21","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",202,"Gizzard shad",2760
+"774","2023-07-21","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",202,"White perch",75.8
+"775","2023-07-21","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Gizzard shad",700
+"776","2023-07-21","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Largemouth bass",2210
+"777","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Bluegill",46
+"778","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Brown bullhead",23
+"779","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Gizzard shad",15403
+"780","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Green sunfish",25
+"781","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Largemouth bass",167
+"782","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Logperch",49
+"783","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Rock bass",47
+"784","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Round Goby",21
+"785","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Walleye(yellow pickerel)",2300
+"786","2023-07-21","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",202,"Yellow perch",111
+"787","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Bluegill",297
+"788","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brook silverside",4
+"789","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brown bullhead",500
+"790","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Gizzard shad",1201
+"791","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Goldfish",61
+"792","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Largemouth bass",77
+"793","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Logperch",2
+"794","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Pumpkinseed",271
+"795","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rock bass",20
+"796","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rudd",355
+"797","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"White perch",48
+"798","2023-09-27","2023","HH55","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Yellow perch",301
+"799","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Bluegill",24.7
+"800","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brook silverside",2.2
+"801","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Gizzard shad",3638
+"802","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Largemouth bass",49
+"803","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Pumpkinseed",173
+"804","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rudd",8
+"805","2023-09-27","2023","HH58","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Yellow perch",94
+"806","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Bluegill",3
+"807","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brook silverside",3
+"808","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Emerald shiner",15
+"809","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Golden shiner",1117
+"810","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Largemouth bass",2182
+"811","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Logperch",11
+"812","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Pumpkinseed",95
+"813","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rock bass",901
+"814","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rudd",338
+"815","2023-09-27","2023","HH59","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"White perch",55
+"816","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Bluegill",751
+"817","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brook silverside",5
+"818","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Brown bullhead",656
+"819","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Common shiner",34.3
+"820","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Emerald shiner",13
+"821","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Gizzard shad",1665
+"822","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Largemouth bass",272
+"823","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Logperch",118
+"824","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Pumpkinseed",461
+"825","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rock bass",25
+"826","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Rudd",816
+"827","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Spottail shiner",36
+"828","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"White perch",86
+"829","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"White sucker",95
+"830","2023-09-27","2023","HH60","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",270,"Yellow perch",783
+"831","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Bluegill",349
+"832","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Brook silverside",2.2
+"833","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Brown bullhead",71
+"834","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Gizzard shad",980
+"835","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Green sunfish",51
+"836","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Largemouth bass",2221
+"837","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Logperch",31
+"838","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Pumpkinseed",140
+"839","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Rock bass",616.3
+"840","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Rudd",6
+"841","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Smallmouth bass",28
+"842","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Spottail shiner",4
+"843","2023-10-03","2023","HH50","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Walleye(yellow pickerel)",2630
+"844","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"American eel",2080
+"845","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Bluegill",542
+"846","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Largemouth bass",353
+"847","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Logperch",164
+"848","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Pumpkinseed",121
+"849","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Rock bass",1040
+"850","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"Rudd",6
+"851","2023-10-03","2023","HH51","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",276,"White perch",8
+"852","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Bluegill",47.3
+"853","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Brook silverside",3.1
+"854","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Brown bullhead",482
+"855","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Gizzard shad",2960
+"856","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Largemouth bass",1512
+"857","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Logperch",149
+"858","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Pumpkinseed",80
+"859","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Rock bass",262
+"860","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Rudd",8
+"861","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"Walleye(yellow pickerel)",2320
+"862","2023-10-03","2023","HH52","Construction Site","Construction Site-Post","Construction Site-2023","Post",276,"White perch",187
+"863","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Bluegill",28.7
+"864","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Brook silverside",2.1
+"865","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Brown bullhead",628
+"866","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Largemouth bass",283
+"867","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Logperch",19
+"868","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Pumpkinseed",260
+"869","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Rudd",761
+"870","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"White perch",23
+"871","2023-10-03","2023","HH56","Macassa Bay","Macassa Bay-Post","Macassa Bay-2023","Post",276,"Yellow perch",222
+"872","2023-10-04","2023","HH53","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",277,"Brook silverside",2
+"873","2023-10-04","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",277,"Bluegill",84
+"874","2023-10-04","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",277,"Smallmouth bass",1460
+"875","2023-10-04","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",277,"Spottail shiner",5
+"876","2023-10-04","2023","HH54","Piers 5-7","Piers 5-7-Post","Piers 5-7-2023","Post",277,"Walleye(yellow pickerel)",2840

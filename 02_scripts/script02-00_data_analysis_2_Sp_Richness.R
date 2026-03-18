@@ -116,6 +116,7 @@ TotalSpArea2 <- TotalSpArea %>% dplyr::group_by(Area) %>% summarise(Count =lengt
 
 
 TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
+write.csv(TempMeanSpRich,"TempMeanSpRich.csv") 
 
 TempMeanSpRich <- events %>%
  left_join(TempMeanSpRich, by = c("YMD","Year","Transect","Area","AreaYear")) %>%
@@ -316,7 +317,7 @@ m_noInt <- glmmTMB(
  family = nbinom2(),
  data = dat_cc
 )
-# Test Area main effect
+# Test overall TimePeriod effect (Pre vs Post averaged over areas)
 m_noTP <- glmmTMB(
  Count ~ Area + ns(doy, df = 4) + (1|Transect) + (1|Year),
  family = nbinom2(),
@@ -324,6 +325,9 @@ m_noTP <- glmmTMB(
 )
 anova(m_noInt, m_noTP)
 
+# Test overall Area effect (averaged over TimePeriod)
+m_noArea <- update(m_noInt, . ~ . - Area)
+anova(m_noInt, m_noArea)
 
 # Area-specific adjusted means and contrasts (richness)
 con_rich <- emmeans(m_full, pairwise ~ TimePeriod | Area, type = "response")

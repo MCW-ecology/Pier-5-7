@@ -71,7 +71,35 @@ PiscCPUE <- events %>%
  mutate(CPUE = tidyr::replace_na(CPUE, 0))
 write.csv(PiscCPUE,"PiscCPUE.csv")
 
+####Some summary tables
 
+df_AdPisc <- df %>%
+ dplyr::filter(adult %in% c("Y"))
+df_AdPisc_sum <- df_AdPisc %>%
+ group_by(Common_Name) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+
+df_AdPisc_sum_Area <- df_AdPisc %>%
+ group_by(Common_Name, Area) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+Pivotdf_AdPisc_sum_Area <- dcast(df_AdPisc_sum_Area, Common_Name ~ Area, value.var = "Total_Count")
+Pivotdf_AdPisc_sum_Area[is.na(Pivotdf_AdPisc_sum_Area)] <- 0
+
+df_AdPisc_sum_AreaYear <- df_AdPisc %>%
+ group_by(Common_Name, AreaYear) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+Pivotdf_AdPisc_sum_AreaYear <- dcast(df_AdPisc_sum_AreaYear, Common_Name ~ AreaYear, value.var = "Total_Count")
+Pivotdf_AdPisc_sum_AreaYear[is.na(Pivotdf_AdPisc_sum_AreaYear)] <- 0
+
+df_AdPisc_sum_AreaTP <- df_AdPisc %>%
+ group_by(Common_Name, AreaTP) %>%
+ summarise(Total_Count = sum(Count), .groups = "drop") %>%
+ arrange(desc(Total_Count))
+Pivotdf_AdPisc_sum_AreaTP <- dcast(df_AdPisc_sum_AreaTP, Common_Name ~ AreaTP, value.var = "Total_Count")
+Pivotdf_AdPisc_sum_AreaTP[is.na(Pivotdf_AdPisc_sum_AreaTP)] <- 0
 
 ##### Plot CPUE by year with error bars ######
 mean_abundance_yr_Area <- PiscCPUE %>%
