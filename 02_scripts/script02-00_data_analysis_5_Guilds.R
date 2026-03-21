@@ -82,6 +82,8 @@ mean_abundance_yr_Area <- GuildCPUE %>%
 
 mean_abundance_yr_Area$Year <- as.numeric(as.character(mean_abundance_yr_Area$Year))
 
+saveRDS(mean_abundance_yr_Area, "01_data/mean_CPUE_guild.rds")
+
 ggplot(mean_abundance_yr_Area,
        aes(x = Year,
            y = mean_abundance_per_year_transect,
@@ -327,4 +329,40 @@ ggsave("fig_lithophil_byArea_PrePost_grouped.png",
        p_area_grouped, width = 7.5, height = 4.5, dpi = 300)
 ggsave("fig_lithophil_byArea_PrePost_grouped.png",
        p_area_grouped, width = 7.5, height = 4.5, dpi = 300)
+
+
+library(glmmTMB)
+library(emmeans)
+library(broom.mixed)
+library(dplyr)
+
+# Model (from your workflow)
+m_guild_full  <- glmmTMB(CPUE ~ TimePeriod * Area + ns(doy, 4) + (1|Transect) + (1|Year),
+                         family = nbinom2(), data = GuildCPUE2)
+m_guild_noInt <- update(m_guild_full, . ~ . - TimePeriod:Area)
+
+# LRTs
+anova(m_guild_full, m_guild_noInt)
+anova(m_guild_noInt, update(m_guild_noInt, . ~ . - Area))
+anova(m_guild_noInt, update(m_guild_noInt, . ~ . - TimePeriod))
+
+# Fixed effects table (additive model)
+fixef_tbl <- broom.mixed::tidy(m_guild_noInt, effects = "fixed")
+fixef_tbl
+
+# Random effects SDs
+ranef_tbl <- broom.mixed::tidy(m_guild_noInt, effects = "ran_pars")
+ranef_tbl
+
+# EMMs (overall TimePeriod, response scale)
+emm_tp <- emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
+pairs(emm_tp)
+
+# Pre vs Post within each Area (response scale; Holm)
+con_guild <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
+summary(con_guild$contrasts, adjust = "holm")
+
+# (Optional) Area differences averaged over TimePeriod
+emm_area <- emmeans(m_guild_noInt, ~ Area, type = "response")
+pairs(emm_area, adjust = "holm")
 ``

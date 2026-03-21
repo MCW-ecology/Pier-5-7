@@ -19,6 +19,7 @@
 
 df <- readRDS("01_data/Efish_processed.rds")
 events <- readRDS("01_data/events.rds")
+EventsYearArea <- readRDS("01_data/EventsYearArea.rds") #from CPUE script
 
 #### Make a combined column of area and year
 df <- df %>% 
@@ -74,6 +75,26 @@ write.csv(TempBPUE2,"TempBPUE2.csv")
 mean_biomass_yr_Area <- TempBPUE2 %>%
  group_by(Year, Area) %>%
  summarise(mean_BPUE = mean(BPUE, na.rm = TRUE))
+
+#####################################################
+#### BPUE by species table for supplemental #########
+#####################################################
+
+### Summary by TimePeriod/Area/species
+SpeciesBPUE <- df %>% dplyr::group_by(Sp_Code, Common_Name,Area, Year, AreaYear) %>% summarise(TotalWeight =sum(Weight))
+
+
+SpeciesBPUE2 <- SpeciesBPUE %>%
+ left_join(EventsYearArea, by = c("Year","Area","AreaYear")) %>%
+ mutate(TotalWeight = tidyr::replace_na(TotalWeight, 0))
+
+SpeciesBPUE2$BPUE <- SpeciesBPUE2$TotalWeight/SpeciesBPUE2$TotalTransects
+
+
+SpeciesBPUE3 <- SpeciesBPUE2[c("Sp_Code", "Common_Name", "AreaYear", "BPUE")]
+PivotBPUEforSup <- dcast(SpeciesBPUE3, Sp_Code+Common_Name ~ AreaYear, value.var = "BPUE")
+PivotBPUEforSup[is.na(PivotBPUEforSup)] <- 0
+write.csv(PivotBPUEforSup,"PivotBPUEforSup.csv")
 
 ##### Plot BPUE with error bars ######
 

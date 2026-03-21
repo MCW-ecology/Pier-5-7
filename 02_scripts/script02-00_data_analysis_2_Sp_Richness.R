@@ -135,6 +135,8 @@ MeanSpRich <- TempMeanSpRich %>%
 
 MeanSpRich$Year <- as.numeric(as.character(MeanSpRich$Year))
 
+saveRDS(MeanSpRich, "01_data/MeanSpRich.rds")
+
 options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
 
 

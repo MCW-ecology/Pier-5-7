@@ -1,12 +1,19 @@
-"","Transect","Area","2018","2019","2020","2021","2022","2023"
-"1","HH50","Piers 5-7",4,5,3,3,2,2
-"2","HH51","Piers 5-7",4,5,3,3,2,3
-"3","HH52","Construction Site",3,5,3,3,2,3
-"4","HH53","Piers 5-7",3,5,3,3,2,3
-"5","HH54","Piers 5-7",2,6,3,3,2,2
-"6","HH55","Macassa Bay",2,5,3,3,2,1
-"7","HH56","Macassa Bay",2,5,3,3,2,1
-"8","HH57","Macassa Bay",2,5,3,3,2,NA
-"9","HH58","Macassa Bay",3,5,3,3,1,1
-"10","HH59","Macassa Bay",3,5,3,3,1,1
-"11","HH60","Macassa Bay",2,5,3,3,NA,1
+"","Area","AreaYear","2018","2019","2020","2021","2022","2023"
+"1","Construction Site","Construction Site-2018",3,NA,NA,NA,NA,NA
+"2","Construction Site","Construction Site-2019",NA,5,NA,NA,NA,NA
+"3","Construction Site","Construction Site-2020",NA,NA,3,NA,NA,NA
+"4","Construction Site","Construction Site-2021",NA,NA,NA,3,NA,NA
+"5","Construction Site","Construction Site-2022",NA,NA,NA,NA,2,NA
+"6","Construction Site","Construction Site-2023",NA,NA,NA,NA,NA,3
+"7","Macassa Bay","Macassa Bay-2018",14,NA,NA,NA,NA,NA
+"8","Macassa Bay","Macassa Bay-2019",NA,30,NA,NA,NA,NA
+"9","Macassa Bay","Macassa Bay-2020",NA,NA,18,NA,NA,NA
+"10","Macassa Bay","Macassa Bay-2021",NA,NA,NA,18,NA,NA
+"11","Macassa Bay","Macassa Bay-2022",NA,NA,NA,NA,8,NA
+"12","Macassa Bay","Macassa Bay-2023",NA,NA,NA,NA,NA,5
+"13","Piers 5-7","Piers 5-7-2018",13,NA,NA,NA,NA,NA
+"14","Piers 5-7","Piers 5-7-2019",NA,21,NA,NA,NA,NA
+"15","Piers 5-7","Piers 5-7-2020",NA,NA,12,NA,NA,NA
+"16","Piers 5-7","Piers 5-7-2021",NA,NA,NA,12,NA,NA
+"17","Piers 5-7","Piers 5-7-2022",NA,NA,NA,NA,8,NA
+"18","Piers 5-7","Piers 5-7-2023",NA,NA,NA,NA,NA,10

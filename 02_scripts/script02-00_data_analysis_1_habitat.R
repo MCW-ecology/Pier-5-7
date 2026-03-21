@@ -213,6 +213,14 @@ m_temp_noInt <- update(m_temp_full, . ~ . - TimePeriod:Area)
 # Likelihood-ratio test for interaction
 anova(m_temp_full, m_temp_noInt)
 
+# Test overall TimePeriod effect (Pre vs Post averaged over areas)
+m_temp_noTP <- update(m_temp_noInt, . ~ . - TimePeriod)
+anova(m_temp_noInt, m_temp_noTP)
+
+# Test overall Area effect (averaged over TimePeriod)
+m_temp_noArea <- update(m_temp_noInt, . ~ . - Area)
+anova(m_temp_noInt, m_temp_noArea)
+
 library(emmeans)
 
 # Overall adjusted means for Pre vs Post (averaged over Areas)
@@ -359,97 +367,42 @@ dat_cc <- dat_cond %>%
  drop_na()
 
 
-# Full model with interaction
-m_cond_full <- glmmTMB(
- Conductivity ~ TimePeriod * Area + ns(doy, df = 4) +
-  (1|Transect) + (1|Year),
- family = gaussian(),
- data = dat_cc
+# Full interaction model (ML for model comparison)
+m_cond_full <- lmer(
+ Conductivity ~ TimePeriod * Area + ns(doy, df = 4) + 
+  (1 | Transect) + (1 | Year),
+ data = dat_cc,
+ REML = FALSE
 )
 
 # Additive model (no interaction)
-#m_cond_noInt <- update(m_cond_full, . ~ . - TimePeriod:Area)
+m_cond_noInt <- update(m_cond_full, . ~ . - TimePeriod:Area)
+anova(m_cond_full, m_cond_noInt)   # Chi-square, df, p-value
 
-#dat_cc2 <- dat_cc %>%
-# mutate(doy_s = scale(doy))
+# If interaction is NOT significant, continue with m_noInt for main effects tests:
 
-
-#m_cond_noInt <- glmmTMB(
-# Conductivity ~ TimePeriod + Area + ns(doy_s, df = 3) + (1|Transect) + (1|Year),
-# family = gaussian(),
-# data = dat_cc2
-#)
-
-
-library(lme4)
-library(lmerTest)   # gives p-values
-
-m_cond_noInt_lmer <- lmer(
- Conductivity ~ TimePeriod + Area + ns(doy, 4) +
-  (1|Transect) + (1|Year),
- data = dat_cc,
- REML = TRUE
-)
-
-summary(m_cond_noInt_lmer)
-
-
-# Test interaction
-anova(m_cond_full, m_cond_noInt_lmer)
-
+# Test overall TimePeriod effect (drop TimePeriod from additive model)
 m_cond_noTP <- update(m_cond_noInt, . ~ . - TimePeriod)
-anova(m_cond_noInt, m_cond_noTP)
+anova(m_cond_noInt, m_cond_noTP)   # LRT for TimePeriod
 
+# Test overall Area effect (drop Area from additive model)
 m_cond_noArea <- update(m_cond_noInt, . ~ . - Area)
-anova(m_cond_noInt, m_cond_noArea)
+anova(m_cond_noInt, m_cond_noArea) # LRT for Area
 
-library(emmeans)
+model_use <- m_cond_noInt   # <-- change to m_do_noInt_lmer if using lmer
 
-# Overall adjusted means (averaged across Areas)
-emm_tp <- emmeans(m_cond_noInt, ~ TimePeriod)
+# Overall Pre vs Post (averaged over Areas)
+emm_tp <- emmeans(model_use, ~ TimePeriod)
 emm_tp
-pairs(emm_tp)     # Post - Pre difference, Gaussian test
+pairs(emm_tp)   # Post - Pre, Gaussian test
 
-emm_area <- emmeans(m_cond_noInt, ~ TimePeriod | Area)
+# Area-wise adjusted means (descriptive context)
+emm_area <- emmeans(model_use, ~ TimePeriod | Area)
 emm_area
 
-# Pre vs Post within each Area
-con_area <- pairs(emm_area)    
-
-# Apply Holm across all contrasts
-summary(con_area, by = NULL, adjust = "holm")
-
-#### Diagnostics
-res_cond <- simulateResiduals(m_cond_noInt, n = 1000)
-plot(res_cond)
-testDispersion(res_cond)
-
-
-library(lme4)
-library(lmerTest)   # p-values for fixed effects
-
-# Fit ML (REML = FALSE) for model comparison
-m_cond_full_lmer <- lmer(
- Conductivity ~ TimePeriod * Area + ns(doy, 4) + (1|Transect) + (1|Year),
- data = dat_cc, REML = FALSE
-)
-m_cond_add_lmer <- lmer(
- Conductivity ~ TimePeriod + Area + ns(doy, 4) + (1|Transect) + (1|Year),
- data = dat_cc, REML = FALSE
-)
-
-anova(m_cond_full_lmer, m_cond_add_lmer)  # LRT for interaction
-
-# Then refit the additive model with REML for estimates (if interaction not significant)
-m_cond_noInt_lmer <- update(m_cond_add_lmer, REML = TRUE)
-
-# emmeans on the REML fit is fine
-library(emmeans)
-emm_tp   <- emmeans(m_cond_noInt_lmer, ~ TimePeriod)
-emm_area <- emmeans(m_cond_noInt_lmer, ~ TimePeriod | Area)
-
-m_cond_noInt_lmer <- update(m_cond_add_lmer, REML = TRUE)
-emm_tp <- emmeans(m_cond_noInt_lmer, ~ TimePeriod)
+# If you want per-area Pre vs Post tests with Holm across Areas:
+con_area <- pairs(emm_area)                        # Pre vs Post within each Area
+summary(con_area, by = NULL, adjust = "holm")      # Holm across the 3 contrasts
 
 ######################################################################################
 ######### Test Pre Vs Post for YSI DO ######################################
@@ -489,7 +442,6 @@ m_do_full <- glmmTMB(
 )
 
 m_do_noInt <- update(m_do_full, . ~ . - TimePeriod:Area)
-
 anova(m_do_full, m_do_noInt)  # LRT for interaction
 
 # Using glmmTMB:

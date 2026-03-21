@@ -113,6 +113,8 @@ mean_abundance_yr_Area <- PiscCPUE %>%
 
 mean_abundance_yr_Area$Year <- as.numeric(as.character(mean_abundance_yr_Area$Year))
 
+saveRDS(mean_abundance_yr_Area, "01_data/mean_CPUE_AdPisc.rds")
+
 ggplot(mean_abundance_yr_Area,
        aes(x = Year,
            y = mean_abundance_per_year_transect,
