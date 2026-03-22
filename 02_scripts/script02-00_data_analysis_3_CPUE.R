@@ -80,6 +80,7 @@ SpeciesCPUE <- df %>% dplyr::group_by(Sp_Code, Common_Name,Area, Year, AreaYear)
 TempEvents <- events %>% dplyr::group_by(Year, Area, AreaYear, Transect, YMD) %>% summarise(Count =length(Transect))
 TempEvents2 <- TempEvents %>% dplyr::group_by(Year,Area, AreaYear) %>% summarise(TotalTransects =sum(Count))
 saveRDS(TempEvents2, "01_data/EventsYearArea.rds")
+EventsYearArea <- readRDS("01_data/EventsYearArea.rds")
 PivotTransectsEvents <- dcast(EventsYearArea, Area+AreaYear ~ Year, value.var = "TotalTransects")
 write.csv(PivotTransectsEvents,"PivotTransectsEvents.csv")
 
@@ -117,7 +118,7 @@ write.csv(mean_abundance_yr_sp_Area,"CPUEtest.csv")
 
 #### Pivot table for Supplmental
 PivotCPUE <- dcast(mean_abundance_yr_sp_Area, Common_Name ~ AreaYear, value.var = "mean_abundance_sp_per_year_transect")
-write.csv(PivotTransects,"PivotTransects.csv")
+write.csv(PivotCPUE,"PivotTransects.csv")
 
 mean_abundance_TP_sp_Area <- TempCPUE %>%
  group_by(TimePeriod, Common_Name, Area, AreaTP) %>%
@@ -148,7 +149,7 @@ mean_abundance_yr_Area <- TempCPUE2 %>%
   n = n(),
   se = sd / sqrt(n)
  )
-saveRDS(mean_abundance_yr_Area, "01_data/mean_CPUE.rds")
+
 
 mean_abundance_TP_Area <- TempCPUE2 %>%
  group_by(TimePeriod, Area, AreaTP) %>%
@@ -156,6 +157,7 @@ mean_abundance_TP_Area <- TempCPUE2 %>%
 
 ##### Plot CPUE ######
 mean_abundance_yr_Area$Year <- as.numeric(as.character(mean_abundance_yr_Area$Year))
+saveRDS(mean_abundance_yr_Area, "01_data/mean_CPUE.rds")
 
 options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
 

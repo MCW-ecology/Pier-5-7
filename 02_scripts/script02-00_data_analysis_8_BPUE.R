@@ -109,6 +109,8 @@ mean_biomass_yr_Area <- TempBPUE2 %>%
 
 mean_biomass_yr_Area$Year <- as.numeric(as.character(mean_biomass_yr_Area$Year))
 
+saveRDS(mean_biomass_yr_Area, "01_data/mean_BPUE.rds")
+
 options(repr.plot.width=8, repr.plot.height=4, repr.plot.res=300)
 
 ggplot(mean_biomass_yr_Area,

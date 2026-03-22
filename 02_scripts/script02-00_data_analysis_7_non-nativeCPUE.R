@@ -50,6 +50,7 @@ mean_abundance_yr_Area <- NonNativeCPUE %>%
  )
 
 mean_abundance_yr_Area$Year <- as.numeric(as.character(mean_abundance_yr_Area$Year))
+saveRDS(mean_abundance_yr_Area, "01_data/mean_CPUE_nonNative.rds")
 
 ggplot(mean_abundance_yr_Area,
        aes(x = Year,

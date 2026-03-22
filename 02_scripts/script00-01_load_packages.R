@@ -37,6 +37,8 @@ library(emmeans)
 library(readr)      # for write_csv
 library(knitr)      # for kable (optional pretty print)
 library(kableExtra)
+library(patchwork)
+library(cowplot)
 
 ###Packages off CRAN
 #----------------------------#
