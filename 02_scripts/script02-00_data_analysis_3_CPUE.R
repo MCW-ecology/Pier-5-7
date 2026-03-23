@@ -369,6 +369,8 @@ ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response)) +
 ggsave("CPUE_GLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
 
 ####Another example plot with colours
+
+saveRDS(emm_cpue_area_df, "01_data/CPUEModMeans.rds") #### for multi panel figure
 pd <- position_dodge(width = 0.45)
 
 ggplot(emm_cpue_area_df, aes(x = TimePeriod, y = response, colour = Area, group = Area)) +

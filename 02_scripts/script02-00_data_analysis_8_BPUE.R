@@ -217,6 +217,8 @@ plot_df <- as.data.frame(emm_area) %>%
  mutate(TimePeriod = factor(TimePeriod, levels = c("Pre", "Post"))) %>%
  rename(Mean = response, LCL = asymp.LCL, UCL = asymp.UCL)
 
+saveRDS(plot_df, "01_data/BPUEModMeans.rds") #### for multi panel figure
+
 pd <- position_dodge(width = 0.45)
 
 ggplot(plot_df, aes(x = TimePeriod, y = Mean, colour = Area, group = Area)) +

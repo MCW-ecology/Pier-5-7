@@ -10,7 +10,7 @@
 ##
 ## Author: M Croft-White
 ##
-## Date Created:13Mar2026
+## Date Created:20Mar2026
 ##
 ## --------------------------------------------------------------#
 ## Modification Notes:
@@ -163,9 +163,9 @@ areas_all <- as.character(areas_all)
 
 # Define a palette (replace with your preferred colors)
 pal <- c(
- "Construction Site" = "#0072B2",
- "Macassa Bay"       = "#E69F00",
- "Piers 5-7"         = "#009E73"
+ "Construction Site" = "violetred4",
+ "Macassa Bay"       = "steelblue",
+ "Piers 5-7"         = "seagreen4"
 )
 # If areas_all contains more/different names, expand 'pal' accordingly:
 missing_cols <- setdiff(areas_all, names(pal))
@@ -240,91 +240,58 @@ p_bpue <- plot_panel(
  palette  = pal
 )
 
-
-
-#6) Combine panels (2 x 3 layout) using patchwork
-# ------------------------------
-# Titles for each panel (optional). If you want internal titles, add + ggtitle("...") to each p_* above.
-# Or use patchwork's plot_annotation() for a common title/subtitle/caption.
-# 
-#install.packages("cowplot")   # if not installed
-
-legend_bottom <- wrap_elements(get_legend(
- p_rich + theme(legend.position = "bottom") + guides(color = guide_legend(nrow = 1))
-))
-
-panel_grid <- wrap_plots(
- list(p_rich, p_cpue, p_adp, p_guild, p_non_native, p_bpue),
- ncol = 3, nrow = 2, guides = "collect"
-) & theme(legend.position = "bottom")
-
-final <- panel_grid / legend_bottom + plot_layout(heights = c(1, 0.08))
-final
-ggsave("CPUEbyYear.png", width = 18, height = 10, dpi = 300)
-
-
-#6) Combine panels (2 x 3 layout) using patchwork
-# ------------------------------
-# Titles for each panel (optional). If you want internal titles, add + ggtitle("...") to each p_* above.
-# Or use patchwork's plot_annotation() for a common title/subtitle/caption.
-panel_6 <- (p_rich | p_cpue | p_adp) /
- (p_guild | p_non_native | p_bpue) +
- plot_annotation(
-  theme = theme(
-   plot.title = element_text(face = "bold", size = 16),
-   plot.caption = element_text(size = 10)
-  )
- )
-
-# Print to device
-panel_6
-
-------------------------------
-# 6) Combine panels (2 x 3 layout) using patchwork
-# ------------------------------
-
 library(patchwork)
+library(cowplot)   # install.packages("cowplot") if needed
 
-panel_6 <- (p_rich | p_cpue | p_adp) /
- (p_guild | p_non_native | p_bpue) +
- plot_layout(guides = "collect") +                # <-- collect legends from all panels
- plot_annotation(
-  theme = theme(
-   plot.title   = element_text(face = "bold", size = 16),
-   plot.caption = element_text(size = 10)
+# 1) Build grid with legends suppressed in each panel
+panel_grid <- wrap_plots(
+ list(
+  p_rich       + theme(legend.position = "none"),
+  p_cpue       + theme(legend.position = "none"),
+  p_adp        + theme(legend.position = "none"),
+  p_guild      + theme(legend.position = "none"),
+  p_non_native + theme(legend.position = "none"),
+  p_bpue       + theme(legend.position = "none")
+ ),
+ ncol = 3, nrow = 2
+)
+
+
+# 2) Extract ONE legend from a representative plot (e.g., p_rich),
+#    customizing font sizes and the legend key appearance
+legend_bottom <- cowplot::get_legend(
+ p_rich +
+  theme(
+   legend.position   = "bottom",
+   legend.title      = element_text(size = 18),   # ⬅ legend title font size
+   legend.text       = element_text(size = 18),   # ⬅ legend label font size
+   legend.key.size   = unit(12, "mm"),             # ⬅ legend key box size
+   legend.margin     = margin(t = 2, r = 2, b = 2, l = 2)
+  ) +
+  guides(
+   color = guide_legend(
+    nrow = 1,                                    # one row
+    override.aes = list(                         # ⬅ what the legend shows
+     size      = 8,                             # point size in legend (geom_point)
+     linewidth = 1.2                            # line thickness in legend (geom_line)
+     # alpha   = 1, shape = 16                  # optionally control shape/alpha
+    )
+   )
   )
- ) &
- theme(legend.position = "bottom")                # <-- place the single, collected legend
+)
 
 
-# Titles for each panel (optional). If you want internal titles, add + ggtitle("...") to each p_* above.
-# Or use patchwork's plot_annotation() for a common title/subtitle/caption.
+# 3) Stack grid over legend and control the legend band height
+final <- panel_grid / patchwork::wrap_elements(legend_bottom) +
+ plot_layout(heights = c(1, 0.09))
 
-p_rich_l   <- p_rich   + theme(legend.position = "bottom")
-p_cpue_n   <- p_cpue   + theme(legend.position = "none")
-p_adp_n    <- p_adp    + theme(legend.position = "none")
-p_guild_n  <- p_guild  + theme(legend.position = "none")
-p_non_nat_n<- p_non_native + theme(legend.position = "none")
-p_bpue_n   <- p_bpue   + theme(legend.position = "none")
+final
+ggsave("CPUEbyYear.png", final, width = 18, height = 10, dpi = 300, bg = "white")
 
 
-panel_6 <- (p_rich_1 | p_cpue_n | p_adp_n) /
- (p_guild_n | p_non_native_n | p_bpue_n) +
- plot_annotation(
-  theme = theme(
-   plot.title = element_text(face = "bold", size = 16),
-   plot.caption = element_text(size = 10)
-  )
- )
 
-# Print to device
-panel_6
-
-# ------------------------------
-# 7) Save high-resolution outputs
-# ------------------------------
 # Width/height in inches; increase dpi for print quality.
-ggsave("CPUEbyYear.png", width = 18, height = 10, dpi = 300)
+
 #ggsave("01_data/figure_6panel.png", panel_6, width = 18, height = 10, dpi = 300, bg = "white")
 #ggsave("06_figures/figure_6panel.pdf",  panel_6, width = 18, height = 10, device = cairo_pdf)
 

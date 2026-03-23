@@ -200,6 +200,7 @@ plot_df <- as.data.frame(emm_area) %>%
   LCL  = asymp.LCL,
   UCL  = asymp.UCL
  )
+saveRDS(plot_df, "01_data/NonNativeCPUEModMeans.rds") #### for multi panel figure
 
 # 3) Plot (points + 95% CI; colours by Area; dodged to avoid overlap)
 pd <- position_dodge(width = 0.45)

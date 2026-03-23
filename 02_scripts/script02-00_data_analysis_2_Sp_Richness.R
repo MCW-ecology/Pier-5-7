@@ -362,6 +362,7 @@ emm_df <- as.data.frame(emm_tp) %>%
  )
 
 
+
 ggplot(emm_df, aes(x = TimePeriod, y = response)) +
  geom_point(size = 3) +
  geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL), width = 0.12, linewidth = 0.8) +
@@ -421,6 +422,8 @@ emm_area_df <- as.data.frame(emm_area) %>%
   LCL  = asymp.LCL,
   UCL  = asymp.UCL
  )
+
+saveRDS(emm_area_df, "01_data/SpRichModMeans.rds") #### for multi panel figure
 
 ## Plot: points and 95% CI, TimePeriod on x-axis, colour by Area
 ggplot(emm_area_df, aes(x = TimePeriod, y = Mean, colour = Area)) +

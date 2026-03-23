@@ -289,13 +289,15 @@ print(p_area_main)
 ggsave("fig_lithophil_area_overall.png", p_area_main, width = 6.5, height = 4, dpi = 300)
 
 #############################
-####Plot
+####Plot by area and time period (coloured by area)
 
 # 1) Get adjusted means for each Area × TimePeriod from the interaction model
-emm_area <- emmeans(m_guild_full, ~ TimePeriod | Area, type = "response")
+emm_area <- emmeans(m_guild_noInt, ~ TimePeriod | Area, type = "response")
 emm_area_df <- as.data.frame(emm_area) %>%
  mutate(TimePeriod = factor(TimePeriod, levels = c("Pre","Post")),
         Area = factor(Area))
+
+saveRDS(emm_area_df, "01_data/GuildModMeans.rds") #### for multi panel figure
 
 # 2) Handle CI column names (emmeans may return asymp.LCL/UCL or lower.CL/upper.CL)
 lower_col <- if ("asymp.LCL" %in% names(emm_area_df)) "asymp.LCL" else "lower.CL"
@@ -365,4 +367,3 @@ summary(con_guild$contrasts, adjust = "holm")
 # (Optional) Area differences averaged over TimePeriod
 emm_area <- emmeans(m_guild_noInt, ~ Area, type = "response")
 pairs(emm_area, adjust = "holm")
-``
