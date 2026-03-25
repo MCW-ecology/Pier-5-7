@@ -162,7 +162,7 @@ anova(m_guild_noInt, m_guild_noArea)
 
 con_guild <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
 summary(con_guild$contrasts, adjust = "holm")
-emmeans(m_guild_noInt, ~ TimePeriod, type = "response") ##since full model wasn't sign, report additive model means
+emmeans(m_guild_noInt, ~ Area, type = "response") ##since full model wasn't sign, report additive model means
 
 #Important next step (recommended):test the overall Pre vs Post effect using the additive model
 emm_overall <- emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
@@ -173,6 +173,10 @@ pairs(emm_overall)
 con <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
 con$contrasts
 summary(con$contrasts, adjust = "holm")        # or "bonferroni"
+
+con_guild2 <- emmeans(m_guild_noInt, pairwise ~ Area)
+summary(con_guild2$contrasts, adjust = "holm")
+
 
 #### Make a table of model adjusted means ####
 

@@ -27,7 +27,8 @@ df <- df %>%
 df <- df %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
-
+#### Summary by year, area, YMD
+SumAreaYearYMD <- df %>% dplyr::group_by(YMD,Year, Area,) %>% summarise(Count =length(Common_Name)) 
 
 ### Summary by transect/date/species
 SpeciesSumDate <- df %>% dplyr::group_by(Common_Name,YMD,Year, Month, Area, AreaYear, Transect, TimePeriod, doy) %>% summarise(Count =length(Common_Name)) 
@@ -332,10 +333,17 @@ m_noArea <- update(m_noInt, . ~ . - Area)
 anova(m_noInt, m_noArea)
 
 # Area-specific adjusted means and contrasts (richness)
-con_rich <- emmeans(m_full, pairwise ~ TimePeriod | Area, type = "response")
-
+con_rich <- emmeans(m_noInt, pairwise ~ TimePeriod | Area, type = "response")
 # Look at per-area Pre vs Post contrasts (no adjustment first)
 con_rich$contrasts
+
+con_rich2 <- emmeans(m_noInt, pairwise ~ Area)
+summary(con_rich2$contrasts, adjust = "holm")
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_SR_area <- emmeans(m_noInt, ~ Area, type = "response")
+emm_overall_SR_area
+pairs(emm_overall_SR_area)
 
 # Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
 summary(con_rich$contrasts, adjust = "holm") #Holm is better than Bonferroni and R's emmeans recommends it

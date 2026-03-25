@@ -26,6 +26,7 @@ df <- df %>%
 df <- df %>% 
  unite(AreaTP, Area,TimePeriod, sep = "-", remove = FALSE)
 
+EventsYearArea <- readRDS("01_data/EventsYearArea.rds")
 
 
 ###determine juvenile vs adult piscivores species (ref is Scott and Crossman for all, except OFFLHD for
@@ -100,6 +101,30 @@ df_AdPisc_sum_AreaTP <- df_AdPisc %>%
  arrange(desc(Total_Count))
 Pivotdf_AdPisc_sum_AreaTP <- dcast(df_AdPisc_sum_AreaTP, Common_Name ~ AreaTP, value.var = "Total_Count")
 Pivotdf_AdPisc_sum_AreaTP[is.na(Pivotdf_AdPisc_sum_AreaTP)] <- 0
+
+### CPUE by species
+### Summary by TimePeriod/Area/species
+df_spCPUE <- df %>%
+ dplyr::filter(adult %in% c("Y"))
+SpeciesCPUE <- df_spCPUE %>% dplyr::group_by(Sp_Code, Common_Name,Area, Year, AreaYear) %>% summarise(Count =sum(Count))
+
+SpeciesCPUE2 <- SpeciesCPUE %>%
+ left_join(EventsYearArea, by = c("Year","Area","AreaYear")) %>%
+ mutate(Count = tidyr::replace_na(Count, 0))
+
+SpeciesCPUE2$CPUE <- SpeciesCPUE2$Count/SpeciesCPUE2$TotalTransects
+
+SpeciesCPUE3 <- SpeciesCPUE2[c("Sp_Code", "Common_Name", "AreaYear", "CPUE")]
+PivotPiscCPUEforSup <- dcast(SpeciesCPUE3, Sp_Code+Common_Name ~ AreaYear, value.var = "CPUE")
+PivotPiscCPUEforSup[is.na(PivotPiscCPUEforSup)] <- 0
+write.csv(PivotPiscCPUEforSup,"PivotCPUEforSup.csv")
+
+#### Summary by year, area, YMD
+PiscSumAreaYearYMD <- df_spCPUE %>% dplyr::group_by(YMD,Year, Area,) %>% summarise(Count =length(Common_Name)) 
+
+#### Summary by year, area, YMD
+df_spCPUE3 <- df_spCPUE %>% dplyr::group_by(YMD,Year, Area, Transect) %>% summarise(Count =length(Transect)) 
+PiscSumAreaYearYMD <- df_spCPUE3 %>% dplyr::group_by(YMD,Year, Area,) %>% summarise(Count =length(Transect)) 
 
 ##### Plot CPUE by year with error bars ######
 mean_abundance_yr_Area <- PiscCPUE %>%

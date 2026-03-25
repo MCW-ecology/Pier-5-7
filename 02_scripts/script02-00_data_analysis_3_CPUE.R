@@ -297,8 +297,11 @@ anova(m_cpue_noInt, m_cpue_noTP)
 m_cpue_noArea <- update(m_cpue_noInt, . ~ . - Area)
 anova(m_cpue_noInt, m_cpue_noArea)
 
-#Effect sizes (Pre vs Post within each Area)
-emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
+con_CPUE <- emmeans(m_cpue_noInt, pairwise ~ Area)
+summary(con_CPUE$contrasts, adjust = "holm")
+
+#Effect sizes (Pre vs Post within each Area) Note this should be run with NoInt model
+# emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
 
 #Diagnostics (strongly recommended)
 res <- simulateResiduals(m_cpue_full)
@@ -307,9 +310,14 @@ testDispersion(res)
 testZeroInflation(res)
 
 #Important next step (recommended):test the overall Pre vs Post effect using the additive model
-emm_overall <- emmeans(m_cpue_noInt, ~ TimePeriod, type = "response")
-emm_overall
-pairs(emm_overall)
+emm_overall_TP <- emmeans(m_cpue_noInt, ~ TimePeriod, type = "response")
+emm_overall_TP
+pairs(emm_overall_TP)
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area <- emmeans(m_cpue_noInt, ~ Area, type = "response")
+emm_overall_area
+pairs(emm_overall_area)
 
 #Multiple comparisons note (important if you plan to report "per area" p-values)
 con <- emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
