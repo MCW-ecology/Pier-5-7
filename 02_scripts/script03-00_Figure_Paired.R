@@ -190,7 +190,7 @@ p_adp <- plot_panel(
 range_guild <- range(mean_CPUE_guild$Mean, na.rm = TRUE)
 p_guild <- plot_panel(
  mean_CPUE_guild,
- y_label  = "Mean Lithophil CPUE",
+ y_label  = "Mean Lithophile CPUE",
  y_breaks = pretty(range_guild, n = 6),
  y_limits = range(pretty(range_guild)),
  palette  = pal
@@ -342,33 +342,34 @@ plot_panel_mm_time <- function(dat,
 # ================================================================
 p_rich_mm  <- plot_panel_mm_time(SpRich_mm,         "Species Richness")
 p_cpue_mm  <- plot_panel_mm_time(CPUE_mm,           "CPUE")
-p_guild_mm <- plot_panel_mm_time(CPUE_guild_mm,     "Lithophil CPUE")
+p_guild_mm <- plot_panel_mm_time(CPUE_guild_mm,     "Lithophile CPUE")
 p_nn_mm    <- plot_panel_mm_time(CPUE_nonNative_mm, "Non-native CPUE")
 p_bpue_mm  <- plot_panel_mm_time(BPUE_mm,           "BPUE")
 
 
-
+########################################################################
+#### Make a 2x3 figure for Sp Richness CPUE and Adult Pisc CPUE
 #-----------------------------------------------------------------------
 
-library(patchwork)
-library(cowplot)
-
 # ----------------------------------------------------------
-# 1) Remove legends from all 4 plots
+# 1) Remove legends from all 6 plots
 # ----------------------------------------------------------
 p1 <- p_rich      + theme(legend.position = "none")
 p2 <- p_rich_mm   + theme(legend.position = "none")
 p3 <- p_cpue      + theme(legend.position = "none")
 p4 <- p_cpue_mm   + theme(legend.position = "none")
+p5 <- p_adp + theme(legend.position = "none")
+p6 <- patchwork::plot_spacer()
 
 # ----------------------------------------------------------
-# 2) Build a TRUE 2×2 layout using wrap_plots()
+# 2) Build a TRUE 2×3 layout using wrap_plots()
 #    (Prevents wrap_dims errors permanently)
 # ----------------------------------------------------------
 p_grid <- wrap_plots(
  p1, p2,
  p3, p4,
- ncol = 2, nrow = 2
+ p5, p6,
+ ncol = 2, nrow = 3
 ) +
  plot_layout(guides = "collect") &
  theme(legend.position = "none")   # suppress all legends here
@@ -380,14 +381,14 @@ legend_bottom_mm <- cowplot::get_legend(
  p_rich_mm +
   theme(
    legend.position = "bottom",
-   legend.title    = element_text(size = 18),
-   legend.text     = element_text(size = 18),
-   legend.key.size = unit(12, "mm")
+   legend.title    = element_text(size = 16),
+   legend.text     = element_text(size = 16),
+   legend.key.size = unit(10, "mm")
   ) +
   guides(
    color = guide_legend(
     nrow = 1,
-    override.aes = list(size = 8, linewidth = 1.2)
+    override.aes = list(size = 6, linewidth = 1.0)
    )
   )
 )
@@ -397,11 +398,72 @@ legend_bottom_mm <- patchwork::wrap_elements(legend_bottom_mm)
 # ----------------------------------------------------------
 # 4) Stack the grid above the legend
 # ----------------------------------------------------------
-final_SpRichCPUE <- p_grid /
+final_SpRichCPUEAdPisc <- p_grid /
  legend_bottom_mm +
  plot_layout(heights = c(1, 0.12))
 
-final_SpRichCPUE
+final_SpRichCPUEAdPisc
 
-ggsave("final_SpRichCPUE.png",
-       final_SpRichCPUE, width = 10, height = 10, dpi = 300, bg = "white")
+ggsave("final_SpRichCPUEAdPisc.png",
+       final_SpRichCPUEAdPisc, width = 10, height = 10, dpi = 300, bg = "white")
+
+ 
+########################################################################
+#### Make a 2x3 figure for Lithophiles, Non-native and BPUE
+#-----------------------------------------------------------------------
+
+# ----------------------------------------------------------
+# 1) Remove legends from all 6 plots
+# ----------------------------------------------------------
+p7 <- p_guild      + theme(legend.position = "none")
+p8 <- p_guild_mm   + theme(legend.position = "none")
+p9 <- p_non_native      + theme(legend.position = "none")
+p10 <- p_nn_mm   + theme(legend.position = "none")
+p11 <- p_bpue + theme(legend.position = "none")
+p12 <- p_bpue_mm + theme(legend.position = "none")
+
+# ----------------------------------------------------------
+# 2) Build a TRUE 2×3 layout using wrap_plots()
+#    (Prevents wrap_dims errors permanently)
+# ----------------------------------------------------------
+p_grid <- wrap_plots(
+ p7, p8,
+ p9, p10,
+ p11, p12,
+ ncol = 2, nrow = 3
+) +
+ plot_layout(guides = "collect") &
+ theme(legend.position = "none")   # suppress all legends here
+
+# ----------------------------------------------------------
+# 3) Extract a single legend
+# ----------------------------------------------------------
+legend_bottom_mm <- cowplot::get_legend(
+ p_rich_mm +
+  theme(
+   legend.position = "bottom",
+   legend.title    = element_text(size = 16),
+   legend.text     = element_text(size = 16),
+   legend.key.size = unit(10, "mm")
+  ) +
+  guides(
+   color = guide_legend(
+    nrow = 1,
+    override.aes = list(size = 6, linewidth = 1.0)
+   )
+  )
+)
+
+legend_bottom_mm <- patchwork::wrap_elements(legend_bottom_mm)
+
+# ----------------------------------------------------------
+# 4) Stack the grid above the legend
+# ----------------------------------------------------------
+final_GuildNNBPUE <- p_grid /
+ legend_bottom_mm +
+ plot_layout(heights = c(1, 0.12))
+
+final_GuildNNBPUE
+
+ggsave("final_GuildNNBPUE.png",
+       final_GuildNNBPUE, width = 10, height = 10, dpi = 300, bg = "white")

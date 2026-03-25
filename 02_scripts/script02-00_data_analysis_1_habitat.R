@@ -45,7 +45,8 @@ library(dplyr)
 # Ensure Year is numeric in both data sets
 temperature_year_area$Year <- as.numeric(as.character(temperature_year_area$Year))
 hab <- hab %>% mutate(Year = as.numeric(Year))
-
+saveRDS(temperature_year_area, "01_data/temperature.rds") #### for multi panel figure
+saveRDS(hab, "01_data/hab.rds") #### for multi panel figure
 ggplot() +
  # --- Raw observations in the background ---
  geom_point(
@@ -91,7 +92,7 @@ library(ggplot2)
 
 # Make sure Year is numeric in the summary as well
 conductivity_year_area$Year <- as.numeric(as.character(conductivity_year_area$Year))
-
+saveRDS(conductivity_year_area, "01_data/cond.rds") #### for multi panel figure
 ggplot() +
  # --- Raw observations in the background (colored by Area) ---
  geom_point(
@@ -135,7 +136,7 @@ library(ggplot2)
 
 # Ensure Year is numeric in the summary as well
 do_year_area$Year <- as.numeric(as.character(do_year_area$Year))
-
+saveRDS(do_year_area, "01_data/DO.rds") #### for multi panel figure
 ggplot() +
  # --- Raw DO observations in the background ---
  geom_point(
