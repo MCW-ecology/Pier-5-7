@@ -206,6 +206,11 @@ emm_tp <- emmeans(m_bpue_add, ~ TimePeriod, type = "response")
 emm_tp
 pairs(emm_tp)             # Pre/Post ratio; tests done on log scale
 
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area_BPUE <- emmeans(m_bpue_add, ~ Area, type = "response")
+emm_overall_area_BPUE
+pairs(emm_overall_area_BPUE)
+
 # Per Area (descriptive; or inferential if interaction significant)
 emm_area <- emmeans(m_bpue_add, ~ TimePeriod | Area, type = "response")
 emm_area

@@ -332,28 +332,30 @@ anova(m_noInt, m_noTP)
 m_noArea <- update(m_noInt, . ~ . - Area)
 anova(m_noInt, m_noArea)
 
-# Area-specific adjusted means and contrasts (richness)
-con_rich <- emmeans(m_noInt, pairwise ~ TimePeriod | Area, type = "response")
+# Area-specific adjusted means and contrasts (richness) Note: best for when full model is significant. 
+#con_rich <- emmeans(m_noInt, pairwise ~ TimePeriod | Area, type = "response")
 # Look at per-area Pre vs Post contrasts (no adjustment first)
-con_rich$contrasts
+#con_rich$contrasts
 
-con_rich2 <- emmeans(m_noInt, pairwise ~ Area)
-summary(con_rich2$contrasts, adjust = "holm")
+#con_rich2 <- emmeans(m_noInt, pairwise ~ Area)
+#summary(con_rich2$contrasts, adjust = "holm")
 
 #Important next step (recommended):test the overall Pre vs Post effect using the additive model
 emm_overall_SR_area <- emmeans(m_noInt, ~ Area, type = "response")
 emm_overall_SR_area
 pairs(emm_overall_SR_area)
 
-# Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
-summary(con_rich$contrasts, adjust = "holm") #Holm is better than Bonferroni and R's emmeans recommends it
-# or
-#summary(con_rich$contrasts, adjust = "bonferroni")
-
 # Overall Pre vs Post effect (averaged across Areas, adjusted for doy)
 emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
 emm_tp
 pairs(emm_tp)   # Pre vs Post contrast (on response scale)
+
+# Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
+#summary(con_rich$contrasts, adjust = "holm") #Holm is better than Bonferroni and R's emmeans recommends it
+# or
+#summary(con_rich$contrasts, adjust = "bonferroni")
+
+
 
 ####Results for contrasts "holm": Piers 5-7 P=0.0574, Construction site P = 0.6145, Macassa P = <0.0001
 

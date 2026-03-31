@@ -320,9 +320,9 @@ emm_overall_area
 pairs(emm_overall_area)
 
 #Multiple comparisons note (important if you plan to report "per area" p-values)
-con <- emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
-con$contrasts
-summary(con$contrasts, adjust = "holm")        # or "bonferroni"
+#con <- emmeans(m_cpue_full, pairwise ~ TimePeriod | Area, type = "response")
+#con$contrasts
+#summary(con$contrasts, adjust = "holm")        # or "bonferroni"
 
 
 ###Plot overall CPUE differences by TimePeriod

@@ -160,22 +160,27 @@ m_guild_noArea <- update(m_guild_noInt, . ~ . - Area)
 anova(m_guild_noInt, m_guild_noArea)
 
 
-con_guild <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
-summary(con_guild$contrasts, adjust = "holm")
-emmeans(m_guild_noInt, ~ Area, type = "response") ##since full model wasn't sign, report additive model means
+#con_guild <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
+#summary(con_guild$contrasts, adjust = "holm")
+#emmeans(m_guild_noInt, ~ Area, type = "response") ##since full model wasn't sign, report additive model means
 
 #Important next step (recommended):test the overall Pre vs Post effect using the additive model
-emm_overall <- emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
-emm_overall
-pairs(emm_overall)
+emm_overall_TP_Guild <- emmeans(m_guild_noInt, ~ TimePeriod, type = "response")
+emm_overall_TP_Guild
+pairs(emm_overall_TP_Guild)
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area_Guild <- emmeans(m_guild_noInt, ~ Area, type = "response")
+emm_overall_area_Guild
+pairs(emm_overall_area_Guild)
 
 #Multiple comparisons note (important if you plan to report "per area" p-values)
-con <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
-con$contrasts
-summary(con$contrasts, adjust = "holm")        # or "bonferroni"
+#con <- emmeans(m_guild_noInt, pairwise ~ TimePeriod | Area, type = "response")
+#con$contrasts
+#summary(con$contrasts, adjust = "holm")        # or "bonferroni"
 
-con_guild2 <- emmeans(m_guild_noInt, pairwise ~ Area)
-summary(con_guild2$contrasts, adjust = "holm")
+#con_guild2 <- emmeans(m_guild_noInt, pairwise ~ Area)
+#summary(con_guild2$contrasts, adjust = "holm")
 
 
 #### Make a table of model adjusted means ####
