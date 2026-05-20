@@ -233,6 +233,13 @@ pairs(emm_tp)  # Post - Pre difference, test on Gaussian scale
 emm_area <- emmeans(m_temp_noInt, ~ TimePeriod | Area)
 emm_area
 
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area_Temp <- emmeans(m_temp_noInt, ~ Area, type = "response")
+emm_overall_area_Temp
+pairs(emm_overall_area_Temp)
+
+
+
 # If you really want per-area Pre vs Post tests (adjust p across Areas):
 con3 <- pairs(emm_area, by = NULL)     # combine all three contrasts into one family
 summary(con3, adjust = "holm")         # Holm is preferred over Bonferroni
@@ -401,6 +408,11 @@ pairs(emm_tp)   # Post - Pre, Gaussian test
 emm_area <- emmeans(model_use, ~ TimePeriod | Area)
 emm_area
 
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area_cond <- emmeans(m_cond_noInt, ~ Area, type = "response")
+emm_overall_area_cond
+pairs(emm_overall_area_cond)
+
 # If you want per-area Pre vs Post tests with Holm across Areas:
 con_area <- pairs(emm_area)                        # Pre vs Post within each Area
 summary(con_area, by = NULL, adjust = "holm")      # Holm across the 3 contrasts
@@ -470,6 +482,11 @@ pairs(emm_tp)   # Post - Pre, Gaussian test
 # Area-wise adjusted means (descriptive context)
 emm_area <- emmeans(model_use, ~ TimePeriod | Area)
 emm_area
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_area_do <- emmeans(model_use, ~ Area, type = "response")
+emm_overall_area_do
+pairs(emm_overall_area_do)
 
 # If you want per-area Pre vs Post tests with Holm across Areas:
 con_area <- pairs(emm_area)                        # Pre vs Post within each Area

@@ -18,7 +18,7 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
-events <- readRDS("01_data/events.rds")
+events <- readRDS("01_data/events.rds") ### From import_efish_data.R
 
 #### Make a combined column of area and year
 df <- df %>% 
@@ -223,7 +223,9 @@ ggplot(TempMeanSpRichTP_noConst, aes(x = TimePeriod, y = Count, fill = Area)) +
  )
 ggsave("SpRichBoxPlot.png", width = 8, height = 4, dpi = 300)
 
-#### Unique species found in each Area
+############################################
+#### Unique species found in each Area #####
+############################################
 
 # Macassa Bay
 
@@ -265,6 +267,7 @@ constr_only_species <- SpeciesSumDate %>%
  arrange(Common_Name)
 
 constr_only_species
+
 #########################################################################################################
 ####Test difference in Species Richness between Pre and Post (Negative Binomial GLMM - repeated measures)
 #########################################################################################################
@@ -292,7 +295,7 @@ dat <- TempMeanSpRichTP %>%
   doy = yday(as.Date(YMD))
  )
 
-# Final recommended model
+# Full Model
 m_nb <- glmmTMB(
  Count ~ TimePeriod * Area + ns(doy, df = 4) +
   (1 | Transect) + (1 | Year),
@@ -328,9 +331,19 @@ m_noTP <- glmmTMB(
 )
 anova(m_noInt, m_noTP)
 
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_SR_TP <- emmeans(m_noInt, ~ TimePeriod, type = "response")
+emm_overall_SR_TP
+pairs(emm_overall_SR_TP)
+
 # Test overall Area effect (averaged over TimePeriod)
 m_noArea <- update(m_noInt, . ~ . - Area)
 anova(m_noInt, m_noArea)
+
+#Important next step (recommended):test the overall Pre vs Post effect using the additive model
+emm_overall_SR_area <- emmeans(m_noInt, ~ Area, type = "response")
+emm_overall_SR_area
+pairs(emm_overall_SR_area)
 
 # Area-specific adjusted means and contrasts (richness) Note: best for when full model is significant. 
 #con_rich <- emmeans(m_noInt, pairwise ~ TimePeriod | Area, type = "response")
@@ -340,15 +353,9 @@ anova(m_noInt, m_noArea)
 #con_rich2 <- emmeans(m_noInt, pairwise ~ Area)
 #summary(con_rich2$contrasts, adjust = "holm")
 
-#Important next step (recommended):test the overall Pre vs Post effect using the additive model
-emm_overall_SR_area <- emmeans(m_noInt, ~ Area, type = "response")
-emm_overall_SR_area
-pairs(emm_overall_SR_area)
 
-# Overall Pre vs Post effect (averaged across Areas, adjusted for doy)
-emm_tp <- emmeans(m_noInt, ~ TimePeriod, type = "response")
-emm_tp
-pairs(emm_tp)   # Pre vs Post contrast (on response scale)
+
+
 
 # Apply multiple-comparison adjustment across areas (Holm or Bonferroni)
 #summary(con_rich$contrasts, adjust = "holm") #Holm is better than Bonferroni and R's emmeans recommends it
@@ -356,8 +363,6 @@ pairs(emm_tp)   # Pre vs Post contrast (on response scale)
 #summary(con_rich$contrasts, adjust = "bonferroni")
 
 
-
-####Results for contrasts "holm": Piers 5-7 P=0.0574, Construction site P = 0.6145, Macassa P = <0.0001
 
 #### Make Plot of Model ajusted Mean Sp Richness by TimePeriod
 
@@ -416,8 +421,7 @@ ggplot(emm_area_df, aes(x = TimePeriod, y = response)) +
  )
 ggsave("SpRichGLMMTimePeriodArea.png", width = 8, height = 4, dpi = 300)
 
-### Plot of coloured by area ####
-
+### Make Plot of Model ajusted Mean Sp Richness coloured by area ####
 
 ## Get model-adjusted means (back-transformed) for each TimePeriod within each Area
 emm_area <- emmeans(m_noInt, ~ TimePeriod | Area, type = "response")
@@ -493,7 +497,7 @@ testZeroInflation(res)
 ########################################################
 ####Same as above without the Spline for DayOfYear #####
 ########################################################
-
+#### This was not used because the results were the same as with the Spline
 
 #Prep the datatable
 dat_cc2 <- dat %>%
@@ -624,7 +628,7 @@ ggplot(emm_area_df_nodoy, aes(x = TimePeriod, y = response)) +
 ################################
 ### Mean Fall Species Richness ######
 ################################
-
+#### This was not used, I was just playing around with things
 TempMeanSpRich <- SpeciesSumDate %>% dplyr::group_by(Transect, Year, Month, YMD, Area, AreaYear) %>% summarise(Count =length(Common_Name)) 
 TempMeanSpRich <- SpeciesSumDate %>%
  dplyr::filter(Month %in% c(9, 10)) %>%

@@ -35,9 +35,9 @@ library(cowplot)
 # 1. Colour palette
 # -----------------------------------------
 pal <- c(
- "Construction Site" = "violetred4",
+ "Construction Site" = "seagreen",
  "Macassa Bay"       = "steelblue",
- "Piers 5-7"         = "seagreen4"
+ "Piers 5-7"         = "#D55E00"
 )
 
 # -----------------------------------------

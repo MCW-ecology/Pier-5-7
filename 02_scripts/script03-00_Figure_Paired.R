@@ -139,9 +139,9 @@ areas_all <- as.character(areas_all)
 
 # Define a palette (replace with your preferred colors)
 pal <- c(
- "Construction Site" = "violetred4",
+ "Construction Site" = "seagreen",
  "Macassa Bay"       = "steelblue",
- "Piers 5-7"         = "seagreen4"
+ "Piers 5-7"         = "#D55E00"
 )
 # If areas_all contains more/different names, expand 'pal' accordingly:
 missing_cols <- setdiff(areas_all, names(pal))
@@ -266,9 +266,9 @@ BPUE_mm           <- standardize_modmeans(BPUE_mm)
 # 3) Area colour palette (reuses your previous one)
 # ================================================================
 pal <- c(
- "Construction Site" = "violetred4",
+ "Construction Site" = "seagreen",
  "Macassa Bay"       = "steelblue",
- "Piers 5-7"         = "seagreen4"
+ "Piers 5-7"         = "#D55E00"
 )
 
 # Expand palette for any new Areas

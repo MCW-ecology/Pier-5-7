@@ -122,9 +122,9 @@ BPUE_mm           <- standardize_modmeans(BPUE_mm)
 # 3) Area colour palette (reuses your previous one)
 # ================================================================
 pal <- c(
- "Construction Site" = "violetred4",
+ "Construction Site" = "seagreen",
  "Macassa Bay"       = "steelblue",
- "Piers 5-7"         = "seagreen4"
+ "Piers 5-7"         = "#D55E00"
 )
 
 # Expand palette for any new Areas

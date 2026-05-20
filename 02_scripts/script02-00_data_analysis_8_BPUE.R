@@ -18,7 +18,7 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
-events <- readRDS("01_data/events.rds")
+events <- readRDS("01_data/events.rds") ### From import_efish_data.R
 EventsYearArea <- readRDS("01_data/EventsYearArea.rds") #from CPUE script
 
 #### Make a combined column of area and year
@@ -163,7 +163,7 @@ ggplot(TempBPUE2, aes(x = TimePeriod, y = BPUE, color = Area)) + geom_point(alph
 ###Random effects:(1 | Transect) — repeated measures within each transect
 ###               (1 | Year) — accounts for multi‑year variation within Pre and Post
 ###Seasonality control:A smooth spline on day‑of‑year because sampling spans May → October
-###Family:Negative binomial (richness is a count and likely overdispersed)
+###Family:tweedie (richness is a count and likely overdispersed)
 ###Note: code written by CoPilot
 
 library(dplyr)

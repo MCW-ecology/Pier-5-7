@@ -20,7 +20,7 @@
 temp_df <- readRDS("01_data/Efish_processed.rds")
 guilds <- read.csv("C:/Users/croftwhitem/Documents/GitHub/Pier-5-7/01_data/01_raw_files/SpeciesList.csv")
 df <- merge(temp_df, guilds, by = "Common_Name")
-events <- readRDS("01_data/events.rds")
+events <- readRDS("01_data/events.rds") ### From import_efish_data.R
 #### Make a combined column of area and year
 df <- df %>% 
  unite(AreaYear, Area,Year, sep = "-", remove = FALSE)

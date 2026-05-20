@@ -219,60 +219,6 @@ saveRDS(combined, "01_data/Efish_processed.rds")
 
 
 
-#####Data Formatting#######################################----
-#-------------------------------------------------------------#
-
-### Create Derived Variables
-#----------------------------#
-
-# Add calculated fields
-# temp_formatted <- temp_clean %>%
-#   mutate(
-#     year = lubridate::year(date),
-#     month = lubridate::month(date),
-#     log_value = log(value + 1)
-#   )
-
-
-### Filter and Select
-#----------------------------#
-
-# Keep only relevant observations and variables
-# df_final <- temp_formatted %>%
-#   filter(year >= 2020) %>%
-#   select(id, date, year, month, category, value, log_value)
-
-#cat("Final dataset:", format(nrow(df_final), big.mark = ","), "records\n")
-
-
-#####Data Validation#######################################----
-#-------------------------------------------------------------#
-
-### Check Data Quality
-#----------------------------#
-
-# Verify data integrity
-# temp_duplicates <- df_final %>%
-#   group_by(id, date) %>%
-#   filter(n() > 1)
-#
-# if(nrow(temp_duplicates) > 0) {
-#   warning("Found ", nrow(temp_duplicates), " duplicate records")
-# }
-
-
-
-# Save processed data for future use (commented out - manual export only)
-# saveRDS(df_final, "01 - Data/processed_data.rds")
-
-
-#####Cleanup###############################################----
-#-------------------------------------------------------------#
-
-# Remove temporary objects
-#rm(list = ls(pattern = "^temp_"))
-#cat("Cleanup complete.\n")
-
 
 ## End of script
 

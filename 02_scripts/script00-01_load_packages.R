@@ -39,6 +39,11 @@ library(knitr)      # for kable (optional pretty print)
 library(kableExtra)
 library(patchwork)
 library(cowplot)
+library(lme4)
+
+citation("glmmTMB")
+citation("lme4")
+citation ("emmeans")
 
 ###Packages off CRAN
 #----------------------------#

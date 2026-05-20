@@ -18,7 +18,7 @@
 ## --------------------------------------------------------------#
 
 df <- readRDS("01_data/Efish_processed.rds")
-events <- readRDS("01_data/events.rds")
+events <- readRDS("01_data/events.rds") ### From import_efish_data.R
 
 #### Make a combined column of area and year
 df <- df %>% 
